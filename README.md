@@ -40,10 +40,11 @@ purchased in the simulation.
 
 ```text
 ID,Category,Item,Size,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
-CS01,Classic Smoothies,Sunrise Sunset,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,2,6,6
-SF03,Superfoods Smoothies,Acai Berry Boost,24 oz.,5.99,50,TRUE,FALSE,FALSE,FALSE,2,2,4,118
-SC02,Supercharged Smoothies,Peanut Paradise,24 oz.,5.99,35,FALSE,FALSE,FALSE,FALSE,3,4,12,160
-IS01,Indulgent Smoothies,Bahama Mama,24 oz.,5.49,60,TRUE,FALSE,FALSE,FALSE,4,5,20,210
+CS01,Classic Smoothies,Sunrise Sunset,24 oz.,4.99,75,1,0,0,0,3,2,6,6
+CS02,Classic Smoothies,Kiwi Quencher,24 oz.,4.99,75,1,0,0,0,3,5,15,21
+SF07,Superfoods Smoothies,Detox Island Green,24 oz.,5.99,50,1,1,0,0,2,1,2,136
+SC04,Supercharged Smoothies,Lean Machine,24 oz.,5.99,35,0,1,1,1,3,4,12,184
+IS04,Indulgent Smoothies,Mocha Madness,24 oz.,5.49,60,0,0,1,1,4,2,8,242
 ```
 
 ## Product Samples
