@@ -32,7 +32,8 @@ Pinot, Databricks, Amazon Kinesis Data Analytics.
 ## Product Samples
 
 Products roughly based on Tropical Smoothie menu
-from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns, with `_`, are used
+from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns, with `_`,
+are used
 to generate artificial product category and product weightings, which determine how frequently the products are
 purchased in the simulation.
 
@@ -144,6 +145,15 @@ docker-compose up -d
 docker exec -it streaming-sales-generator_kafka_1 bash
 ```
 
+To run the application:
+
+```shell
+python3 ./producer.py
+python3 ./consumer.py
+```
+
+From within the Kafka container:
+
 ```shell
 export BOOTSTRAP_SERVERS="localhost:9092"
 export TOPIC_PURCHASES="smoothie.purchases"
@@ -158,7 +168,10 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS --topic $TOPIC_P
 kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS --topic $TOPIC_STOCKINGS --from-beginning
 ```
 
-```shell
-python3 ./producer.py
-python3 ./consumer.py
-```
+---
+_The contents of this repository represent my viewpoints and not of my past or current employers, including Amazon Web
+Services (AWS). All third-party libraries, modules, plugins, and SDKs are the property of their respective owners. The
+author(s) assumes no responsibility or liability for any errors or omissions in the content of this site. The
+information contained in this site is provided on an "as is" basis with no guarantees of completeness, accuracy,
+usefulness or timeliness._
+
