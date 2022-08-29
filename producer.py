@@ -1,29 +1,32 @@
+import configparser
 import datetime
+import json
 import random
 import time
-import json
-from kafka import KafkaProducer
 from csv import reader
 
-# *** CONSTANTS ***
-BOOTSTRAP_SERVERS = 'localhost:9092'
-TOPIC_PURCHASE = 'smoothie.purchases'
-TOPIC_STOCKING = 'smoothie.stockings'
+from kafka import KafkaProducer
 
-MIN_SALE_FREQ = 120  # minimum sales frequency in seconds
-MAX_SALE_FREQ = 300  # maximum sales frequency in seconds
-NUMBER_OF_SALES = 100  # number of transactions to generate
+config = configparser.ConfigParser()
+config.read('configuration.ini')
 
-CLUB_MEMBER_DISCOUNT = .10  # % discount for smoothie club members
-SUPPLEMENTS_COST = 1.99  # cost of adding supplements to smoothie
+# *** CONFIGURATION ***
+bootstrap_servers = config['KAFKA']['bootstrap_servers']
+topic_purchases = config['KAFKA']['topic_purchases']
+topic_stockings = config['KAFKA']['topic_stockings']
 
-IS_MEMBER = 3  # chance of being member on scale of 1 to 10?
-QUANTITY_ONE = 8  # chance of quantity being 1 vs. 2 on scale of 1 to 10?
-ADD_SUPP_SF_SC = 5  # chance of adding a supplement to SF or SC smoothies on scale of 1 to 10?
-ADD_SUPP_CS_IS = 2  # chance of adding a supplement to CS or IS smoothies on scale of 1 to 10?
+min_sale_freq = int(config['SALES']['min_sale_freq'])
+max_sale_freq = int(config['SALES']['max_sale_freq'])
+number_of_sales = int(config['SALES']['number_of_sales'])
+quantity_one_freq = int(config['SALES']['quantity_one_freq'])
+member_freq = int(config['SALES']['member_freq'])
+club_member_discount = float(config['SALES']['club_member_discount'])
+add_supp_freq_group1 = int(config['SALES']['add_supp_freq_group1'])
+add_supp_freq_group2 = int(config['SALES']['add_supp_freq_group2'])
+supplements_cost = float(config['SALES']['supplements_cost'])
 
-MIN_INVENTORY = 10  # minimum inventory level
-RESTOCK_AMOUNT = 15  # restocking amount
+min_inventory = int(config['INVENTORY']['min_inventory'])
+restock_amount = int(config['INVENTORY']['restock_amount'])
 
 # *** VARIABLES ***
 products = []
@@ -73,9 +76,9 @@ class Purchase:
         self.member_discount = float(member_discount)
         self.add_supplements = bool(add_supplements)
         self.supplement_price = float(supplement_price)
-        self.total_purchase = self.quantity * (self.price + SUPPLEMENTS_COST)
+        self.total_purchase = self.quantity * (self.price + supplements_cost)
         if self.is_member:
-            self.total_purchase = self.total_purchase * (1 - CLUB_MEMBER_DISCOUNT)
+            self.total_purchase = self.total_purchase * (1 - club_member_discount)
         self.total_purchase = round(self.total_purchase, 2)
 
     def __str__(self):
@@ -112,13 +115,7 @@ class Stocking:
 
 def main():
     create_product_list()
-
-    purchases = generate_sales()
-    for purchase in purchases:
-        print(purchase)
-
-    for product in products:
-        print(product)
+    generate_sales()
 
 
 # product list from csv file
@@ -138,7 +135,7 @@ def create_product_list():
 # generate sales
 def generate_sales():
     purchases = []
-    for x in range(0, NUMBER_OF_SALES):
+    for x in range(0, number_of_sales):
         range_min = product_weightings[0]
         range_max = product_weightings[-1]
         rnd_product_weight = closest_product_match(product_weightings, random.randint(range_min, range_max))
@@ -146,27 +143,27 @@ def generate_sales():
         for product in products:
             if product.range_weight == rnd_product_weight:
                 add_supplement = random_add_supplements(product.product_id)
-                supplement_price = SUPPLEMENTS_COST if add_supplement else 0.00
+                supplement_price = supplements_cost if add_supplement else 0.00
                 is_member = random_club_member()
-                member_discount = CLUB_MEMBER_DISCOUNT if is_member else 0.00
+                member_discount = club_member_discount if is_member else 0.00
+
                 purchase = Purchase(
                     datetime.datetime.utcnow(),
                     product.product_id,
                     product.price,
                     random_quantity(),
-                    random_club_member(),
+                    is_member,
                     member_discount,
                     add_supplement,
                     supplement_price
                 )
-                product.inventory = product.inventory - quantity
                 purchases.append(purchase)
-                print(purchase)
-                publish_to_kafka(TOPIC_PURCHASE, purchase)
-                if product.inventory <= MIN_INVENTORY:
+                publish_to_kafka(topic_purchases, purchase)
+                product.inventory = product.inventory - quantity
+                if product.inventory <= min_inventory:
                     restock_item(product.product_id)
                 break
-        time.sleep(random.randint(MIN_SALE_FREQ, MAX_SALE_FREQ))
+        time.sleep(random.randint(min_sale_freq, max_sale_freq))
     return purchases
 
 
@@ -174,7 +171,7 @@ def generate_sales():
 def restock_item(product_id):
     for product in products:
         if product.product_id == product_id:
-            new_inventory = product.inventory + RESTOCK_AMOUNT
+            new_inventory = product.inventory + restock_amount
             stocking = Stocking(
                 datetime.datetime.utcnow(),
                 product.product_id,
@@ -182,21 +179,20 @@ def restock_item(product_id):
                 new_inventory
             )
             stockings.append(stocking)
-            print(stocking)
             product.inventory = new_inventory
-            publish_to_kafka(TOPIC_STOCKING, stocking)
+            publish_to_kafka(topic_stockings, stocking)
             break
 
 
-# publish messages to kafka
+# publish messages to kafka topic
 def publish_to_kafka(topic, message):
     producer = KafkaProducer(
-        bootstrap_servers=BOOTSTRAP_SERVERS,
+        bootstrap_servers=bootstrap_servers,
         value_serializer=lambda v: json.dumps(v).encode('utf-8')
     )
     message = json.dumps(vars(message))
-    print(message)
     producer.send(topic, value=message)
+    print(message)
 
 
 # find the closest match in weight range
@@ -208,7 +204,7 @@ def closest_product_match(lst, k):
 # purchase quantity (usually 1, max 2)
 def random_quantity():
     rnd = random.randint(1, 10)
-    if rnd <= QUANTITY_ONE:
+    if rnd <= quantity_one_freq:
         return 1
     return 2
 
@@ -216,7 +212,7 @@ def random_quantity():
 # smoothie club membership? (usually False)
 def random_club_member():
     rnd = random.randint(1, 10)
-    if rnd <= IS_MEMBER:
+    if rnd <= member_freq:
         return True
     return False
 
@@ -225,10 +221,10 @@ def random_club_member():
 def random_add_supplements(product_id):
     rnd = random.randint(1, 10)
     if str(product_id).startswith('SF') or str(product_id).startswith('SC'):
-        if rnd <= ADD_SUPP_SF_SC:
+        if rnd <= add_supp_freq_group1:
             return False
         return True
-    if rnd <= ADD_SUPP_CS_IS:
+    if rnd <= add_supp_freq_group2:
         return True
     return False
 
