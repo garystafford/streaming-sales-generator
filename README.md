@@ -13,7 +13,7 @@ source of streaming data, or create something new each time. Ideally, the data i
 analyses and visualize different aspects. Additionally, it should have some predictable patterns but is not totally
 random or results if an even distribution over time.
 
-This configurable data generator streams synthetic drink sales transactions and product inventory activities to Apache
+This configurable data generator streams synthetic drink sale transactions and product inventory activities to Apache
 Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark Structured Streaming,
 Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analytics.
 
