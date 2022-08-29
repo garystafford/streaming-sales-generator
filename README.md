@@ -30,7 +30,7 @@ Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analy
 * Restocks low product inventories based on a minimum value
 * Writes restocking activities to a second Apache Kafka topic: time, old inventory, new inventory, etc. (topic 3)
 
-## Product Samples from CSV File
+## Raw Product List
 
 Products are based on Tropical Smoothie menu
 from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns with `_`
@@ -46,7 +46,7 @@ SC04,Supercharged Smoothies,Lean Machine,24 oz.,5.99,35,0,1,1,1,3,4,12,184
 IS04,Indulgent Smoothies,Mocha Madness,24 oz.,5.49,60,0,0,1,1,4,2,8,242
 ```
 
-## Products Topic Samples
+## Products Topic
 
 A few sample product messages:
 
@@ -120,9 +120,9 @@ A few sample product messages:
 ]
 ```
 
-## Transactions Topic Samples
+## Purchases Topic
 
-A few sample transaction messages:
+A few sample sales transaction messages:
 
 ```json
 [
@@ -173,9 +173,9 @@ A few sample transaction messages:
 ]
 ```
 
-## Restocking Activity Topic Samples
+## Restocking Activity Topic
 
-A few sample restock activity messages:
+A few sample restocking activity messages:
 
 ```json
 [
