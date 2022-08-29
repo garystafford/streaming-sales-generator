@@ -13,14 +13,14 @@ source of streaming data, or create something new each time. Ideally, the data i
 analyses and visualize different aspects. Additionally, it should have some predictable patterns but is not totally
 random or results if an even distribution over time.
 
-This configurable data generator streams drink products, synthetic sales transactions, and product inventory activities
+This configurable data generator streams drink products, semi-random sales transactions, and product inventory activities
 to Apache Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark Structured
 Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analytics.
 
 ## Highlights
 
 * All configuration in a separate `configuration.ini` file
-* Nothing is completely random - variables are weighted and can be adjusted in `.ini` file
+* Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
 * Over 25 smoothie drink products: descriptions, inventories, product weightings
 * Writes initial product list to an Apache Kafka topic (topic 1)
 * Generates streaming drink purchases, with time, item, quantity, price, total price, etc.
@@ -34,8 +34,7 @@ Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analy
 
 Products roughly based on Tropical Smoothie menu
 from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns, with `_`,
-are used
-to generate artificial product category and product weightings, which determine how frequently the products are
+are used to generate artificial product category and product weightings, which determine how frequently the products are
 purchased in the simulation.
 
 ```text
@@ -218,8 +217,10 @@ See [bitnami/kafka](https://hub.docker.com/r/bitnami/kafka) on Docker Hub for mo
 locally using Docker.
 
 ```shell
+# deploy kafka stack
 docker stack deploy kafka --compose-file docker-compose.yml
 
+# optional: to exec into Kafka container
 docker container ls
 docker exec -it <docker_container_name> bash
 ```
