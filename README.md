@@ -37,13 +37,12 @@ are used
 to generate artificial product category and product weightings, which determine how frequently the products are
 purchased in the simulation.
 
-```csv
+```text
 ID,Category,Item,Size,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
 CS01,Classic Smoothies,Sunrise Sunset,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,2,6,6
-CS02,Classic Smoothies,Kiwi Quencher,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,5,15,21
-CS03,Classic Smoothies,Paradise Point,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,3,9,30
-CS04,Classic Smoothies,Sunny Day,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,4,12,42
-CS05,Classic Smoothies,Mango Magic,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,3,9,51
+SF03,Superfoods Smoothies,Acai Berry Boost,24 oz.,5.99,50,TRUE,FALSE,FALSE,FALSE,2,2,4,118
+SC02,Supercharged Smoothies,Peanut Paradise,24 oz.,5.99,35,FALSE,FALSE,FALSE,FALSE,3,4,12,160
+IS01,Indulgent Smoothies,Bahama Mama,24 oz.,5.49,60,TRUE,FALSE,FALSE,FALSE,4,5,20,210
 ```
 
 ## Transaction Samples
