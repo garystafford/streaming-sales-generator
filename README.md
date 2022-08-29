@@ -21,7 +21,7 @@ Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analy
 
 * All configuration in a separate `configuration.ini` file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
-* Over 25 smoothie drink products: descriptions, inventories, product weightings
+* Over 25 smoothie drink products in `products.csv`: descriptions, inventories, product weightings
 * Writes initial product list to an Apache Kafka topic (topic 1)
 * Generates streaming drink purchases, with time, item, quantity, price, total price, etc.
 * Writes smoothie purchases to an Apache Kafka topic (topic 2)
@@ -36,6 +36,8 @@ Products are based on Tropical Smoothie menu
 from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns with `_`
 are were used to generate artificial product category and product weightings. These determine how frequently the 
 products are purchased in the simulation.
+
+A few sample products from CSV file, `products.csv`:
 
 ```text
 ID,Category,Item,Size,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
