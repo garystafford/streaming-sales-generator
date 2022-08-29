@@ -1,9 +1,9 @@
-# Streaming Sales Generator
+# Yet Another Streaming Data Generator (YASDG)
 
 ## TL;DR
 
-1. Run the command: `docker-compose up -d`
-2. Run the command: `python3 ./consumer.py`
+1. Run the command `docker-compose up -d` to create local instance of Kafka
+2. Run the command `python3 ./producer.py` to generate streaming data
 3. Run the command `python3 ./consumer.py` in a separate terminal window to view results
 
 ## Background
