@@ -10,9 +10,9 @@ BOOTSTRAP_SERVERS = 'localhost:9092'
 TOPIC_PURCHASE = 'smoothie.purchases'
 TOPIC_STOCKING = 'smoothie.stockings'
 
-MIN_SALE_FREQ = 1  # minimum sales frequency in seconds
-MAX_SALE_FREQ = 5  # maximum sales frequency in seconds
-NUMBER_OF_SALES = 25  # number of transactions to generate
+MIN_SALE_FREQ = 120  # minimum sales frequency in seconds
+MAX_SALE_FREQ = 300  # maximum sales frequency in seconds
+NUMBER_OF_SALES = 100  # number of transactions to generate
 
 CLUB_MEMBER_DISCOUNT = .10  # % discount for smoothie club members
 SUPPLEMENTS_COST = 1.99  # cost of adding supplements to smoothie
@@ -22,7 +22,7 @@ QUANTITY_ONE = 8  # chance of quantity being 1 vs. 2 on scale of 1 to 10?
 ADD_SUPP_SF_SC = 5  # chance of adding a supplement to SF or SC smoothies on scale of 1 to 10?
 ADD_SUPP_CS_IS = 2  # chance of adding a supplement to CS or IS smoothies on scale of 1 to 10?
 
-MIN_INVENTORY = 34  # minimum inventory level
+MIN_INVENTORY = 10  # minimum inventory level
 RESTOCK_AMOUNT = 15  # restocking amount
 
 # *** VARIABLES ***
