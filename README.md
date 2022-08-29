@@ -30,12 +30,12 @@ Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analy
 * Restocks low product inventories based on a minimum value
 * Writes restocking activities to a second Apache Kafka topic: time, old inventory, new inventory, etc. (topic 3)
 
-## Product Samples
+## Product Samples from CSV File
 
-Products roughly based on Tropical Smoothie menu
-from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns, with `_`,
-are used to generate artificial product category and product weightings, which determine how frequently the products are
-purchased in the simulation.
+Products are based on Tropical Smoothie menu
+from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns with `_`
+are were used to generate artificial product category and product weightings. These determine how frequently the 
+products are purchased in the simulation.
 
 ```text
 ID,Category,Item,Size,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
@@ -46,7 +46,9 @@ SC04,Supercharged Smoothies,Lean Machine,24 oz.,5.99,35,0,1,1,1,3,4,12,184
 IS04,Indulgent Smoothies,Mocha Madness,24 oz.,5.49,60,0,0,1,1,4,2,8,242
 ```
 
-## Product Samples
+## Products Topic Samples
+
+A few sample product messages:
 
 ```json
 [
@@ -118,7 +120,9 @@ IS04,Indulgent Smoothies,Mocha Madness,24 oz.,5.49,60,0,0,1,1,4,2,8,242
 ]
 ```
 
-## Transaction Samples
+## Transactions Topic Samples
+
+A few sample transaction messages:
 
 ```json
 [
@@ -169,7 +173,9 @@ IS04,Indulgent Smoothies,Mocha Madness,24 oz.,5.49,60,0,0,1,1,4,2,8,242
 ]
 ```
 
-## Restocking Activity Samples
+## Restocking Activity Topic Samples
+
+A few sample restock activity messages:
 
 ```json
 [
