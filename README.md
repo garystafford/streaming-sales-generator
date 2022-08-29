@@ -14,20 +14,20 @@ analyses and visualize different aspects. Additionally, it should have some pred
 random or results if an even distribution over time.
 
 This configurable data generator streams synthetic drink sales transactions and product inventory activities to Apache
-Kafka for demonstrating streaming data analytics tools, such as Apache Spark Structured Streaming, Apache Flink, Apache
-Pinot, Databricks, Amazon Kinesis Data Analytics.
+Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark Structured Streaming,
+Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analytics.
 
 ## Highlights
 
-* All configuration in the `configuration.ini` file
+* All configuration in a separate `configuration.ini` file
 * Nothing is completely random - variables are weighted and can be adjusted in `.ini` file
 * Over 25 smoothie drink products: descriptions, inventories, product weightings
-* Generates streaming drink purchases with: time, item, quantity, price, total price, etc.
+* Generates streaming drink purchases, with time, item, quantity, price, total price, etc.
 * Writes smoothie purchases to an Apache Kafka topic
 * Club membership discounts semi-randomly applied to smoothie purchases
 * Add-on supplements semi-randomly applied to smoothie purchases
 * Restocks low product inventories based on a minimum value
-* Writes restocking activities to a second Apache Kafka topic
+* Writes restocking activities to a second Apache Kafka topic: time, old inventory, new inventory
 
 ## Product Samples
 
@@ -102,34 +102,39 @@ CS05,Classic Smoothies,Mango Magic,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,3,9,5
 ```json
 [
     {
-        "transaction_time": "2022-08-29 13:03:02.817920",
-        "product_id": "SC02",
-        "existing_level": 10,
-        "new_level": 25
-    },
-    {
-        "transaction_time": "2022-08-29 13:03:47.405038",
-        "product_id": "SC04",
-        "existing_level": 10,
-        "new_level": 25
-    },
-    {
-        "transaction_time": "2022-08-29 13:03:52.222737",
-        "product_id": "IS01",
-        "existing_level": 9,
-        "new_level": 24
-    },
-    {
-        "transaction_time": "2022-08-29 13:05:01.114076",
+        "transaction_time": "2022-08-29 15:09:23.007874",
         "product_id": "SC05",
+        "existing_level": 9,
+        "stock_quantity": 15,
+        "new_level": 24
+    },
+    {
+        "transaction_time": "2022-08-29 15:12:30.415329",
+        "product_id": "SC03",
         "existing_level": 10,
+        "stock_quantity": 15,
         "new_level": 25
     },
     {
-        "transaction_time": "2022-08-29 13:08:23.356092",
-        "product_id": "SC02",
+        "transaction_time": "2022-08-29 15:19:38.139400",
+        "product_id": "SC01",
+        "existing_level": 10,
+        "stock_quantity": 15,
+        "new_level": 25
+    },
+    {
+        "transaction_time": "2022-08-29 15:34:35.392350",
+        "product_id": "SC04",
         "existing_level": 9,
+        "stock_quantity": 15,
         "new_level": 24
+    },
+    {
+        "transaction_time": "2022-08-29 15:48:55.183778",
+        "product_id": "IS01",
+        "existing_level": 10,
+        "stock_quantity": 15,
+        "new_level": 25
     }
 ]
 ```

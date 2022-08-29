@@ -103,17 +103,20 @@ class Purchase:
 
 
 class Stocking:
-    def __init__(self, transaction_time, product_id, existing_level, new_level):
+    def __init__(self, transaction_time, product_id, existing_level, stock_quantity, new_level):
         self.transaction_time = str(transaction_time)
         self.product_id = str(product_id)
         self.existing_level = int(existing_level)
+        self.stock_quantity = int(stock_quantity)
         self.new_level = int(new_level)
 
     def __str__(self):
-        return 'Stocking: time: {0}, product_id: {1}, existing_level: {2}, new_level: {3}'.format(
+        return 'Stocking: time: {0}, product_id: {1}, existing_level: {2:.0f}, stock_quantity: {3:.0f}, ' \
+               'new_level: {4:.0f}'.format(
             self.transaction_time,
             self.product_id,
             self.existing_level,
+            self.stock_quantity,
             self.new_level
         )
 
@@ -123,7 +126,7 @@ def main():
     generate_sales()
 
 
-# product list from csv file
+# create a product and weighting lists from CSV data file
 def create_product_list():
     with open('products.csv', 'r') as csv_file:
         next(csv_file)  # skip header row
@@ -137,7 +140,7 @@ def create_product_list():
     product_weightings.sort()
 
 
-# generate sales
+# generate synthetic sale transactions
 def generate_sales():
     purchases = []
     for x in range(0, number_of_sales):
@@ -181,15 +184,16 @@ def restock_item(product_id):
                 datetime.datetime.utcnow(),
                 product.product_id,
                 product.inventory,
+                restock_amount,
                 new_inventory
             )
             stockings.append(stocking)
-            product.inventory = new_inventory
+            product.inventory = new_inventory  # update existing product item
             publish_to_kafka(topic_stockings, stocking)
             break
 
 
-# publish messages to kafka topic
+# publish a message to a kafka topic
 def publish_to_kafka(topic, message):
     producer = KafkaProducer(
         bootstrap_servers=bootstrap_servers,
