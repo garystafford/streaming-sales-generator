@@ -13,22 +13,22 @@ source of streaming data, or create something new each time. Ideally, the data i
 analyses and visualize different aspects. Additionally, it should have some predictable patterns but is not totally
 random or results if an even distribution over time.
 
-This configurable data generator streams synthetic drink sale transactions and product inventory activities to Apache
-Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark Structured Streaming,
-Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analytics.
+This configurable data generator streams drink products, synthetic sales transactions, and product inventory activities
+to Apache Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark Structured
+Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analytics.
 
 ## Highlights
 
 * All configuration in a separate `configuration.ini` file
 * Nothing is completely random - variables are weighted and can be adjusted in `.ini` file
 * Over 25 smoothie drink products: descriptions, inventories, product weightings
-* Writes products to an Apache Kafka topic
+* Writes initial product list to an Apache Kafka topic (topic 1)
 * Generates streaming drink purchases, with time, item, quantity, price, total price, etc.
-* Writes smoothie purchases to an Apache Kafka topic
+* Writes smoothie purchases to an Apache Kafka topic (topic 2)
 * Club membership discounts semi-randomly applied to smoothie purchases
 * Add-on supplements semi-randomly applied to smoothie purchases
 * Restocks low product inventories based on a minimum value
-* Writes restocking activities to a second Apache Kafka topic: time, old inventory, new inventory
+* Writes restocking activities to a second Apache Kafka topic: time, old inventory, new inventory, etc. (topic 3)
 
 ## Product Samples
 
@@ -50,7 +50,7 @@ IS01,Indulgent Smoothies,Bahama Mama,24 oz.,5.49,60,TRUE,FALSE,FALSE,FALSE,4,5,2
 
 ```json
 [
-  {
+    {
         "product_id": "CS01",
         "category": "Classic Smoothies",
         "item": "Sunrise Sunset",
