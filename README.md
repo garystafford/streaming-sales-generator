@@ -22,6 +22,7 @@ Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analytics.
 * All configuration in a separate `configuration.ini` file
 * Nothing is completely random - variables are weighted and can be adjusted in `.ini` file
 * Over 25 smoothie drink products: descriptions, inventories, product weightings
+* Writes products to an Apache Kafka topic
 * Generates streaming drink purchases, with time, item, quantity, price, total price, etc.
 * Writes smoothie purchases to an Apache Kafka topic
 * Club membership discounts semi-randomly applied to smoothie purchases
@@ -43,6 +44,78 @@ CS01,Classic Smoothies,Sunrise Sunset,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,2,
 SF03,Superfoods Smoothies,Acai Berry Boost,24 oz.,5.99,50,TRUE,FALSE,FALSE,FALSE,2,2,4,118
 SC02,Supercharged Smoothies,Peanut Paradise,24 oz.,5.99,35,FALSE,FALSE,FALSE,FALSE,3,4,12,160
 IS01,Indulgent Smoothies,Bahama Mama,24 oz.,5.49,60,TRUE,FALSE,FALSE,FALSE,4,5,20,210
+```
+
+## Product Samples
+
+```json
+[
+  {
+        "product_id": "CS01",
+        "category": "Classic Smoothies",
+        "item": "Sunrise Sunset",
+        "size": "24 oz.",
+        "price": 4.99,
+        "inventory": 75,
+        "contains_fruit": true,
+        "contains_veggies": false,
+        "contains_nuts": false,
+        "contains_caffeine": false,
+        "range_weight": 6
+    },
+    {
+        "product_id": "SF01",
+        "category": "Superfoods Smoothies",
+        "item": "Island Green",
+        "size": "24 oz.",
+        "price": 5.99,
+        "inventory": 50,
+        "contains_fruit": true,
+        "contains_veggies": true,
+        "contains_nuts": false,
+        "contains_caffeine": false,
+        "range_weight": 108
+    },
+    {
+        "product_id": "SC02",
+        "category": "Supercharged Smoothies",
+        "item": "Peanut Paradise",
+        "size": "24 oz.",
+        "price": 5.99,
+        "inventory": 35,
+        "contains_fruit": false,
+        "contains_veggies": false,
+        "contains_nuts": false,
+        "contains_caffeine": false,
+        "range_weight": 160
+    },
+    {
+        "product_id": "SC03",
+        "category": "Supercharged Smoothies",
+        "item": "Health Nut",
+        "size": "24 oz.",
+        "price": 5.99,
+        "inventory": 35,
+        "contains_fruit": false,
+        "contains_veggies": false,
+        "contains_nuts": true,
+        "contains_caffeine": false,
+        "range_weight": 172
+    },
+    {
+        "product_id": "IS04",
+        "category": "Indulgent Smoothies",
+        "item": "Mocha Madness",
+        "size": "24 oz.",
+        "price": 5.49,
+        "inventory": 60,
+        "contains_fruit": false,
+        "contains_veggies": false,
+        "contains_nuts": true,
+        "contains_caffeine": true,
+        "range_weight": 242
+    }
+]
 ```
 
 ## Transaction Samples
@@ -161,14 +234,18 @@ From within the Kafka container:
 
 ```shell
 export BOOTSTRAP_SERVERS="localhost:9092"
+export TOPIC_PRODUCTS="smoothie.products"
 export TOPIC_PURCHASES="smoothie.purchases"
 export TOPIC_STOCKINGS="smoothie.stockings"
 
 # delete topics
+kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PRODUCTS
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PURCHASES
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_STOCKINGS
 
 # read topics from beginning
+kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
+  --topic $TOPIC_PRODUCTS --from-beginning
 kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
   --topic $TOPIC_PURCHASES --from-beginning
 kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \

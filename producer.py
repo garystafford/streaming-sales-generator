@@ -17,6 +17,7 @@ config.read('configuration.ini')
 
 # *** CONFIGURATION ***
 bootstrap_servers = config['KAFKA']['bootstrap_servers']
+topic_products = config['KAFKA']['topic_products']
 topic_purchases = config['KAFKA']['topic_purchases']
 topic_stockings = config['KAFKA']['topic_stockings']
 
@@ -134,8 +135,9 @@ def create_product_list():
         csv_products = list(csv_reader)
 
     for p in csv_products:
-        product = Product(p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8], p[9], p[13])
+        product = Product(p[0], p[1], p[2], p[3], p[4], p[5], int(p[6]), int(p[7]), int(p[8]), int(p[9]), p[13])
         products.append(product)
+        publish_to_kafka(topic_products, product)
         product_weightings.append(int(p[13]))
     product_weightings.sort()
 
