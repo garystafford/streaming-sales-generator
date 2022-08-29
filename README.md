@@ -169,8 +169,10 @@ kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PU
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_STOCKINGS
 
 # read topics from beginning
-kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS --topic $TOPIC_PURCHASES --from-beginning
-kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS --topic $TOPIC_STOCKINGS --from-beginning
+kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
+  --topic $TOPIC_PURCHASES --from-beginning
+kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
+  --topic $TOPIC_STOCKINGS --from-beginning
 ```
 
 ---
