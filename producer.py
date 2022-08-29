@@ -203,7 +203,7 @@ def publish_to_kafka(topic, message):
     )
     message = json.dumps(vars(message))
     producer.send(topic, value=message)
-    print(message)
+    print("Topic: {0}, Value: {1}".format(topic, message))
 
 
 # find the closest match in weight range
