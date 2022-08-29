@@ -8,7 +8,7 @@
 
 ## Background
 
-Everytime you want to explore a new streaming technology or create a customer demonstration, first you must find a good
+Everytime you want to explore a new streaming technology or create a demonstration, first you must find a good
 source of streaming data, or create something new each time. Ideally, the data is complex enough to perform multiple
 analyses and visualize different aspects. Additionally, it should have some predictable patterns but is not totally
 random or results if an even distribution over time.
