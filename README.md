@@ -11,17 +11,52 @@
 ## Transaction Sample
 
 ```json
-{
-    "transaction_time": "2022-08-29 02:14:17.980703",
-    "product_id": "CS02",
-    "price": 4.99,
-    "quantity": 1,
-    "is_member": false,
-    "member_discount": 0.0,
-    "add_supplements": false,
-    "supplement_price": 0.0,
-    "total_purchase": 6.98
-}
+[
+    {
+        "transaction_time": "2022-08-29 12:39:06.178496",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-08-29 12:39:09.523024",
+        "product_id": "SC02",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-08-29 12:39:12.973486",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-08-29 12:39:17.233186",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 7.18
+    }
+]
 ```
 
 ## Commands
