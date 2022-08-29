@@ -1,4 +1,4 @@
-# Streaming Smoothie Sales Generator
+# Streaming Sales Generator
 
 Configurable streaming data generator, which streams synthetic sales transactions to Apache Kafka for demonstration
 purposes. Can be used to demonstrate streaming data analytics tools, such as Apache Spark Structured Streaming, Apache
@@ -8,13 +8,13 @@ Flink, Apache Pinot, Databricks, Amazon Kinesis Data Analytics.
 
 * All configuration in `configuration.ini` file
 * Nothing is completely random - all purchase variables are weighted
-* Over 25 products: descriptions, inventories, product weightings
+* Over 25 smoothie drink products: descriptions, inventories, product weightings
 * Generates streaming purchases
-* Writes the purchases to an Apache Kafka topic
+* Writes smoothie purchases to an Apache Kafka topic
+* Club membership discounts semi-randomly applied to smoothie purchases
+* Add-on supplements semi-randomly applied to smoothie purchases
 * Restocks low product inventories based on minimum value
-* Writes restocking activity to a second Apache Kafka topic
-* Club membership discounts semi-randomly applied to purchases
-* Add-on supplements semi-randomly applied to purchases
+* Writes restocking activities to a second Apache Kafka topic
 
 ## Product Samples
 
