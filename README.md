@@ -1,6 +1,8 @@
 # Streaming Smoothie Sales Generator
 
-Highly-configurable data generator, which streams sales transactions to Apache Kafka for demonstration purposes. Can be used to demonstrate streaming data analytics tools, such as Apache Spark Structured Streaming, Apache Flink, Apache Pinot, Databricks, Amazon Kinesis Data Analytics
+Configurable streaming data generator, which streams synthetic sales transactions to Apache Kafka for demonstration
+purposes. Can be used to demonstrate streaming data analytics tools, such as Apache Spark Structured Streaming, Apache
+Flink, Apache Pinot, Databricks, Amazon Kinesis Data Analytics.
 
 ## Highlights
 
@@ -15,6 +17,9 @@ Highly-configurable data generator, which streams sales transactions to Apache K
 * Add-on supplements semi-randomly applied to purchases
 
 ## Product Samples
+
+Products roughly based on Tropical Smoothie menu
+from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/).
 
 ```csv
 ID,Category,Item,Size,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
@@ -115,7 +120,8 @@ CS05,Classic Smoothies,Mango Magic,24 oz.,4.99,75,TRUE,FALSE,FALSE,FALSE,3,3,9,5
 
 ## Commands
 
-See https://hub.docker.com/r/bitnami/kafka for more information about running Kafka locally using Docker.
+See [bitnami/kafka](https://hub.docker.com/r/bitnami/kafka) on Docker Hub for more information about running Kafka
+locally using Docker.
 
 ```shell
 docker-compose up -d
