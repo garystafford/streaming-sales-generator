@@ -145,9 +145,10 @@ See [bitnami/kafka](https://hub.docker.com/r/bitnami/kafka) on Docker Hub for mo
 locally using Docker.
 
 ```shell
-docker-compose up -d
+docker stack deploy kafka --compose-file docker-compose.yml
 
-docker exec -it streaming-sales-generator_kafka_1 bash
+docker container ls
+docker exec -it <docker_container_name> bash
 ```
 
 To run the application:
