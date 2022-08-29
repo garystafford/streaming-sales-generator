@@ -1,7 +1,7 @@
 # Purpose: Produce streaming sales and inventory activities to Kafka topics
 # Author:  Gary A. Stafford
 # Date: 2022-08-29
-# Instructions: Modify the configuration.ini file to meet your requirements
+# Instructions: Modify the configuration.ini file to meet your requirements.
 
 import configparser
 import datetime

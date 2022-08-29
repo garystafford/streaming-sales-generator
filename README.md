@@ -1,25 +1,40 @@
 # Streaming Sales Generator
 
-Configurable streaming data generator, which streams synthetic sales transactions to Apache Kafka for demonstration
-purposes. Can be used to demonstrate streaming data analytics tools, such as Apache Spark Structured Streaming, Apache
-Flink, Apache Pinot, Databricks, Amazon Kinesis Data Analytics.
+## TL;DR
+
+1. Run the command: `docker-compose up -d`
+2. Run the command: `python3 ./consumer.py`
+3. Run the command `python3 ./consumer.py` in a separate terminal window to view results
+
+## Background
+
+Everytime you want to explore a new streaming technology or create a customer demonstration, first you must find a good
+source of streaming data, or create something new each time. Ideally, the data is complex enough to perform multiple
+analyses and visualize different aspects. Additionally, it should have some predictable patterns but is not totally
+random or results if an even distribution over time.
+
+This configurable data generator streams synthetic drink sales transactions and product inventory activities to Apache
+Kafka for demonstrating streaming data analytics tools, such as Apache Spark Structured Streaming, Apache Flink, Apache
+Pinot, Databricks, Amazon Kinesis Data Analytics.
 
 ## Highlights
 
-* All configuration in `configuration.ini` file
-* Nothing is completely random - all purchase variables are weighted
+* All configuration in the `configuration.ini` file
+* Nothing is completely random - variables are weighted and can be adjusted in `.ini` file
 * Over 25 smoothie drink products: descriptions, inventories, product weightings
-* Generates streaming purchases
+* Generates streaming drink purchases with: time, item, quantity, price, total price, etc.
 * Writes smoothie purchases to an Apache Kafka topic
 * Club membership discounts semi-randomly applied to smoothie purchases
 * Add-on supplements semi-randomly applied to smoothie purchases
-* Restocks low product inventories based on minimum value
+* Restocks low product inventories based on a minimum value
 * Writes restocking activities to a second Apache Kafka topic
 
 ## Product Samples
 
 Products roughly based on Tropical Smoothie menu
-from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/).
+from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns, with `_`, are used
+to generate artificial product category and product weightings, which determine how frequently the products are
+purchased in the simulation.
 
 ```csv
 ID,Category,Item,Size,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight

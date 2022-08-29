@@ -1,7 +1,8 @@
 # Purpose: Consume messages from Kafka topic
 # Author:  Gary A. Stafford
 # Date: 2022-08-29
-# Instructions: Modify the configuration.ini file to meet your requirements
+# Instructions: Modify the configuration.ini file to meet your requirements.
+#               Select the topic to view the messages from.
 
 import configparser
 import json
@@ -20,7 +21,7 @@ topic_stockings = config['KAFKA']['topic_stockings']
 
 def main():
     consumer = KafkaConsumer(
-        topic_stockings,
+        topic_purchases,
         bootstrap_servers=bootstrap_servers,
         value_deserializer=lambda m: json.loads(m.decode('utf-8')),
         auto_offset_reset='earliest',
