@@ -128,50 +128,59 @@ A few sample product messages:
 A few sample sales transaction messages:
 
 ```json
-[
-    {
-        "transaction_time": "2022-08-29 12:39:06.178496",
-        "product_id": "CS08",
+[{
+        "transaction_time": "2022-08-30 12:57:07.942191",
+        "product_id": "CS10",
         "price": 4.99,
-        "quantity": 1,
-        "is_member": false,
-        "member_discount": 0.0,
-        "add_supplements": false,
-        "supplement_price": 0.0,
-        "total_purchase": 6.98
-    },
-    {
-        "transaction_time": "2022-08-29 12:39:09.523024",
-        "product_id": "SC02",
-        "price": 5.99,
         "quantity": 2,
         "is_member": false,
         "member_discount": 0.0,
-        "add_supplements": true,
-        "supplement_price": 1.99,
-        "total_purchase": 15.96
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
     },
     {
-        "transaction_time": "2022-08-29 12:39:12.973486",
-        "product_id": "CS09",
-        "price": 4.99,
+        "transaction_time": "2022-08-30 12:57:11.113150",
+        "product_id": "SC03",
+        "price": 5.99,
         "quantity": 1,
         "is_member": false,
         "member_discount": 0.0,
         "add_supplements": false,
         "supplement_price": 0.0,
-        "total_purchase": 6.98
+        "total_purchase": 5.99
     },
     {
-        "transaction_time": "2022-08-29 12:39:17.233186",
-        "product_id": "SC01",
+        "transaction_time": "2022-08-30 12:57:12.338458",
+        "product_id": "SC05",
         "price": 5.99,
         "quantity": 1,
         "is_member": true,
         "member_discount": 0.1,
         "add_supplements": false,
         "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-08-30 12:57:14.584755",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
         "total_purchase": 7.18
+    }, {
+        "transaction_time": "2022-08-30 12:57:18.787460",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
     }
 ]
 ```

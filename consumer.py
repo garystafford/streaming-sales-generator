@@ -21,7 +21,7 @@ topic_stockings = config['KAFKA']['topic_stockings']
 
 def main():
     consumer = KafkaConsumer(
-        topic_products,
+        topic_purchases,
         bootstrap_servers=bootstrap_servers,
         value_deserializer=lambda m: json.loads(m.decode('utf-8')),
         auto_offset_reset='earliest'
