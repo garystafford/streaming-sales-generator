@@ -229,8 +229,7 @@ locally using Docker.
 docker stack deploy kafka --compose-file docker-compose.yml
 
 # optional: to exec into Kafka container
-docker container ls
-docker exec -it <docker_container_name> bash
+docker exec -it $(docker container ls --filter  name=kafka_kafka --format "{{.ID}}") bash
 ```
 
 To run the application:
@@ -248,20 +247,41 @@ export TOPIC_PRODUCTS="smoothie.products"
 export TOPIC_PURCHASES="smoothie.purchases"
 export TOPIC_STOCKINGS="smoothie.stockings"
 
+# list topics
+kafka-topics.sh --list --bootstrap-server $BOOTSTRAP_SERVERS
+
 # delete topics
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PRODUCTS
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PURCHASES
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_STOCKINGS
 
+# optional: create partitions (or will be automatically created)
+kafka-topics.sh --create --topic $TOPIC_PRODUCTS \
+    --partitions 3 --replication-factor 1 \
+    --config cleanup.policy=compact \
+    --bootstrap-server $BOOTSTRAP_SERVERS
+
+kafka-topics.sh --create --topic $TOPIC_PURCHASES \
+    --partitions 3 --replication-factor 1 \
+    --config cleanup.policy=compact \
+    --bootstrap-server $BOOTSTRAP_SERVERS
+
+kafka-topics.sh --create --topic $TOPIC_STOCKINGS \
+    --partitions 3 --replication-factor 1 \
+    --config cleanup.policy=compact \
+    --bootstrap-server $BOOTSTRAP_SERVERS
+
 # read topics from beginning
 kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
-  --topic $TOPIC_PRODUCTS --from-beginning
-kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
-  --topic $TOPIC_PURCHASES --from-beginning
-kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
-  --topic $TOPIC_STOCKINGS --from-beginning
-```
+    --topic $TOPIC_PRODUCTS --from-beginning
 
+kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
+    --topic $TOPIC_PURCHASES --from-beginning
+
+kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
+    --topic $TOPIC_STOCKINGS --from-beginning
+```
+s   
 ---
 _The contents of this repository represent my viewpoints and not of my past or current employers, including Amazon Web
 Services (AWS). All third-party libraries, modules, plugins, and SDKs are the property of their respective owners. The
