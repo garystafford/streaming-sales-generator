@@ -1,4 +1,4 @@
-# Purpose: Consumes all messages from Kafka topic
+# Purpose: Consumes all messages from Kafka topic for testing purposes
 # Author:  Gary A. Stafford
 # Date: 2022-08-29
 # Instructions: Modify the configuration.ini file to meet your requirements.
