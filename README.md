@@ -13,23 +13,23 @@ source of streaming data, or create something new each time. Ideally, the data i
 analyses and visualize different aspects. Additionally, it should have some predictable patterns but is not totally
 random or results if an even distribution over time.
 
-This configurable data generator streams drink products, semi-random sales transactions, and product inventory
-activities to Apache Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark
-Structured Streaming, Apache Beam, Apache Flink, Apache Pinot, Databricks, Google Cloud Dataproc, and Amazon Kinesis 
-Data Analytics.
+This configurable data generator (`producer.py`) streams drink products, semi-random sales transactions, and product
+inventory activities to Apache Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache
+Spark Structured Streaming, Apache Beam, Apache Flink, Apache Pinot, Databricks, Google Cloud Dataproc, and Amazon
+Kinesis Data Analytics.
 
 ## Highlights
 
 * All configuration in a separate `configuration.ini` file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
 * Over 25 smoothie drink products in `products.csv`: descriptions, inventories, product weightings
-* Writes initial product list to an Apache Kafka topic (topic 1)
+* Writes initial product list to an Apache Kafka topic (topic 1/3)
 * Generates streaming drink purchases, with time, item, quantity, price, total price, etc.
-* Writes smoothie purchases to an Apache Kafka topic (topic 2)
+* Writes smoothie purchases to an Apache Kafka topic (topic 2/3)
 * Club membership discounts semi-randomly applied to smoothie purchases
 * Add-on supplements semi-randomly applied to smoothie purchases
 * Restocks low product inventories based on a minimum value
-* Writes restocking activities to a second Apache Kafka topic: time, old inventory, new inventory, etc. (topic 3)
+* Writes restocking activities to a second Apache Kafka topic: time, old inventory, new inventory, etc. (topic 3/3)
 
 ## Raw Product List
 
@@ -125,7 +125,7 @@ A few sample product messages are show below.
 
 ## Purchases Topic
 
-A few sample sales transaction messages are show below. The `sample_data.json` file contains more sample data. 
+A few sample sales transaction messages are show below. The `sample_data.json` file contains more sample data.
 
 ```json
 [
@@ -307,7 +307,7 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
 * Add SASL/SCRAM authentication option for Apache Kafka (currently unauthenticated only)
 * Add AWS IAM authentication option for Amazon MSK (currently unauthenticated only)
 * Store products with real-time inventory levels in a datastore (e.g., Amazon DynamoDB)
-* Add hours of operation (e.g., Monday 8AM - 8PM)
+* Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
 * Add semi-random sales volume variability based on day and time of day (e.g., Friday evening vs. Monday morning)
 * Add positive and negative sales anomalies variable, such as a winter storm, power outage, or marketing promotion
 * Add supply change issues variable that could impact availability of certain products (zero inventory/lost sales)
