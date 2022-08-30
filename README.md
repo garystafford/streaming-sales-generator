@@ -244,9 +244,9 @@ From within the Kafka container:
 
 ```shell
 export BOOTSTRAP_SERVERS="localhost:9092"
-export TOPIC_PRODUCTS="smoothie.products"
-export TOPIC_PURCHASES="smoothie.purchases"
-export TOPIC_STOCKINGS="smoothie.stockings"
+export TOPIC_PRODUCTS="demo.products"
+export TOPIC_PURCHASES="demo.purchases"
+export TOPIC_STOCKINGS="demo.stockings"
 
 # list topics
 kafka-topics.sh --list --bootstrap-server $BOOTSTRAP_SERVERS

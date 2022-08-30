@@ -37,6 +37,7 @@ restock_amount = int(config['INVENTORY']['restock_amount'])
 # *** VARIABLES ***
 products = []
 product_weightings = []
+purchases = []
 stockings = []
 
 
@@ -127,7 +128,7 @@ def main():
     generate_sales()
 
 
-# create a product and weighting lists from CSV data file
+# create products and weightings lists from CSV data file
 def create_product_list():
     with open('products.csv', 'r') as csv_file:
         next(csv_file)  # skip header row
@@ -135,7 +136,8 @@ def create_product_list():
         csv_products = list(csv_reader)
 
     for p in csv_products:
-        product = Product(p[0], p[1], p[2], p[3], p[4], p[5], int(p[6]), int(p[7]), int(p[8]), int(p[9]), p[13])
+        product = Product(p[0], p[1], p[2], p[3], p[4], p[5], to_bool(p[6]),
+                          to_bool(p[7]), to_bool(p[8]), to_bool(p[9]), p[13])
         products.append(product)
         publish_to_kafka(topic_products, product)
         product_weightings.append(int(p[13]))
@@ -144,7 +146,6 @@ def create_product_list():
 
 # generate synthetic sale transactions
 def generate_sales():
-    purchases = []
     for x in range(0, number_of_sales):
         range_min = product_weightings[0]
         range_max = product_weightings[-1]
@@ -174,7 +175,6 @@ def generate_sales():
                     restock_item(product.product_id)
                 break
         time.sleep(random.randint(min_sale_freq, max_sale_freq))
-    return purchases
 
 
 # restock inventories
@@ -195,15 +195,21 @@ def restock_item(product_id):
             break
 
 
-# publish a message to a kafka topic
+# serialize object to json and publish message to kafka topic
 def publish_to_kafka(topic, message):
     producer = KafkaProducer(
         bootstrap_servers=bootstrap_servers,
-        value_serializer=lambda v: json.dumps(v).encode('utf-8')
+        value_serializer=lambda v: json.dumps(vars(v)).encode('utf-8')
     )
-    message = json.dumps(vars(message))
     producer.send(topic, value=message)
-    print("Topic: {0}, Value: {1}".format(topic, message))
+    print('Topic: {0}, Value: {1}'.format(topic, message))
+
+
+# convert uppercase boolean values from CSV file to Python
+def to_bool(value):
+    if type(value) == str and str(value).lower() == 'true':
+        return 1
+    return 0
 
 
 # find the closest match in weight range
