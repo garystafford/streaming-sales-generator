@@ -1,4 +1,4 @@
-# Purpose: Produce streaming sales and inventory activities to Kafka topics
+# Purpose: Produces products, streaming sales transactions, and restocking activities to Kafka topics
 # Author:  Gary A. Stafford
 # Date: 2022-08-29
 # Instructions: Modify the configuration.ini file to meet your requirements.
@@ -37,8 +37,6 @@ restock_amount = int(config['INVENTORY']['restock_amount'])
 # *** VARIABLES ***
 products = []
 product_weightings = []
-purchases = []
-stockings = []
 
 
 class Product:
@@ -83,9 +81,8 @@ class Purchase:
         self.member_discount = float(member_discount)
         self.add_supplements = bool(add_supplements)
         self.supplement_price = float(supplement_price)
-        self.total_purchase = self.quantity * (self.price + supplements_cost)
-        if self.is_member:
-            self.total_purchase = self.total_purchase * (1 - club_member_discount)
+        self.total_purchase = self.quantity * (self.price + supplement_price)
+        self.total_purchase = self.total_purchase * (1 - member_discount)
         self.total_purchase = round(self.total_purchase, 2)
 
     def __str__(self):
@@ -168,7 +165,6 @@ def generate_sales():
                     add_supplement,
                     supplement_price
                 )
-                purchases.append(purchase)
                 publish_to_kafka(topic_purchases, purchase)
                 product.inventory = product.inventory - quantity
                 if product.inventory <= min_inventory:
@@ -189,7 +185,6 @@ def restock_item(product_id):
                 restock_amount,
                 new_inventory
             )
-            stockings.append(stocking)
             product.inventory = new_inventory  # update existing product item
             publish_to_kafka(topic_stockings, stocking)
             break

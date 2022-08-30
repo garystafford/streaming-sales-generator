@@ -1,4 +1,4 @@
-# Purpose: Consume messages from Kafka topic
+# Purpose: Consumes all messages from Kafka topic
 # Author:  Gary A. Stafford
 # Date: 2022-08-29
 # Instructions: Modify the configuration.ini file to meet your requirements.
@@ -8,7 +8,6 @@ import configparser
 import json
 
 from kafka import KafkaConsumer
-
 
 config = configparser.ConfigParser()
 config.read('configuration.ini')
@@ -25,11 +24,10 @@ def main():
         topic_products,
         bootstrap_servers=bootstrap_servers,
         value_deserializer=lambda m: json.loads(m.decode('utf-8')),
-        auto_offset_reset='earliest',
+        auto_offset_reset='earliest'
     )
     for message in consumer:
-        data = message.value
-        print(data)
+        print(message.value)
 
 
 if __name__ == '__main__':
