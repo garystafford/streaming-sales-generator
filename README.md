@@ -14,9 +14,9 @@ analyses and visualize different aspects. Additionally, it should have some pred
 random or results if an even distribution over time.
 
 This configurable data generator streams drink products, semi-random sales transactions, and product inventory
-activities
-to Apache Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark Structured
-Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analytics.
+activities to Apache Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark
+Structured Streaming, Apache Beam, Apache Flink, Apache Pinot, Databricks, Google Cloud Dataproc, and Amazon Kinesis 
+Data Analytics.
 
 ## Highlights
 
@@ -128,7 +128,8 @@ A few sample product messages:
 A few sample sales transaction messages:
 
 ```json
-[{
+[
+    {
         "transaction_time": "2022-08-30 12:57:07.942191",
         "product_id": "CS10",
         "price": 4.99,
@@ -171,7 +172,8 @@ A few sample sales transaction messages:
         "add_supplements": true,
         "supplement_price": 1.99,
         "total_purchase": 7.18
-    }, {
+    },
+    {
         "transaction_time": "2022-08-30 12:57:18.787460",
         "product_id": "SC05",
         "price": 5.99,
@@ -228,6 +230,10 @@ A few sample restocking activity messages:
     }
 ]
 ```
+
+## Sample Dashboard
+
+![Dashboard](dashboard.png)
 
 ## Commands
 
