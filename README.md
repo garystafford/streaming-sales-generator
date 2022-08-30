@@ -250,6 +250,10 @@ export TOPIC_STOCKINGS="smoothie.stockings"
 # list topics
 kafka-topics.sh --list --bootstrap-server $BOOTSTRAP_SERVERS
 
+kafka-topics.sh --describe \
+    --topic $TOPIC_PURCHASES \
+    --bootstrap-server $BOOTSTRAP_SERVERS
+
 # delete topics
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PRODUCTS
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PURCHASES
@@ -257,17 +261,17 @@ kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_ST
 
 # optional: create partitions (or will be automatically created)
 kafka-topics.sh --create --topic $TOPIC_PRODUCTS \
-    --partitions 3 --replication-factor 1 \
+    --partitions 1 --replication-factor 1 \
     --config cleanup.policy=compact \
     --bootstrap-server $BOOTSTRAP_SERVERS
 
 kafka-topics.sh --create --topic $TOPIC_PURCHASES \
-    --partitions 3 --replication-factor 1 \
+    --partitions 1 --replication-factor 1 \
     --config cleanup.policy=compact \
     --bootstrap-server $BOOTSTRAP_SERVERS
 
 kafka-topics.sh --create --topic $TOPIC_STOCKINGS \
-    --partitions 3 --replication-factor 1 \
+    --partitions 1 --replication-factor 1 \
     --config cleanup.policy=compact \
     --bootstrap-server $BOOTSTRAP_SERVERS
 
@@ -281,7 +285,7 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
 kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
     --topic $TOPIC_STOCKINGS --from-beginning
 ```
-s   
+
 ---
 _The contents of this repository represent my viewpoints and not of my past or current employers, including Amazon Web
 Services (AWS). All third-party libraries, modules, plugins, and SDKs are the property of their respective owners. The
