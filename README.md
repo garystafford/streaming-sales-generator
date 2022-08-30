@@ -38,7 +38,7 @@ from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothi
 are were used to generate artificial product category and product weightings. These determine how frequently the
 products are purchased in the simulation.
 
-A few sample products from CSV file, `products.csv`:
+A few sample products from CSV file, `products.csv` are show below.
 
 ```text
 ID,Category,Item,Size,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
@@ -51,7 +51,7 @@ IS04,Indulgent Smoothies,Mocha Madness,24 oz.,5.49,60,0,0,1,1,4,2,8,242
 
 ## Products Topic
 
-A few sample product messages:
+A few sample product messages are show below.
 
 ```json
 [
@@ -125,7 +125,7 @@ A few sample product messages:
 
 ## Purchases Topic
 
-A few sample sales transaction messages:
+A few sample sales transaction messages are show below. The `sample_data.json` file contains more sample data. 
 
 ```json
 [
@@ -189,7 +189,7 @@ A few sample sales transaction messages:
 
 ## Restocking Activity Topic
 
-A few sample restocking activity messages:
+A few sample restocking activity messages are show below.
 
 ```json
 [
