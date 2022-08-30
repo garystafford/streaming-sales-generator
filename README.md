@@ -13,7 +13,8 @@ source of streaming data, or create something new each time. Ideally, the data i
 analyses and visualize different aspects. Additionally, it should have some predictable patterns but is not totally
 random or results if an even distribution over time.
 
-This configurable data generator streams drink products, semi-random sales transactions, and product inventory activities
+This configurable data generator streams drink products, semi-random sales transactions, and product inventory
+activities
 to Apache Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache Spark Structured
 Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analytics.
 
@@ -34,7 +35,7 @@ Streaming, Apache Flink, Apache Pinot, Databricks, and Amazon Kinesis Data Analy
 
 Products are based on Tropical Smoothie menu
 from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns with `_`
-are were used to generate artificial product category and product weightings. These determine how frequently the 
+are were used to generate artificial product category and product weightings. These determine how frequently the
 products are purchased in the simulation.
 
 A few sample products from CSV file, `products.csv`:
@@ -285,6 +286,16 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
 kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
     --topic $TOPIC_STOCKINGS --from-beginning
 ```
+
+## Future Additions
+
+* Add SASL/SCRAM authentication option for Apache Kafka (currently unauthenticated only)
+* Add AWS IAM authentication option for Amazon MSK (currently unauthenticated only)
+* Store products with real-time inventory levels in a datastore (e.g., Amazon DynamoDB)
+* Add hours of operation (e.g., Monday 8AM - 8PM)
+* Add semi-random sales volume variability based on day and time of day (e.g., Friday evening vs. Monday morning)
+* Add positive and negative sales anomalies variable, such as a winter storm, power outage, or marketing promotion
+* Add supply change issues variable that could impact availability of certain products (zero inventory/lost sales)
 
 ---
 _The contents of this repository represent my viewpoints and not of my past or current employers, including Amazon Web
