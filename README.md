@@ -69,7 +69,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 3
+        "_range_weight": 3
     },
     {
         "product_id": "CS06",
@@ -83,7 +83,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 36
+        "_range_weight": 36
     },
     {
         "product_id": "SF02",
@@ -97,7 +97,7 @@ A few sample product messages are show below.
         "contains_veggies": true,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 84
+        "_range_weight": 84
     },
     {
         "product_id": "SC05",
@@ -111,7 +111,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": true,
         "contains_caffeine": true,
-        "range_weight": 164
+        "_range_weight": 164
     },
     {
         "product_id": "IS01",
@@ -125,7 +125,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 168
+        "_range_weight": 168
     }
 ]
 ```
