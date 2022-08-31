@@ -3,12 +3,13 @@
 ## TL;DR
 
 1. Run the command `docker stack deploy kafka --compose-file docker-compose.yml` to create local instance of Kafka
-2. Run the command `python3 ./producer.py` to start generating streaming data to Kafka
-3. Run the command `python3 ./consumer.py` in a separate terminal window to view results
+2. Run the command `python3 -m pip install kafka-python` to install the `kafka-python` package
+3. Run the command `python3 ./producer.py` to start generating streaming data to Kafka
+4. Run the command `python3 ./consumer.py` in a separate terminal window to view results
 
 ## Background
 
-Everytime you want to explore a new streaming technology or create a demonstration, first you must find a good
+Every time you want to explore a new streaming technology or create a demonstration, first you must find a good
 source of streaming data, or create something new each time. Ideally, the data is complex enough to perform multiple
 analyses and visualize different aspects. Additionally, it should have some predictable patterns but is not totally
 random or results if an even distribution over time.
@@ -242,6 +243,7 @@ locally using Docker.
 
 ```shell
 # deploy kafka stack
+docker swarm init
 docker stack deploy kafka --compose-file docker-compose.yml
 
 # optional: to exec into Kafka container
@@ -251,6 +253,7 @@ docker exec -it $(docker container ls --filter  name=kafka_kafka --format "{{.ID
 To run the application:
 
 ```shell
+python3 -m pip install kafka-python
 python3 ./producer.py
 python3 ./consumer.py
 ```
