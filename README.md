@@ -234,6 +234,8 @@ A few sample restocking activity messages are show below.
 
 ## Sample Dashboard
 
+A sample dashboard created from the purchases topic's data.
+
 ![Dashboard](dashboard.png)
 
 ## Commands
