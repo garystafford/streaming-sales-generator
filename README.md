@@ -12,7 +12,7 @@
 Each time you want to explore or demonstrate a new streaming technology, you must first find
 an adequate data source or develop a new source. Ideally, the streaming data source should be complex enough
 to perform multiple types of analyses on and visualize different aspects with BI and dashboarding tools. Additionally,
-the data should possess a degree of consistency and predictability while still displaying a reasonable level of natural randomness,
+the streaming data source should possess a degree of consistency and predictability while still displaying a reasonable level of natural randomness,
 and conversely, not result in a uniform distribution of data over time.
 
 This project's highly configurable data generator (`producer.py`) streams beverage products, semi-random beverage sales transactions,
