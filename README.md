@@ -12,10 +12,10 @@
 Every time you want to explore a new streaming technology or create a demonstration, you must first find
 an adequate data source or create a new source. Ideally, the streaming data source should be complex enough
 to perform multiple types of analyses on and visualize different aspects with BI and dashboarding tools. Additionally,
-the data have should a degree of predictability, possess a certain level of randomness without being completely random,
+the data should possess a degree of predictability, display a reasonable level of randomness without being completely random,
 and conversely, not result in uniform distributions of data over time.
 
-This projects's configurable data generator (`producer.py`) streams beverage products, semi-random beverage sales transactions,
+This project's configurable data generator (`producer.py`) streams beverage products, semi-random beverage sales transactions,
 and product inventory activities to Apache Kafka topics. It is designed for demonstrating streaming data analytics tools,
 such as Apache Spark Structured Streaming, Apache Beam, Apache Flink, Apache Pinot, Databricks, Google Cloud Dataproc,
 and Amazon Kinesis Data Analytics.
