@@ -15,7 +15,7 @@ to perform multiple types of analyses on and visualize different aspects with Bu
 the streaming data source should possess a degree of consistency and predictability while still displaying a reasonable level of natural randomness.
 Conversely, the source should not result in an unnatural uniform distribution of data over time.
 
-This project's highly configurable Synthetic data generator (`producer.py`) streams beverage products, semi-random beverage sales transactions,
+This project's highly configurable synthetic data generator (`producer.py`) streams beverage products, semi-random beverage sales transactions,
 and inventory restocking activities to Apache Kafka topics. It is designed for demonstrating streaming data analytics tools,
 such as Apache Spark Structured Streaming, Apache Beam, Apache Flink, Apache Pinot, Databricks, Google Cloud Dataproc,
 and Amazon Kinesis Data Analytics.
@@ -32,6 +32,12 @@ and Amazon Kinesis Data Analytics.
 * Writes smoothie purchases to an Apache Kafka topic (topic 2/3)
 * Restocks low product inventories based on a minimum stock levels
 * Writes restocking activities to an Apache Kafka topic with time, old level, new level, etc. (topic 3/3)
+
+## Sample Dashboard
+
+A simple dashboard example created from the synthetic sales data joined with the product list.
+
+![Dashboard](dashboard.png)
 
 ## Raw Product List
 
@@ -237,12 +243,6 @@ A few sample restocking activity messages are show below.
     }
 ]
 ```
-
-## Sample Dashboard
-
-A sample dashboard created from the purchases topic's data.
-
-![Dashboard](dashboard.png)
 
 ## Commands
 
