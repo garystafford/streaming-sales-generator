@@ -9,10 +9,11 @@
 
 ## Background
 
-Every time you want to explore a new streaming technology or create a demonstration, first you must find a good
-source of streaming data, or create something new each time. Ideally, the data is complex enough to perform multiple
-analyses on and visualize different aspects. Additionally, the data should have some predictable patterns with a degree of randomness without being totally
-random or results in even distributions of data over time.
+Every time you want to explore a new streaming technology or create a streaming demonstration, first you must find a good
+source of streaming data, or create something new each time. Ideally, the streaming data source should be complex enough
+to perform multiple types of analyses on and visualize different aspects with BI and dashboarding tools. Additionally,
+the data should a degree of predictability, possess a certain level of randomness without completely random, and conversely, not
+result in even distributions of data over time.
 
 This configurable data generator (`producer.py`) streams drink products, semi-random sales transactions, and product
 inventory activities to Apache Kafka. It is designed for demonstrating streaming data analytics tools, such as Apache
