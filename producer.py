@@ -215,9 +215,11 @@ def closest_product_match(lst, k):
     return lst[min(range(len(lst)), key=lambda i: abs(lst[i] - k))]
 
 
-# purchase quantity (usually 1, max 2)
+# purchase quantity (usually 1, max 3)
 def random_quantity():
-    rnd = random.randint(1, 10)
+    rnd = random.randint(1, 30)
+    if rnd == 30:
+        return 3
     if rnd <= quantity_one_freq:
         return 1
     return 2
