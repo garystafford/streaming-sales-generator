@@ -1,11 +1,11 @@
-# Yet Another Streaming Data Generator (YASDG)
+# Streaming Synthetic Sales Data Generator
 
 ## TL;DR
 
-1. Run the command `docker stack deploy kafka --compose-file docker-compose.yml` to create local instance of Kafka
-2. Run the command `python3 -m pip install kafka-python` to install the `kafka-python` package
-3. Run the command `python3 ./producer.py` to start generating streaming data to Kafka
-4. Run the command `python3 ./consumer.py` in a separate terminal window to view results
+1. `docker stack deploy kafka --compose-file docker-compose.yml` to create local instance of Kafka
+2. `python3 -m pip install kafka-python` to install the `kafka-python` package
+3. `python3 ./producer.py` to start generating streaming data to Apache Kafka
+4. `python3 ./consumer.py` in a separate terminal window to view results
 
 ## Background
 
@@ -15,23 +15,23 @@ to perform multiple types of analyses on and visualize different aspects with Bu
 the streaming data source should possess a degree of consistency and predictability while still displaying a reasonable level of natural randomness.
 Conversely, the source should not result in an unnatural uniform distribution of data over time.
 
-This project's highly configurable data generator (`producer.py`) streams beverage products, semi-random beverage sales transactions,
+This project's highly configurable Synthetic data generator (`producer.py`) streams beverage products, semi-random beverage sales transactions,
 and inventory restocking activities to Apache Kafka topics. It is designed for demonstrating streaming data analytics tools,
 such as Apache Spark Structured Streaming, Apache Beam, Apache Flink, Apache Pinot, Databricks, Google Cloud Dataproc,
 and Amazon Kinesis Data Analytics.
 
 ## Highlights
 
-* All configuration in a separate `configuration.ini` file
+* Generator is configurable in a separate `configuration.ini` file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
-* Over 25 smoothie drink products in `products.csv`: descriptions, inventories, product weightings
+* Over 25 smoothie drink products in `products.csv`: descriptions, inventories, costs, ingredients, product weightings
 * Writes initial product list to an Apache Kafka topic (topic 1/3)
-* Generates streaming drink purchases, with time, item, quantity, price, total price, etc.
-* Writes smoothie purchases to an Apache Kafka topic (topic 2/3)
+* Generates semi-random streaming drink purchases, with time, item, quantity, price, total price, etc.
 * Club membership discounts semi-randomly applied to smoothie purchases
 * Add-on supplements semi-randomly applied to smoothie purchases
-* Restocks low product inventories based on a minimum value
-* Writes restocking activities to a second Apache Kafka topic: time, old inventory, new inventory, etc. (topic 3/3)
+* Writes smoothie purchases to an Apache Kafka topic (topic 2/3)
+* Restocks low product inventories based on a minimum stock levels
+* Writes restocking activities to an Apache Kafka topic with time, old level, new level, etc. (topic 3/3)
 
 ## Raw Product List
 
