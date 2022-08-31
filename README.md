@@ -43,12 +43,12 @@ products are purchased in the simulation.
 A few sample products from CSV file, `products.csv` are show below.
 
 ```text
-ID,Category,Item,Size,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
-CS01,Classic Smoothies,Sunrise Sunset,24 oz.,4.99,75,1,0,0,0,3,2,6,6
-CS02,Classic Smoothies,Kiwi Quencher,24 oz.,4.99,75,1,0,0,0,3,5,15,21
-SF07,Superfoods Smoothies,Detox Island Green,24 oz.,5.99,50,1,1,0,0,2,1,2,136
-SC04,Supercharged Smoothies,Lean Machine,24 oz.,5.99,35,0,1,1,1,3,4,12,184
-IS04,Indulgent Smoothies,Mocha Madness,24 oz.,5.49,60,0,0,1,1,4,2,8,242
+ID,Category,Item,Size,COGS,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
+CS01,Classic Smoothies,Sunrise Sunset,24 oz.,1.50,4.99,75,TRUE,FALSE,FALSE,FALSE,3,1,3,3
+CS04,Classic Smoothies,Sunny Day,24 oz.,1.50,4.99,75,TRUE,FALSE,FALSE,FALSE,3,1,3,18
+SF02,Superfoods Smoothies,Totally Green,24 oz.,2.10,5.99,50,TRUE,TRUE,FALSE,FALSE,2,1,2,84
+SC01,Supercharged Smoothies,Triple Berry Oat,24 oz.,2.70,5.99,35,TRUE,FALSE,FALSE,FALSE,3,5,15,137
+IS03,Indulgent Smoothies,Beach Bum,24 oz.,2.20,5.49,60,TRUE,TRUE,FALSE,FALSE,4,3,12,192
 ```
 
 ## Products Topic
