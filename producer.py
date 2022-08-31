@@ -139,7 +139,7 @@ def create_product_list():
                           to_bool(p[8]), to_bool(p[9]), to_bool(p[10]), p[14])
         products.append(product)
         publish_to_kafka(topic_products, product)
-        product_weightings.append(int(p[13]))
+        product_weightings.append(int(p[14]))
     product_weightings.sort()
 
 
