@@ -238,8 +238,8 @@ def random_add_supplements(product_id):
     rnd = random.randint(1, 10)
     if str(product_id).startswith('SF') or str(product_id).startswith('SC'):
         if rnd <= add_supp_freq_group1:
-            return False
-        return True
+            return True
+        return False
     if rnd <= add_supp_freq_group2:
         return True
     return False
