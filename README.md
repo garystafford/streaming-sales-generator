@@ -195,35 +195,35 @@ A few sample restocking activity messages are show below.
 ```json
 [
     {
-        "transaction_time": "2022-08-29 15:09:23.007874",
+        "event_time": "2022-08-29 15:09:23.007874",
         "product_id": "SC05",
         "existing_level": 9,
         "stock_quantity": 15,
         "new_level": 24
     },
     {
-        "transaction_time": "2022-08-29 15:12:30.415329",
+        "event_time": "2022-08-29 15:12:30.415329",
         "product_id": "SC03",
         "existing_level": 10,
         "stock_quantity": 15,
         "new_level": 25
     },
     {
-        "transaction_time": "2022-08-29 15:19:38.139400",
+        "event_time": "2022-08-29 15:19:38.139400",
         "product_id": "SC01",
         "existing_level": 10,
         "stock_quantity": 15,
         "new_level": 25
     },
     {
-        "transaction_time": "2022-08-29 15:34:35.392350",
+        "event_time": "2022-08-29 15:34:35.392350",
         "product_id": "SC04",
         "existing_level": 9,
         "stock_quantity": 15,
         "new_level": 24
     },
     {
-        "transaction_time": "2022-08-29 15:48:55.183778",
+        "event_time": "2022-08-29 15:48:55.183778",
         "product_id": "IS01",
         "existing_level": 10,
         "stock_quantity": 15,
