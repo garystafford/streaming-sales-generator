@@ -62,65 +62,70 @@ A few sample product messages are show below.
         "category": "Classic Smoothies",
         "item": "Sunrise Sunset",
         "size": "24 oz.",
+        "cogs": 1.5,
         "price": 4.99,
         "inventory": 75,
         "contains_fruit": true,
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 6
+        "range_weight": 3
     },
     {
-        "product_id": "SF01",
-        "category": "Superfoods Smoothies",
-        "item": "Island Green",
+        "product_id": "CS06",
+        "category": "Classic Smoothies",
+        "item": "Blimey Limey",
         "size": "24 oz.",
+        "cogs": 1.5,
+        "price": 4.99,
+        "inventory": 75,
+        "contains_fruit": true,
+        "contains_veggies": false,
+        "contains_nuts": false,
+        "contains_caffeine": false,
+        "range_weight": 36
+    },
+    {
+        "product_id": "SF02",
+        "category": "Superfoods Smoothies",
+        "item": "Totally Green",
+        "size": "24 oz.",
+        "cogs": 2.1,
         "price": 5.99,
         "inventory": 50,
         "contains_fruit": true,
         "contains_veggies": true,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 108
+        "range_weight": 84
     },
     {
-        "product_id": "SC02",
+        "product_id": "SC05",
         "category": "Supercharged Smoothies",
-        "item": "Peanut Paradise",
+        "item": "Muscle Blaster",
         "size": "24 oz.",
+        "cogs": 2.7,
         "price": 5.99,
         "inventory": 35,
-        "contains_fruit": false,
-        "contains_veggies": false,
-        "contains_nuts": false,
-        "contains_caffeine": false,
-        "range_weight": 160
-    },
-    {
-        "product_id": "SC03",
-        "category": "Supercharged Smoothies",
-        "item": "Health Nut",
-        "size": "24 oz.",
-        "price": 5.99,
-        "inventory": 35,
-        "contains_fruit": false,
-        "contains_veggies": false,
-        "contains_nuts": true,
-        "contains_caffeine": false,
-        "range_weight": 172
-    },
-    {
-        "product_id": "IS04",
-        "category": "Indulgent Smoothies",
-        "item": "Mocha Madness",
-        "size": "24 oz.",
-        "price": 5.49,
-        "inventory": 60,
         "contains_fruit": false,
         "contains_veggies": false,
         "contains_nuts": true,
         "contains_caffeine": true,
-        "range_weight": 242
+        "range_weight": 164
+    },
+    {
+        "product_id": "IS01",
+        "category": "Indulgent Smoothies",
+        "item": "Bahama Mama",
+        "size": "24 oz.",
+        "cogs": 2.2,
+        "price": 5.49,
+        "inventory": 60,
+        "contains_fruit": true,
+        "contains_veggies": false,
+        "contains_nuts": false,
+        "contains_caffeine": false,
+        "range_weight": 168
     }
 ]
 ```
@@ -316,14 +321,14 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
 
 ## Future Additions
 
-* Add SASL/SCRAM authentication option for Apache Kafka (currently unauthenticated only)
-* Add AWS IAM authentication option for Amazon MSK (currently unauthenticated only)
-* Add the estimated cost to each product, allowing for profitability analyses
-* Store products with real-time inventory levels in a datastore (e.g., Amazon DynamoDB)
-* Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
-* Add semi-random sales volume variability based on day and time of day (e.g., Friday evening vs. Monday morning)
-* Add positive and negative sales anomalies variable, such as a winter storm, power outage, or marketing promotion
-* Add supply change issues variable that could impact availability of certain products (zero inventory/lost sales)
+* ❏ Add SASL/SCRAM authentication option for Apache Kafka (currently unauthenticated only)
+* ❏ Add AWS IAM authentication option for Amazon MSK (currently unauthenticated only)
+* ✓ Add the estimated Cost of Goods Sold (COGS) to each product, allowing for gross profit analyses
+* ❏ Store products with real-time inventory levels in a datastore (e.g., Amazon DynamoDB)
+* ❏ Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
+* ❏ Add semi-random sales volume variability based on day and time of day (e.g., Friday evening vs. Monday morning)
+* ❏ Add positive and negative sales anomalies variable, such as a winter storm, power outage, or marketing promotion
+* ❏ Add supply change issues variable that could impact availability of certain products (zero inventory/lost sales)
 
 ---
 _The contents of this repository represent my viewpoints and not of my past or current employers, including Amazon Web

@@ -40,12 +40,13 @@ product_weightings = []
 
 
 class Product:
-    def __init__(self, product_id, category, item, size, price, inventory, contains_fruit,
+    def __init__(self, product_id, category, item, size, cogs, price, inventory, contains_fruit,
                  contains_veggies, contains_nuts, contains_caffeine, range_weight):
         self.product_id = str(product_id)
         self.category = str(category)
         self.item = str(item)
         self.size = str(size)
+        self.cogs = float(cogs)
         self.price = float(price)
         self.inventory = int(inventory)
         self.contains_fruit = bool(contains_fruit)
@@ -55,12 +56,13 @@ class Product:
         self.range_weight = int(range_weight)
 
     def __str__(self):
-        return 'Product: product_id: {0}, category: {1}, item: {2}, size: {3}, price: ${4:.2f}, inventory: {5:.0f}, ' \
-               'contains_fruit: {6}, contains_veggies: {7}, contains_nuts: {8}, contains_caffeine: {9}'.format(
+        return 'Product: product_id: {0}, category: {1}, item: {2}, size: {3}, cogs: ${4:.2f}, price: ${5:.2f}, inventory: {6:.0f}, ' \
+               'contains_fruit: {7}, contains_veggies: {8}, contains_nuts: {9}, contains_caffeine: {10}'.format(
             self.product_id,
             self.category,
             self.item,
             self.size,
+            self.cogs,
             self.price,
             self.inventory,
             self.contains_fruit,
@@ -133,8 +135,8 @@ def create_product_list():
         csv_products = list(csv_reader)
 
     for p in csv_products:
-        product = Product(p[0], p[1], p[2], p[3], p[4], p[5], to_bool(p[6]),
-                          to_bool(p[7]), to_bool(p[8]), to_bool(p[9]), p[13])
+        product = Product(p[0], p[1], p[2], p[3], p[4], p[5], p[6], to_bool(p[7]),
+                          to_bool(p[8]), to_bool(p[9]), to_bool(p[10]), p[14])
         products.append(product)
         publish_to_kafka(topic_products, product)
         product_weightings.append(int(p[13]))
