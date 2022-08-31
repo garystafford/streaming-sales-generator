@@ -86,7 +86,7 @@ class Purchase:
         self.total_purchase = round(self.total_purchase, 2)
 
     def __str__(self):
-        return 'Purchase: time: {0}, product_id: {1}, quantity: {2:.0f}, price: ${3:.2f}, ' \
+        return 'Purchase: transaction_time: {0}, product_id: {1}, quantity: {2:.0f}, price: ${3:.2f}, ' \
                'add_supplements: {4}, supplement_price: ${5:.2f}, is_member: {6}, ' \
                'member_discount: {7:.0%}, total: ${8:.2f}'.format(
             self.transaction_time,
@@ -102,17 +102,17 @@ class Purchase:
 
 
 class Stocking:
-    def __init__(self, transaction_time, product_id, existing_level, stock_quantity, new_level):
-        self.transaction_time = str(transaction_time)
+    def __init__(self, event_time, product_id, existing_level, stock_quantity, new_level):
+        self.event_time = str(event_time)
         self.product_id = str(product_id)
         self.existing_level = int(existing_level)
         self.stock_quantity = int(stock_quantity)
         self.new_level = int(new_level)
 
     def __str__(self):
-        return 'Stocking: time: {0}, product_id: {1}, existing_level: {2:.0f}, stock_quantity: {3:.0f}, ' \
+        return 'Stocking: event_time: {0}, product_id: {1}, existing_level: {2:.0f}, stock_quantity: {3:.0f}, ' \
                'new_level: {4:.0f}'.format(
-            self.transaction_time,
+            self.event_time,
             self.product_id,
             self.existing_level,
             self.stock_quantity,
