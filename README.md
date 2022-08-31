@@ -9,8 +9,8 @@
 
 ## Background
 
-Every time you want to explore a new streaming technology or create a streaming demonstration, first you must first find
-an adequate data source or create a new source each time. Ideally, the streaming data source should be complex enough
+Every time you want to explore a new streaming technology or create a demonstration, you must first find
+an adequate data source or create a new source. Ideally, the streaming data source should be complex enough
 to perform multiple types of analyses on and visualize different aspects with BI and dashboarding tools. Additionally,
 the data should a degree of predictability, possess a certain level of randomness without being completely random,
 and conversely, not result in uniform distributions of data over time.
