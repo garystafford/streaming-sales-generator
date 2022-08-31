@@ -324,7 +324,7 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
 * ❏ Add SASL/SCRAM authentication option for Apache Kafka (currently unauthenticated only)
 * ❏ Add AWS IAM authentication option for Amazon MSK (currently unauthenticated only)
 * ✓ Add the estimated Cost of Goods Sold (COGS) to each product, allowing for gross profit analyses
-* ❏ Store products with real-time inventory levels in a datastore (e.g., Amazon DynamoDB)
+* ❏ Replace restocking events with broader events topic with event type field: restocking, price change, COGS change, ingredients, etc.
 * ❏ Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
 * ❏ Add semi-random sales volume variability based on day and time of day (e.g., Friday evening vs. Monday morning)
 * ❏ Add positive and negative sales anomalies variable, such as a winter storm, power outage, or marketing promotion
