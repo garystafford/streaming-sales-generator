@@ -253,8 +253,14 @@ docker exec -it $(docker container ls --filter  name=kafka_kafka --format "{{.ID
 To run the application:
 
 ```shell
+# install `kafka-python` python package
 python3 -m pip install kafka-python
+
+# run in foreground
 python3 ./producer.py
+# alternately, run as background process
+nohup python3 ./producer.py &
+
 python3 ./consumer.py
 ```
 
@@ -321,4 +327,3 @@ Services (AWS). All third-party libraries, modules, plugins, and SDKs are the pr
 author(s) assumes no responsibility or liability for any errors or omissions in the content of this site. The
 information contained in this site is provided on an "as is" basis with no guarantees of completeness, accuracy,
 usefulness or timeliness._
-
