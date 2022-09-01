@@ -21,7 +21,7 @@ beverage sales transactions, and inventory restocking activities to Apache Kafka
 demonstrating streaming data analytics tools, such as Apache Spark Structured Streaming, Apache Beam, Apache Flink,
 Apache Pinot, Databricks, Google Cloud Dataproc, and Amazon Kinesis Data Analytics.
 
-![YouTube Video](https://youtu.be/HWOcOFTnl9M)
+[Preview YourTube Video](https://youtu.be/HWOcOFTnl9M).
 
 ## Highlights
 
