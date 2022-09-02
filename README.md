@@ -35,6 +35,7 @@ Here is a short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates 
 * Writes smoothie purchases to an Apache Kafka topic (topic 2/3)
 * Restocks low product inventories based on a minimum stock levels
 * Writes restocking activities to an Apache Kafka topic with time, old level, new level, etc. (topic 3/3)
+* Works with SASL/SCRAM authentication, as well as no authentication methods for connecting to Kafka
 
 ## Sample Dashboard
 
