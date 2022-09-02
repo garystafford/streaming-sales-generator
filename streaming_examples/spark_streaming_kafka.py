@@ -1,20 +1,22 @@
-# Purpose: Reads stream of messages from Kafka topic and
-#          writes stream of aggregations over sliding event-time window to console (stdout)
+# Purpose: Reads a stream of messages from a Kafka topic and
+#          writes a stream of aggregations over sliding event-time window to console (stdout)
 # References: https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html
 # Author:  Gary A. Stafford
 # Date: 2022-09-02
-# Note: Requires --bootstrap_servers argument
+# Note: Expects (4) environment variables: BOOTSTRAP_SERVERS, TOPIC_PURCHASES, SASL_USERNAME, SASL_PASSWORD
 
+import os
 import pyspark.sql.functions as F
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructField, StructType, IntegerType, \
     StringType, FloatType, TimestampType, BooleanType
+from pyspark.sql.window import Window
 
 
 def main():
     spark = SparkSession \
         .builder \
-        .appName("streaming-kafka") \
+        .appName("kafka-streaming-query") \
         .getOrCreate()
 
     spark.sparkContext.setLogLevel("INFO")
@@ -25,11 +27,18 @@ def main():
 
 
 def read_from_kafka(spark):
-    options_read = {
+    options = {
         "kafka.bootstrap.servers":
-            "localhost:9092",
+            os.environ.get('BOOTSTRAP_SERVERS'),
+        "kafka.security.protocol":
+            "SASL_SSL",
+        "kafka.sasl.mechanism":
+            "SCRAM-SHA-512",
+        "kafka.sasl.jaas.config":
+            "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"{0}\" password=\"{1}\";".format(
+                os.environ.get('SASL_USERNAME'), os.environ.get('SASL_PASSWORD')),
         "subscribe":
-            "demo.purchases",
+            os.environ.get('TOPIC_PURCHASES'),
         "startingOffsets":
             "earliest"
     }
@@ -37,7 +46,7 @@ def read_from_kafka(spark):
     df_sales = spark \
         .readStream \
         .format("kafka") \
-        .options(**options_read) \
+        .options(**options) \
         .load()
 
     return df_sales
@@ -57,12 +66,12 @@ def summarize_sales(df_sales):
     ])
 
     ds_sales = df_sales \
-        .selectExpr("CAST(value AS STRING)", "timestamp") \
-        .select(F.from_json("value", schema=schema).alias("data"), "timestamp") \
-        .select("data.*", "timestamp") \
-        .withWatermark("timestamp", "10 minutes") \
+        .selectExpr("CAST(value AS STRING)") \
+        .select(F.from_json("value", schema=schema).alias("data")) \
+        .select("data.*") \
+        .withWatermark("transaction_time", "10 minutes") \
         .groupBy("product_id",
-                 F.window("timestamp", "10 minutes", "5 minutes")) \
+                 F.window("transaction_time", "10 minutes", "5 minutes")) \
         .agg(F.sum("total_purchase"), F.count("quantity")) \
         .orderBy(F.col("window").desc(),
                  F.col("sum(total_purchase)").desc()) \

@@ -210,17 +210,6 @@ def publish_to_kafka(topic, message):
             "sasl_plain_password":
                 sasl_password
         }
-    elif auth_method == 'iam':
-        configs = {
-            "kafka.security.protocol":
-                "SASL_SSL",
-            "kafka.sasl.mechanism":
-                "AWS_MSK_IAM",
-            "kafka.sasl.jaas.config":
-                "software.amazon.msk.auth.iam.IAMLoginModule required;",
-            "kafka.sasl.client.callback.handler.class":
-                "software.amazon.msk.auth.iam.IAMClientCallbackHandler"
-        }
     else:
         configs = {}
 
