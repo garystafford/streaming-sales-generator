@@ -17,6 +17,10 @@ config.read('configuration.ini')
 
 # *** CONFIGURATION ***
 bootstrap_servers = config['KAFKA']['bootstrap_servers']
+auth_method = config['KAFKA']['auth_method']
+sasl_username = config['KAFKA']['sasl_username']
+sasl_password = config['KAFKA']['sasl_password']
+
 topic_products = config['KAFKA']['topic_products']
 topic_purchases = config['KAFKA']['topic_purchases']
 topic_stockings = config['KAFKA']['topic_stockings']
@@ -168,7 +172,7 @@ def generate_sales():
                     add_supplement,
                     supplement_price
                 )
-                publish_to_kafka(topic_purchases, purchase)
+                publish_to_kafka(topic_purchases, purchase, )
                 product.inventory = product.inventory - quantity
                 if product.inventory <= min_inventory:
                     restock_item(product.product_id)
@@ -195,9 +199,35 @@ def restock_item(product_id):
 
 # serialize object to json and publish message to kafka topic
 def publish_to_kafka(topic, message):
+    if auth_method == 'sasl_scram':
+        configs = {
+            "security_protocol":
+                "SASL_SSL",
+            "sasl_mechanism":
+                "SCRAM-SHA-512",
+            "sasl_plain_username":
+                sasl_username,
+            "sasl_plain_password":
+                sasl_password
+        }
+    elif auth_method == 'iam':
+        configs = {
+            "kafka.security.protocol":
+                "SASL_SSL",
+            "kafka.sasl.mechanism":
+                "AWS_MSK_IAM",
+            "kafka.sasl.jaas.config":
+                "software.amazon.msk.auth.iam.IAMLoginModule required;",
+            "kafka.sasl.client.callback.handler.class":
+                "software.amazon.msk.auth.iam.IAMClientCallbackHandler"
+        }
+    else:
+        configs = {}
+
     producer = KafkaProducer(
         bootstrap_servers=bootstrap_servers,
-        value_serializer=lambda v: json.dumps(vars(v)).encode('utf-8')
+        value_serializer=lambda v: json.dumps(vars(v)).encode('utf-8'),
+        **configs
     )
     producer.send(topic, value=message)
     print('Topic: {0}, Value: {1}'.format(topic, message))
