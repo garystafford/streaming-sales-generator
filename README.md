@@ -22,6 +22,8 @@ Apache Pinot, Databricks, Google Cloud Dataproc, and Amazon Kinesis Data Analyti
 
 Here is a short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator.
 
+Here are some [Spark Structured Streaming code samples](./streaming_examples)
+
 ## Highlights
 
 * Generator is configurable in a separate [configuration.ini](configuration.ini) file
