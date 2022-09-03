@@ -17,12 +17,16 @@ natural randomness. Conversely, the source should not result in an unnatural uni
 
 This project's highly configurable synthetic data generator ([producer.py](producer.py)) streams beverage products,
 semi-random beverage sales transactions, and inventory restocking activities to Apache Kafka topics. It is designed for
-demonstrating streaming data analytics tools, such as Apache Spark Structured Streaming, Apache Beam, Apache Flink,
-Apache Pinot, Databricks, Google Cloud Dataproc, and Amazon Kinesis Data Analytics.
+demonstrating streaming data analytics tools, such as
+[Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html),
+[Apache Beam](https://beam.apache.org/), [Apache Flink](https://flink.apache.org/),
+[Apache Pinot](https://pinot.apache.org/), [Databricks](https://www.databricks.com/),
+[Google Cloud Dataproc](https://cloud.google.com/dataproc),
+and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytics/).
 
 Here is a short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator.
 
-Here are some [Spark Structured Streaming code samples](./streaming_examples)
+Here are some [Spark Structured Streaming code samples](./streaming_examples) that aggregate the sales data from Kafka.
 
 ## Highlights
 
@@ -208,8 +212,10 @@ A few sample sales transaction messages are show below.
 
 ### Sample Batch Data
 
-The [sample_data_small.json](sample_batch_data/sample_data_small.json) file contains a batch of 290 purchases, representing a typical
-12-hour business day from 8AM to 8PM. The [sample_data_large.json](sample_batch_data/sample_data_large.json) file contains 500 purchases,
+The [sample_data_small.json](sample_batch_data/sample_data_small.json) file contains a batch of 290 purchases,
+representing a typical
+12-hour business day from 8AM to 8PM. The [sample_data_large.json](sample_batch_data/sample_data_large.json) file
+contains 500 purchases,
 spanning ~20.5 hours of sample data.
 
 ## Restocking Activity Topic
