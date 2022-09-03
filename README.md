@@ -42,7 +42,7 @@ real-time sales data from Kafka.
 * Writes smoothie purchases to an Apache Kafka topic (topic 2/3)
 * Restocks low product inventories based on a minimum stock levels
 * Writes restocking activities to an Apache Kafka topic with time, old level, new level, etc. (topic 3/3)
-* Works with SASL/SCRAM authentication, as well as no authentication methods for connecting to Kafka
+* Configurable authentication methods (SASL/SCRAM or PLAINTEXT) for connecting to Kafka
 
 ## Sample Dashboard
 
@@ -341,7 +341,7 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
 ## TODO Items
 
 * ✓ Add the estimated Cost of Goods Sold (COGS) to each product, allowing for gross profit analyses
-* ✓ Add SASL/SCRAM authentication option for Apache Kafka in addition to no authentication (default)
+* ✓ Add SASL/SCRAM authentication option for Apache Kafka in addition to PLAINTEXT
 * ❏ Replace restocking events with broader events topic with event type field: restocking, price change, COGS change,
   ingredients, etc.
 * ❏ Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
