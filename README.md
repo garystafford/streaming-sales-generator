@@ -206,8 +206,8 @@ A few sample sales transaction messages are show below.
 
 ### Sample Batch Data
 
-The [sample_data_small.json](sample_data_small.json) file contains a batch of 290 purchases, representing a typical
-12-hour business day from 8AM to 8PM. The [sample_data_large.json](sample_data_large.json) file contains 500 purchases,
+The [sample_data_small.json](sample_batch_data/sample_data_small.json) file contains a batch of 290 purchases, representing a typical
+12-hour business day from 8AM to 8PM. The [sample_data_large.json](sample_batch_data/sample_data_large.json) file contains 500 purchases,
 spanning ~20.5 hours of sample data.
 
 ## Restocking Activity Topic
