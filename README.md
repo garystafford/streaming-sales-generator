@@ -26,7 +26,8 @@ and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytic
 
 Here is a short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator.
 
-Here are some [Spark Structured Streaming code samples](./streaming_examples) that aggregate the sales data from Kafka.
+Here are some Spark Structured Streaming and batch [code samples](./streaming_examples) that consume and aggregate the 
+real-time sales data from Kafka.
 
 ## Highlights
 
