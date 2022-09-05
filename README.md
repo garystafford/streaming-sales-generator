@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-1. `docker stack deploy kafka --compose-file docker-compose.yml` to create local instance of Kafka
+1. `docker stack deploy flink-kafka --compose-file docker-compose.yml` to create local instance of Kafka
 2. `python3 -m pip install kafka-python` to install the `kafka-python` package
 3. `python3 ./producer.py` to start generating streaming data to Apache Kafka
 4. `python3 ./consumer.py` in a separate terminal window to view results
@@ -28,6 +28,8 @@ Here is a short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates 
 
 Here are some Spark Structured Streaming and batch [code samples](./streaming_examples) that consume and aggregate the 
 real-time sales data from Kafka.
+
+Here is an Apache Flink streaming [code sample](https://github.com/garystafford/flink-kafka-demo/] that also consumes the purchase topic's messages.
 
 ## Highlights
 
@@ -269,12 +271,15 @@ See [bitnami/kafka](https://hub.docker.com/r/bitnami/kafka) on Docker Hub for mo
 locally using Docker.
 
 ```shell
+# optional: delete previous stack
+docker stack rm kafka-flink
+
 # deploy kafka stack
 docker swarm init
-docker stack deploy kafka --compose-file docker-compose.yml
+docker stack deploy kafka-flink --compose-file docker-compose.yml
 
 # optional: to exec into Kafka container
-docker exec -it $(docker container ls --filter  name=kafka_kafka --format "{{.ID}}") bash
+docker exec -it $(docker container ls --filter  name=kafka-flink_kafka --format "{{.ID}}") bash
 ```
 
 To run the application:

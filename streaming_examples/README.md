@@ -5,7 +5,7 @@ Spark batch and streaming examples currently both use SASL/SCRAM authentication.
 ## Spark Commands
 
 ```shell
-export BOOTSTRAP_SERVERS="b-1.localhost:9096,b-2.localhost:9096"
+export BOOTSTRAP_SERVERS="b-1.localhost:9096,b-2.localhost:9096"  # localhost:9092
 export TOPIC_PURCHASES="demo.purchases"
 export SASL_USERNAME="foo"
 export SASL_PASSWORD="bar"
