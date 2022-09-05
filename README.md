@@ -29,7 +29,7 @@ Here is a short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates 
 Here are some Spark Structured Streaming and batch [code samples](./streaming_examples) that consume and aggregate the 
 real-time sales data from Kafka.
 
-Here is an Apache Flink streaming [code sample](https://github.com/garystafford/flink-kafka-demo] that also consumes the purchase topic's messages.
+Here is an Apache Flink streaming [code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java that also consumes the purchase topic's messages.
 
 ## Highlights
 
