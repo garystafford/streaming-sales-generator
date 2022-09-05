@@ -345,6 +345,8 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
 
 * ✓ Add the estimated Cost of Goods Sold (COGS) to each product, allowing for gross profit analyses
 * ✓ Add SASL/SCRAM authentication option for Apache Kafka in addition to PLAINTEXT
+* ✓ Add streaming data analysis example using Apache Spark Structured Streaming
+* ✓ Add streaming data analysis example using Apache Flink
 * ❏ Replace restocking events with broader events topic with event type field: restocking, price change, COGS change,
   ingredients, etc.
 * ❏ Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
