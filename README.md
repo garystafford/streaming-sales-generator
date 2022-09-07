@@ -280,6 +280,16 @@ docker stack deploy kafka-flink --compose-file docker-compose.yml
 docker exec -it $(docker container ls --filter  name=kafka-flink_kafka --format "{{.ID}}") bash
 ```
 
+### Containers
+
+```text
+CONTAINER ID   IMAGE                      PORTS                                    NAMES
+69ad1556eb3a   flink:latest               6123/tcp, 8081/tcp                       kafka-flink_taskmanager.1...
+9f9b8e43eb21   flink:latest               6123/tcp, 8081/tcp                       kafka-flink_jobmanager.1...
+6114dc4a9824   bitnami/kafka:latest       9092/tcp                                 kafka-flink_kafka.1...
+837c0cdd1498   bitnami/zookeeper:latest   2181/tcp, 2888/tcp, 3888/tcp, 8080/tcp   kafka-flink_zookeeper.1...
+```
+
 To run the application:
 
 ```shell
