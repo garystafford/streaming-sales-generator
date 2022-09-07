@@ -24,7 +24,7 @@ demonstrating streaming data analytics tools, such as
 [Google Cloud Dataproc](https://cloud.google.com/dataproc),
 and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytics/).
 
-* Demonstration: Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator
+* Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator
 * Sample Code
   * __Apache Spark__ Structured Streaming [code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka
