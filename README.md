@@ -24,14 +24,19 @@ demonstrating streaming data analytics tools, such as
 [Google Cloud Dataproc](https://cloud.google.com/dataproc),
 and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytics/).
 
-* Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator
-* Sample Code
+## Video Demonstration
+
+Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator in use.
+
+
+## Sample Code
+
   * __Apache Spark__ Structured Streaming [code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka
   * __Apache Flink__ [code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
 real-time sales data from Kafka
 
-## Highlights
+## Features
 
 * Generator is configurable in a separate [configuration.ini](configuration.ini) file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
