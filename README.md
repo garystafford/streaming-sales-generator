@@ -26,9 +26,10 @@ and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytic
 
 * Demonstration: Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator
 * Sample Code
-  * Apache Spark Structured Streaming [code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
+  * __Apache Spark__ Structured Streaming [code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka
-  * Apache Flink streaming [code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes the purchase topic's messages
+  * __Apache Flink__ [code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
+real-time sales data from Kafka
 
 ## Highlights
 
