@@ -26,7 +26,7 @@ and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytic
 
 ## Video Demonstration
 
-Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator in use.
+Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator in use (video only - no audio).
 
 
 ## Sample Code
