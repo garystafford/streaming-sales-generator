@@ -46,7 +46,7 @@ real-time sales data from Kafka
 
 ## Sample Dashboard
 
-A simple dashboard example created from the synthetic sales data joined with the product list.
+A simple dashboard example created from the streaming sales data joined with the static product list.
 
 ![Dashboard](dashboard.png)
 
