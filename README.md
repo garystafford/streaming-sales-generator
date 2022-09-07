@@ -24,10 +24,11 @@ demonstrating streaming data analytics tools, such as
 [Google Cloud Dataproc](https://cloud.google.com/dataproc),
 and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytics/).
 
-* Here is a short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator
-* Here are some Spark Structured Streaming and batch [code samples](./streaming_examples) that consume and aggregate the 
+* Demonstration: Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator
+* Sample Code
+  * Apache Spark Structured Streaming [code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka
-* Here is an Apache Flink streaming [code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java that also consumes the purchase topic's messages
+  * Apache Flink streaming [code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes the purchase topic's messages
 
 ## Highlights
 
