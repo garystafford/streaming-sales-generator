@@ -376,7 +376,7 @@ kafka-console-consumer.sh \
 * ✓ Add streaming data analysis example using Apache Spark Structured Streaming
 * ✓ Add streaming data analysis example using Apache Flink
 * ✓ Add streaming data analysis example using Apache Kafka Streams
-* ❏ Replace restocking events with broader events topic with event type field: restocking, price change, COGS change,
+* ❏ Replace specific restocking events with more generic events topic with multiple event type field: restocking, price change, COGS change,
   ingredients, etc.
 * ❏ Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
 * ❏ Add semi-random sales volume variability based on day and time of day (e.g., Friday evening vs. Monday morning)
