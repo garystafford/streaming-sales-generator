@@ -20,6 +20,7 @@ semi-random beverage sales transactions, and inventory restocking activities to 
 demonstrating streaming data analytics tools, such as
 [Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html),
 [Apache Beam](https://beam.apache.org/), [Apache Flink](https://flink.apache.org/),
+[Apache Kafka Streams](https://kafka.apache.org/documentation/streams/),
 [Apache Pinot](https://pinot.apache.org/), [Databricks](https://www.databricks.com/),
 [Google Cloud Dataproc](https://cloud.google.com/dataproc),
 and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytics/).
@@ -32,9 +33,11 @@ Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the genera
 ## Sample Code
 
   * __Apache Spark__ Structured Streaming [code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
-real-time sales data from Kafka
+real-time sales data from Kafka using Apache Spark
   * __Apache Flink__ [code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
-real-time sales data from Kafka
+real-time sales data from Kafka using Apache Flink
+  * __Apache Kafka Streams__ [code sample](https://github.com/garystafford/kstreams-kafka-demo/) written in Java, which consumes and aggregates the 
+real-time sales data from Kafka. using KStreams
 
 ## Features
 
@@ -324,7 +327,8 @@ export TOPIC_PURCHASES="demo.purchases"
 export TOPIC_STOCKINGS="demo.stockings"
 
 # list topics
-kafka-topics.sh --list --bootstrap-server $BOOTSTRAP_SERVERS
+kafka-topics.sh --list \
+    --bootstrap-server $BOOTSTRAP_SERVERS
 
 kafka-topics.sh --describe \
     --topic $TOPIC_PURCHASES \
@@ -352,14 +356,17 @@ kafka-topics.sh --create --topic $TOPIC_STOCKINGS \
     --bootstrap-server $BOOTSTRAP_SERVERS
 
 # read topics from beginning
-kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
-    --topic $TOPIC_PRODUCTS --from-beginning
+kafka-console-consumer.sh \
+    --topic $TOPIC_PRODUCTS --from-beginning \
+    --bootstrap-server $BOOTSTRAP_SERVERS
 
-kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
-    --topic $TOPIC_PURCHASES --from-beginning
+kafka-console-consumer.sh \
+    --topic $TOPIC_PURCHASES --from-beginning \
+    --bootstrap-server $BOOTSTRAP_SERVERS
 
-kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
-    --topic $TOPIC_STOCKINGS --from-beginning
+kafka-console-consumer.sh \
+    --topic $TOPIC_STOCKINGS --from-beginning \
+    --bootstrap-server $BOOTSTRAP_SERVERS
 ```
 
 ## TODO Items
@@ -368,6 +375,7 @@ kafka-console-consumer.sh --bootstrap-server $BOOTSTRAP_SERVERS \
 * ✓ Add SASL/SCRAM authentication option for Apache Kafka in addition to PLAINTEXT
 * ✓ Add streaming data analysis example using Apache Spark Structured Streaming
 * ✓ Add streaming data analysis example using Apache Flink
+* ✓ Add streaming data analysis example using Apache Kafka Streams
 * ❏ Replace restocking events with broader events topic with event type field: restocking, price change, COGS change,
   ingredients, etc.
 * ❏ Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
