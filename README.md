@@ -32,12 +32,11 @@ Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the genera
 
 ## Sample Code
 
-  * __Apache Spark__ Structured Streaming [code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
+  * Apache Spark Structured Streaming: [Code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Spark
-  * __Apache Flink__ [code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
+  * Apache Flink: [Code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Flink
-  * __Apache Kafka Streams__ [code sample](https://github.com/garystafford/kstreams-kafka-demo/) written in Java, which consumes and aggregates the 
-real-time sales data from Kafka. using KStreams
+  * Apache Kafka Streams (KStreams): [Code sample](https://github.com/garystafford/kstreams-kafka-demo/) written in Java, which consumes and aggregates the real-time sales data from Kafka using KStreams
 
 ## Features
 
