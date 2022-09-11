@@ -43,7 +43,7 @@ real-time sales data from Kafka using Apache Flink
 * Generator is configurable in a separate [configuration.ini](configuration.ini) file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
 * Over 25 smoothie drink products in [products.csv](products.csv): descriptions, inventories, costs, ingredients,
-  product weightings
+  product propensity-to-buy weighting
 * Writes initial product list to an Apache Kafka topic (topic 1/3)
 * Generates semi-random streaming drink purchases, with time, item, quantity, price, total price, etc.
 * Club membership discounts semi-randomly applied to smoothie purchases
@@ -63,7 +63,7 @@ A simple dashboard example created from the streaming sales data joined with the
 
 Products are based on Tropical Smoothie menu
 from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothie-prices/). Last four columns with `_`
-are were used to generate artificial product category and product weightings. These determine how frequently the
+are were used to generate artificial product category and product propensity-to-buy weighting. These determine how frequently the
 products are purchased in the simulation.
 
 A few sample products from CSV file, [products.csv](products.csv) are show below.
@@ -96,7 +96,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 3
+        "propensity_to_buy": 3
     },
     {
         "event_time": "2022-09-11 14:39:50.715191",
@@ -111,7 +111,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 6
+        "propensity_to_buy": 6
     },
     {
         "event_time": "2022-09-11 14:39:54.232999",
@@ -126,7 +126,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 94
+        "propensity_to_buy": 94
     },
     {
         "event_time": "2022-09-11 14:39:55.538469",
@@ -141,7 +141,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": true,
         "contains_caffeine": false,
-        "range_weight": 143
+        "propensity_to_buy": 143
     },
     {
         "event_time": "2022-09-11 14:39:56.226351",
@@ -156,7 +156,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "range_weight": 168
+        "propensity_to_buy": 168
     }
 ]
 ```
