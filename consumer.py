@@ -12,12 +12,12 @@ from kafka import KafkaConsumer
 from config.kafka import get_configs
 
 config = configparser.ConfigParser()
-config.read('configuration/configuration.ini')
+config.read("configuration/configuration.ini")
 
 # *** CONFIGURATION ***
-topic_products = config['KAFKA']['topic_products']
-topic_purchases = config['KAFKA']['topic_purchases']
-topic_stockings = config['KAFKA']['topic_stockings']
+topic_products = config["KAFKA"]["topic_products"]
+topic_purchases = config["KAFKA"]["topic_purchases"]
+topic_stockings = config["KAFKA"]["topic_stockings"]
 
 
 def main():
@@ -32,8 +32,8 @@ def consume_messages():
 
     consumer = KafkaConsumer(
         *topics,
-        value_deserializer=lambda m: json.loads(m.decode('utf-8')),
-        auto_offset_reset='earliest',
+        value_deserializer=lambda m: json.loads(m.decode("utf-8")),
+        auto_offset_reset="earliest",
         **configs
     )
 
@@ -41,5 +41,5 @@ def consume_messages():
         print(message.value)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
