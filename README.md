@@ -283,7 +283,7 @@ docker stack rm kafka-flink
 
 # deploy kafka stack
 docker swarm init
-docker stack deploy kafka-flink --compose-file docker-compose.yml
+docker stack deploy kafka-flink --compose-file docker/docker-compose.yml
 
 # optional: to exec into Kafka container
 docker exec -it $(docker container ls --filter  name=kafka-flink_kafka --format "{{.ID}}") bash
