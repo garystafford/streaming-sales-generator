@@ -97,7 +97,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "propensity_to_buy_score": 3
+        "propensity_to_buy": 3
     },
     {
         "event_time": "2022-09-11 14:39:50.715191",
@@ -112,7 +112,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "propensity_to_buy_score": 6
+        "propensity_to_buy": 6
     },
     {
         "event_time": "2022-09-11 14:39:54.232999",
@@ -127,7 +127,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "propensity_to_buy_score": 94
+        "propensity_to_buy": 94
     },
     {
         "event_time": "2022-09-11 14:39:55.538469",
@@ -142,7 +142,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": true,
         "contains_caffeine": false,
-        "propensity_to_buy_score": 143
+        "propensity_to_buy": 143
     },
     {
         "event_time": "2022-09-11 14:39:56.226351",
@@ -157,7 +157,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "propensity_to_buy_score": 168
+        "propensity_to_buy": 168
     }
 ]
 ```
