@@ -22,8 +22,3 @@ def get_configs():
         configs['sasl_plain_password'] = sasl_password
 
     return configs
-
-
-class Kafka:
-    def __init__(self):
-        self.configs = {}
