@@ -7,10 +7,11 @@ import configparser
 import json
 import random
 import time
-from datetime import datetime
 from csv import reader
+from datetime import datetime
 
 from kafka import KafkaProducer
+
 from config.kafka import get_configs
 from models.product import Product
 from models.purchase import Purchase

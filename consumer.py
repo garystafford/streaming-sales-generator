@@ -7,9 +7,9 @@
 import configparser
 import json
 
-from config.kafka import get_configs
-
 from kafka import KafkaConsumer
+
+from config.kafka import get_configs
 
 config = configparser.ConfigParser()
 config.read('configuration/configuration.ini')
