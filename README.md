@@ -40,9 +40,9 @@ real-time sales data from Kafka using Apache Flink
 
 ## Features
 
-* Generator is configurable in a separate [configuration.ini](configuration.ini) file
+* Generator is configurable in a separate [configuration.ini](configuration/configuration.ini) file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
-* Over 25 smoothie drink products in [products.csv](products.csv): descriptions, inventories, costs, ingredients,
+* Over 25 smoothie drink products in [products.csv](data/products.csv): descriptions, inventories, costs, ingredients,
   product propensity-to-buy range value
 * The propensity to buy a product is determined by a sequential propensity-to-buy range from 0 to 200
 * Writes initial product list to an Apache Kafka topic (topic 1/3)
@@ -58,7 +58,7 @@ real-time sales data from Kafka using Apache Flink
 
 A simple dashboard example created from the streaming sales data joined with the static product list.
 
-![Dashboard](dashboard.png)
+![Dashboard](screengrabs/dashboard.png)
 
 ## Raw Product List
 
@@ -67,7 +67,7 @@ from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothi
 are were used to generate artificial product category and product propensity-to-buy weighting. These determine how frequently the
 products are purchased in the simulation.
 
-A few sample products from CSV file, [products.csv](products.csv) are show below.
+A few sample products from CSV file, [products.csv](data/products.csv) are show below.
 
 ```text
 ID,Category,Item,Size,COGS,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
