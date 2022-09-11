@@ -375,6 +375,7 @@ kafka-console-consumer.sh \
 * ✓ Add streaming data analysis example using Apache Spark Structured Streaming
 * ✓ Add streaming data analysis example using Apache Flink
 * ✓ Add streaming data analysis example using Apache Kafka Streams
+* ❏ Enable multiple product sales to be assoicated with a single transaction, add transaction ID to Purchases Class
 * ❏ Replace specific restocking events with more generic events topic with multiple event type field: restocking, price change, COGS change,
   ingredients, etc.
 * ❏ Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
