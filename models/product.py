@@ -1,7 +1,8 @@
 class Product:
-    def __init__(self, product_id: str, category: str, item: str, size: str, cogs: float, price: float, inventory: int,
-                 contains_fruit: bool, contains_veggies: bool, contains_nuts: bool, contains_caffeine: bool,
-                 range_weight: int):
+    def __init__(self, event_time: str, product_id: str, category: str, item: str, size: str, cogs: float,
+                 price: float, inventory: int, contains_fruit: bool, contains_veggies: bool, contains_nuts: bool,
+                 contains_caffeine: bool, range_weight: int):
+        self.event_time = str(event_time)
         self.product_id = str(product_id)
         self.category = str(category)
         self.item = str(item)
@@ -16,9 +17,10 @@ class Product:
         self.range_weight = int(range_weight)
 
     def __str__(self):
-        return 'Product: product_id: {0}, category: {1}, item: {2}, size: {3}, cogs: ${4:.2f}, price: ${5:.2f}, ' \
-               'inventory: {6:.0f}, contains_fruit: {7}, contains_veggies: {8}, contains_nuts: {9}, ' \
+        return 'Product: event_time: {0}, Product: product_id: {1}, category: {2}, item: {3}, size: {4}, cogs: ${5:.2f}, price: ${6:.2f}, ' \
+               'inventory: {7:.0f}, contains_fruit: {8}, contains_veggies: {9}, contains_nuts: {10}, ' \
                'contains_caffeine: {10}'.format(
+            self.event_time,
             self.product_id,
             self.category,
             self.item,

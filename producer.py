@@ -56,8 +56,8 @@ def create_product_list():
         csv_products = list(csv_reader)
 
     for p in csv_products:
-        new_product = Product(p[0], p[1], p[2], p[3], p[4], p[5], p[6], to_bool(p[7]), to_bool(p[8]), to_bool(p[9]),
-                              to_bool(p[10]), p[14])
+        new_product = Product(str(datetime.utcnow()), p[0], p[1], p[2], p[3], p[4], p[5], p[6], to_bool(p[7]),
+                              to_bool(p[8]), to_bool(p[9]), to_bool(p[10]), p[14])
         products.append(new_product)
         publish_to_kafka(topic_products, new_product)
         product_weightings.append(int(p[14]))
