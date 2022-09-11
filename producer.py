@@ -40,7 +40,7 @@ restock_amount = int(config['INVENTORY']['restock_amount'])
 
 # *** VARIABLES ***
 products = []
-propensity_to_buy_values = []
+propensity_to_buy_scores = []
 
 
 def main():
@@ -48,7 +48,7 @@ def main():
     generate_sales()
 
 
-# create products and propensity_to_buy lists from CSV data file
+# create products and propensity_to_buy_score lists from CSV data file
 def create_product_list():
     with open('data/products.csv', 'r') as csv_file:
         next(csv_file)  # skip header row
@@ -60,19 +60,19 @@ def create_product_list():
                               to_bool(p[8]), to_bool(p[9]), to_bool(p[10]), p[14])
         products.append(new_product)
         publish_to_kafka(topic_products, new_product)
-        propensity_to_buy_values.append(int(p[14]))
-    propensity_to_buy_values.sort()
+        propensity_to_buy_scores.append(int(p[14]))
+    propensity_to_buy_scores.sort()
 
 
 # generate synthetic sale transactions
 def generate_sales():
     for x in range(0, number_of_sales):
-        range_min = propensity_to_buy_values[0]
-        range_max = propensity_to_buy_values[-1]
-        rnd_propensity_to_buy = closest_product_match(propensity_to_buy_values, random.randint(range_min, range_max))
+        range_min = propensity_to_buy_scores[0]
+        range_max = propensity_to_buy_scores[-1]
+        rnd_propensity_to_buy_score = closest_product_match(propensity_to_buy_scores, random.randint(range_min, range_max))
         quantity = random_quantity()
         for p in products:
-            if p.propensity_to_buy == rnd_propensity_to_buy:
+            if p.propensity_to_buy_score == rnd_propensity_to_buy_score:
                 add_supplement = random_add_supplements(p.product_id)
                 supplement_price = supplements_cost if add_supplement else 0.00
                 is_member = random_club_member()
@@ -132,7 +132,7 @@ def to_bool(value):
     return False
 
 
-# find the closest match in propensity_to_buy_values range
+# find the closest match in propensity_to_buy_scores range
 # Credit: https://www.geeksforgeeks.org/python-find-closest-number-to-k-in-given-list/
 def closest_product_match(lst, k):
     return lst[min(range(len(lst)), key=lambda i: abs(lst[i] - k))]
