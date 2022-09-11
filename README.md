@@ -43,8 +43,8 @@ real-time sales data from Kafka using Apache Flink
 * Generator is configurable in a separate [configuration.ini](configuration.ini) file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
 * Over 25 smoothie drink products in [products.csv](products.csv): descriptions, inventories, costs, ingredients,
-  product propensity-to-buy score
-* The propensity to buy a product is determined by a sequential propensity-to-buy scoring range from 0 to 200
+  product propensity-to-buy range value
+* The propensity to buy a product is determined by a sequential propensity-to-buy range from 0 to 200
 * Writes initial product list to an Apache Kafka topic (topic 1/3)
 * Generates semi-random streaming drink purchases, with time, item, quantity, price, total price, etc.
 * Club membership discounts semi-randomly applied to smoothie purchases
