@@ -84,6 +84,7 @@ A few sample product messages are show below.
 ```json
 [
     {
+        "event_time": "2022-09-11 14:39:46.934384",
         "product_id": "CS01",
         "category": "Classic Smoothies",
         "item": "Sunrise Sunset",
@@ -95,12 +96,13 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "_range_weight": 3
+        "range_weight": 3
     },
     {
-        "product_id": "CS06",
+        "event_time": "2022-09-11 14:39:50.715191",
+        "product_id": "CS02",
         "category": "Classic Smoothies",
-        "item": "Blimey Limey",
+        "item": "Kiwi Quencher",
         "size": "24 oz.",
         "cogs": 1.5,
         "price": 4.99,
@@ -109,26 +111,28 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "_range_weight": 36
+        "range_weight": 6
     },
     {
-        "product_id": "SF02",
+        "event_time": "2022-09-11 14:39:54.232999",
+        "product_id": "SF04",
         "category": "Superfoods Smoothies",
-        "item": "Totally Green",
+        "item": "Pomegranate Plunge",
         "size": "24 oz.",
         "cogs": 2.1,
         "price": 5.99,
         "inventory": 50,
         "contains_fruit": true,
-        "contains_veggies": true,
+        "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "_range_weight": 84
+        "range_weight": 94
     },
     {
-        "product_id": "SC05",
+        "event_time": "2022-09-11 14:39:55.538469",
+        "product_id": "SC03",
         "category": "Supercharged Smoothies",
-        "item": "Muscle Blaster",
+        "item": "Health Nut",
         "size": "24 oz.",
         "cogs": 2.7,
         "price": 5.99,
@@ -136,10 +140,11 @@ A few sample product messages are show below.
         "contains_fruit": false,
         "contains_veggies": false,
         "contains_nuts": true,
-        "contains_caffeine": true,
-        "_range_weight": 164
+        "contains_caffeine": false,
+        "range_weight": 143
     },
     {
+        "event_time": "2022-09-11 14:39:56.226351",
         "product_id": "IS01",
         "category": "Indulgent Smoothies",
         "item": "Bahama Mama",
@@ -151,7 +156,7 @@ A few sample product messages are show below.
         "contains_veggies": false,
         "contains_nuts": false,
         "contains_caffeine": false,
-        "_range_weight": 168
+        "range_weight": 168
     }
 ]
 ```
