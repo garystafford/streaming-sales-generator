@@ -17,9 +17,9 @@ class Product:
         self.propensity_to_buy = int(propensity_to_buy)
 
     def __str__(self):
-        return 'Product: event_time: {0}, Product: product_id: {1}, category: {2}, item: {3}, size: {4}, cogs: ${5:.2f}, price: ${6:.2f}, ' \
-               'inventory: {7:.0f}, contains_fruit: {8}, contains_veggies: {9}, contains_nuts: {10}, ' \
-               'contains_caffeine: {10}'.format(
+        return 'Product: event_time: {0}, Product: product_id: {1}, category: {2}, item: {3}, size: {4}, ' \
+               'cogs: ${5:.2f}, price: ${6:.2f}, inventory: {7:.0f}, contains_fruit: {8}, contains_veggies: {9}, ' \
+               'contains_nuts: {10}, contains_caffeine: {10}'.format(
             self.event_time,
             self.product_id,
             self.category,
