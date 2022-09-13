@@ -1,16 +1,44 @@
 version: "3.9"
 
 services:
-  zookeeper:
-    image: 'bitnami/zookeeper:latest'
+  # source of spark: https://raw.githubusercontent.com/bitnami/containers/main/bitnami/spark/docker-compose.yml
+  spark:
+    image: docker.io/bitnami/spark:3.3
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
     ports:
-      - '2181:2181'
+      - "8180:8080"
+    networks:
+      - streaming-stack
+  spark-worker:
+    image: docker.io/bitnami/spark:3.3
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    networks:
+      - streaming-stack
+  zookeeper:
+    image: "bitnami/zookeeper:latest"
+    ports:
+      - "2181:2181"
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - streaming-stack
   kafka:
-    image: 'bitnami/kafka:latest'
+    image: "bitnami/kafka:latest"
     ports:
-      - '9092:9092'
+      - "9092:9092"
     environment:
       - KAFKA_BROKER_ID=1
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,PLAINTEXT_HOST://:29092
@@ -20,24 +48,33 @@ services:
       - ALLOW_PLAINTEXT_LISTENER=yes
     #volumes:
     #  - /tmp:/bitnami/kafka
+    networks:
+      - streaming-stack
     depends_on:
       - zookeeper
-  jobmanager:
-    image: 'flink:latest'
-    command: jobmanager
-    ports:
-      - "8081:8081"
-    environment:
-      - |
-        FLINK_PROPERTIES=
-        jobmanager.rpc.address: jobmanager
-  taskmanager:
-    image: 'flink:latest'
-    depends_on:
-      - jobmanager
-    command: taskmanager
-    environment:
-      - |
-        FLINK_PROPERTIES=
-        jobmanager.rpc.address: jobmanager
-        taskmanager.numberOfTaskSlots: 2
+#  jobmanager:
+#    image: "flink:latest"
+#    command: jobmanager
+#    ports:
+#      - "8081:8081"
+#    environment:
+#      - |
+#        FLINK_PROPERTIES=
+#        jobmanager.rpc.address: jobmanager
+#    networks:
+#      - streaming-stack
+#  taskmanager:
+#    image: "flink:latest"
+#    depends_on:
+#      - jobmanager
+#    command: taskmanager
+#    environment:
+#      - |
+#        FLINK_PROPERTIES=
+#        jobmanager.rpc.address: jobmanager
+#        taskmanager.numberOfTaskSlots: 2
+#    networks:
+#      - streaming-stack
+
+networks:
+  streaming-stack:

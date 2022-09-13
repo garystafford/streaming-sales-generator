@@ -133,7 +133,8 @@ def publish_to_kafka(topic, message):
     configs = get_configs()
 
     producer = KafkaProducer(
-        value_serializer=lambda v: json.dumps(vars(v)).encode("utf-8"), **configs
+        value_serializer=lambda v: json.dumps(vars(v)).encode("utf-8"),
+        **configs,
     )
     producer.send(topic, value=message)
     print("Topic: {0}, Value: {1}".format(topic, message))

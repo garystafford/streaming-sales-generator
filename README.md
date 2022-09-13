@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-1. `docker stack deploy flink-kafka --compose-file docker-compose.yml` to create local instance of Kafka
+1. `docker stack deploy streaming-stack --compose-file docker/docker-compose.yml` to create local instance of Kafka
 2. `python3 -m pip install kafka-python` to install the `kafka-python` package
 3. `python3 ./producer.py` to start generating streaming data to Apache Kafka
 4. `python3 ./consumer.py` in a separate terminal window to view results
@@ -285,14 +285,14 @@ locally using Docker.
 
 ```shell
 # optional: delete previous stack
-docker stack rm kafka-flink
+docker stack rm streaming-stack
 
 # deploy kafka stack
 docker swarm init
-docker stack deploy kafka-flink --compose-file docker/docker-compose.yml
+docker stack deploy streaming-stack --compose-file docker/docker-compose.yml
 
 # optional: to exec into Kafka container
-docker exec -it $(docker container ls --filter  name=kafka-flink_kafka --format "{{.ID}}") bash
+docker exec -it $(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}") bash
 ```
 
 ### Containers
@@ -301,6 +301,8 @@ Example containers:
 
 ```text
 CONTAINER ID   IMAGE                      PORTS                                    NAMES
+1d7c6ab3009d   bitnami/spark:3.3                                                   streaming-stack_spark...
+1d7c6ab3009d   bitnami/spark:3.3                                                   streaming-stack_spark-worker...
 69ad1556eb3a   flink:latest               6123/tcp, 8081/tcp                       kafka-flink_taskmanager.1...
 9f9b8e43eb21   flink:latest               6123/tcp, 8081/tcp                       kafka-flink_jobmanager.1...
 6114dc4a9824   bitnami/kafka:latest       9092/tcp                                 kafka-flink_kafka.1...
@@ -326,6 +328,8 @@ python3 ./consumer.py
 Manage the topics from within the Kafka container:
 
 ```shell
+docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
+
 export BOOTSTRAP_SERVERS="localhost:9092"
 export TOPIC_PRODUCTS="demo.products"
 export TOPIC_PURCHASES="demo.purchases"
@@ -382,6 +386,7 @@ kafka-console-consumer.sh \
 * ✓ Add streaming data analysis example using Apache Flink
 * ✓ Add streaming data analysis example using Apache Kafka Streams
 * ✓ Add event time to Product model so product changes can be accounted for in stream
+* ✓ Add Apache Spark to local docker streaming stack
 * ❏ Enable multiple product sales to be associated with a single transaction, add transaction ID to Purchases Class
 * ❏ Replace specific restocking events with more generic events topic with multiple event type field: restocking, price change, COGS change,
   ingredients, etc.

@@ -5,16 +5,43 @@ Spark batch and streaming examples currently both use SASL/SCRAM authentication.
 ## Spark Commands
 
 ```shell
-export BOOTSTRAP_SERVERS="b-1.localhost:9096,b-2.localhost:9096"  # localhost:9092
+
+# Install packages on AWS EMR
+sudo yum install git vim wget
+
+# Install packages in Bitnami container
+docker exec -it -u 0 $(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}") bash
+apt-get update && apt-get install git vim wget
+
+python3 -m pip install kafka-python
+
+wget https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar
+wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.8.1/kafka-clients-2.8.1.jar
+wget https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.3.0/spark-sql-kafka-0-10_2.12-3.3.0.jar
+wget https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.0/spark-token-provider-kafka-0-10_2.12-3.3.0.jar
+mv *.jar /opt/bitnami/spark/jars/
+
+# Run Spark jobs Bitnami container
+SPARK_CONTAINER=$(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}")
+docker cp streaming_examples/ ${SPARK_CONTAINER}:/home/
+
+docker exec -it $(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}") bash
+cd /home/streaming_examples/apache_spark_docker_container/
+
+export BOOTSTRAP_SERVERS="localhost:9092"
+
+# Bitnami container
+export BOOTSTRAP_SERVERS="kafka:29092"
+
 export TOPIC_PURCHASES="demo.purchases"
+
+# optional: SASL/SCRAM
 export SASL_USERNAME="foo"
 export SASL_PASSWORD="bar"
 
-sudo yum install git
 git clone https://github.com/garystafford/streaming-sales-generator.git
 cd streaming-sales-generator/
 
-python3 -m pip install -r requirements.txt
 
 spark-submit spark_batch_kafka.py
 

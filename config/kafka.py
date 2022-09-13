@@ -18,4 +18,6 @@ def get_configs():
         configs["sasl_plain_username"] = sasl_username
         configs["sasl_plain_password"] = sasl_password
 
+    print("configs: {0}".format(str(configs)))
+
     return configs
