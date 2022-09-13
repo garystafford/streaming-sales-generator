@@ -30,7 +30,7 @@ and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytic
 Short [YouTube video](https://youtu.be/MTCsN7gJuJM) demonstrates the generator in use (video only - no audio).
 
 
-## Sample Code
+## Streaming Code Sample
 
   * Apache Spark Structured Streaming: [Code samples](./apache_spark_examples) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Spark
