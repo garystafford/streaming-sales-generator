@@ -1,9 +1,8 @@
-# Purpose: Reads a stream of messages from a Kafka topic and
-#          writes a stream of aggregations over sliding event-time window to console (stdout)
+# Purpose: Reads a batch of messages from a Kafka topic and aggregates to the console (stdout)
 # References: https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html
 # Author:  Gary A. Stafford
-# Date: 2022-09-12
-# Note: Expects (4) environment variables: BOOTSTRAP_SERVERS, TOPIC_PURCHASES
+# Date: 2022-09-02
+# Note: Expects (4) environment variables: BOOTSTRAP_SERVERS, TOPIC_PURCHASES, SASL_USERNAME, SASL_PASSWORD
 
 import os
 import pyspark.sql.functions as F
@@ -16,7 +15,7 @@ from pyspark.sql.window import Window
 def main():
     spark = SparkSession \
         .builder \
-        .appName("kafka-streaming-query") \
+        .appName("kafka-batch-query") \
         .getOrCreate()
 
     spark.sparkContext.setLogLevel("INFO")
@@ -33,11 +32,21 @@ def read_from_kafka(spark):
         "subscribe":
             os.environ.get('TOPIC_PURCHASES'),
         "startingOffsets":
-            "earliest"
+            "earliest",
+        "endingOffsets":
+            "latest"
     }
 
+    if os.environ.get("AUTH_METHOD") == "sasl_scram":
+        options["kafka.security.protocol"] = "SASL_SSL"
+        options["kafka.sasl.mechanism"] = "SCRAM-SHA-512"
+        options["kafka.sasl.jaas.config"] = os.environ.get("SASL_USERNAME")
+        options["sasl_plain_password"] = \
+            "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"{0}\" password=\"{1}\";".format(
+                os.environ.get("SASL_USERNAME"), os.environ.get("SASL_PASSWORD"))
+
     df_sales = spark \
-        .readStream \
+        .read \
         .format("kafka") \
         .options(**options) \
         .load()
@@ -58,31 +67,27 @@ def summarize_sales(df_sales):
         StructField("total_purchase", FloatType(), False),
     ])
 
-    ds_sales = df_sales \
+    window = Window.partitionBy("product_id").orderBy("total_purchase")
+    window_agg = Window.partitionBy("product_id")
+
+    df_sales \
         .selectExpr("CAST(value AS STRING)") \
         .select(F.from_json("value", schema=schema).alias("data")) \
         .select("data.*") \
-        .withWatermark("transaction_time", "10 minutes") \
-        .groupBy("product_id",
-                 F.window("transaction_time", "10 minutes", "5 minutes")) \
-        .agg(F.sum("total_purchase"), F.count("quantity")) \
-        .orderBy(F.col("window").desc(),
-                 F.col("sum(total_purchase)").desc()) \
+        .withColumn("row", F.row_number().over(window)) \
+        .withColumn("quantity", F.count(F.col("quantity")).over(window_agg)) \
+        .withColumn("sales", F.sum(F.col("total_purchase")).over(window_agg)) \
+        .filter(F.col("row") == 1).drop("row") \
         .select("product_id",
-                F.format_number("sum(total_purchase)", 2).alias("sales"),
-                F.format_number("count(quantity)", 0).alias("drinks"),
-                "window.start", "window.end") \
+                F.format_number("sales", 2).alias("sales"),
+                F.format_number("quantity", 0).alias("quantity")) \
         .coalesce(1) \
-        .writeStream \
-        .queryName("streaming_to_console") \
-        .trigger(processingTime="1 minute") \
-        .outputMode("complete") \
+        .orderBy(F.regexp_replace("sales", ",", "").cast("float"), ascending=False) \
+        .write \
         .format("console") \
-        .option("numRows", 10) \
+        .option("numRows", 25) \
         .option("truncate", False) \
-        .start()
-
-    ds_sales.awaitTermination()
+        .save()
 
 
 if __name__ == "__main__":

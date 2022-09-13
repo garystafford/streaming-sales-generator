@@ -28,14 +28,11 @@ docker cp streaming_examples/ ${SPARK_CONTAINER}:/home/
 docker exec -it ${SPARK_CONTAINER} bash
 cd /home/streaming_examples/apache_spark_docker_container/
 
-export BOOTSTRAP_SERVERS="localhost:9092"
-
-# Bitnami container
 export BOOTSTRAP_SERVERS="kafka:29092"
-
 export TOPIC_PURCHASES="demo.purchases"
 
 # optional: SASL/SCRAM
+AUTH_METHOD="sasl_scram"
 export SASL_USERNAME="foo"
 export SASL_PASSWORD="bar"
 
