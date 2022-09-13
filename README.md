@@ -386,7 +386,7 @@ kafka-console-consumer.sh \
 * ✓ Add streaming data analysis example using Apache Flink
 * ✓ Add streaming data analysis example using Apache Kafka Streams
 * ✓ Add event time to Product model so product changes can be accounted for in stream
-* ✓ Add Apache Spark containers to local docker streaming stack
+* ✓ Add Apache Spark containers to local docker streaming stack (Kafka, Spark, Flink)
 * ❏ Enable multiple product sales to be associated with a single transaction, add transaction ID to Purchases Class
 * ❏ Replace specific restocking events with more generic events topic with multiple event type field: restocking, price change, COGS change,
   ingredients, etc.
