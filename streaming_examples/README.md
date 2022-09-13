@@ -10,7 +10,8 @@ Spark batch and streaming examples currently both use SASL/SCRAM authentication.
 sudo yum install git vim wget
 
 # Install packages in Bitnami container
-docker exec -it -u 0 $(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}") bash
+SPARK_CONTAINER=$(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}")
+docker exec -it -u 0 ${SPARK_CONTAINER} bash
 apt-get update && apt-get install git vim wget
 
 python3 -m pip install kafka-python
@@ -22,10 +23,9 @@ wget https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-
 mv *.jar /opt/bitnami/spark/jars/
 
 # Run Spark jobs Bitnami container
-SPARK_CONTAINER=$(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}")
 docker cp streaming_examples/ ${SPARK_CONTAINER}:/home/
 
-docker exec -it $(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}") bash
+docker exec -it ${SPARK_CONTAINER} bash
 cd /home/streaming_examples/apache_spark_docker_container/
 
 export BOOTSTRAP_SERVERS="localhost:9092"
