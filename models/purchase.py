@@ -2,6 +2,7 @@ class Purchase:
     def __init__(
         self,
         transaction_time: str,
+        transaction_id: int,
         product_id: str,
         price: float,
         quantity: int,
@@ -11,6 +12,7 @@ class Purchase:
         supplement_price: float,
     ):
         self.transaction_time = str(transaction_time)
+        self.transaction_id = int(transaction_id)
         self.product_id = str(product_id)
         self.price = float(price)
         self.quantity = int(quantity)
@@ -24,10 +26,11 @@ class Purchase:
 
     def __str__(self):
         return (
-            "Purchase: transaction_time: {0}, product_id: {1}, quantity: {2:.0f}, price: ${3:.2f}, "
-            "add_supplements: {4}, supplement_price: ${5:.2f}, is_member: {6}, "
-            "member_discount: {7:.0%}, total: ${8:.2f}".format(
+            "Purchase: transaction_time: {0}, transaction_id: {1:.0f}, product_id: {2}, quantity: {3:.0f}, "
+            "price: ${4:.2f}, add_supplements: {5}, supplement_price: ${6:.2f}, is_member: {7}, "
+            "member_discount: {8:.0%}, total: ${9:.2f}".format(
                 self.transaction_time,
+                self.transaction_id,
                 self.product_id,
                 self.quantity,
                 self.price,

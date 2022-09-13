@@ -28,7 +28,8 @@ topic_stockings = config["KAFKA"]["topic_stockings"]
 min_sale_freq = int(config["SALES"]["min_sale_freq"])
 max_sale_freq = int(config["SALES"]["max_sale_freq"])
 number_of_sales = int(config["SALES"]["number_of_sales"])
-quantity_one_freq = int(config["SALES"]["quantity_one_freq"])
+transaction_quantity_one_item_freq = int(config["SALES"]["transaction_quantity_one_item_freq"])
+item_quantity_one_freq = int(config["SALES"]["item_quantity_one_freq"])
 member_freq = int(config["SALES"]["member_freq"])
 club_member_discount = float(config["SALES"]["club_member_discount"])
 add_supp_freq_group1 = int(config["SALES"]["add_supp_freq_group1"])
@@ -79,35 +80,40 @@ def create_product_list():
 
 # generate synthetic sale transactions
 def generate_sales():
+    # common to all transactions
+    range_min = propensity_to_buy_range[0]
+    range_max = propensity_to_buy_range[-1]
     for x in range(0, number_of_sales):
-        range_min = propensity_to_buy_range[0]
-        range_max = propensity_to_buy_range[-1]
-        rnd_propensity_to_buy = closest_product_match(
-            propensity_to_buy_range, random.randint(range_min, range_max)
-        )
-        quantity = random_quantity()
-        for p in products:
-            if p.propensity_to_buy == rnd_propensity_to_buy:
-                add_supplement = random_add_supplements(p.product_id)
-                supplement_price = supplements_cost if add_supplement else 0.00
-                is_member = random_club_member()
-                member_discount = club_member_discount if is_member else 0.00
-
-                new_purchase = Purchase(
-                    str(datetime.utcnow()),
-                    p.product_id,
-                    p.price,
-                    random_quantity(),
-                    is_member,
-                    member_discount,
-                    add_supplement,
-                    supplement_price,
-                )
-                publish_to_kafka(topic_purchases, new_purchase)
-                p.inventory = p.inventory - quantity
-                if p.inventory <= min_inventory:
-                    restock_item(p.product_id)
-                break
+        # common for each transaction's line items
+        transaction_time = str(datetime.utcnow())
+        is_member = random_club_member()
+        member_discount = club_member_discount if is_member else 0.00
+        for y in range(0, random_transaction_item_quantity()):
+            # unique to each line item
+            rnd_propensity_to_buy = closest_product_match(
+                propensity_to_buy_range, random.randint(range_min, range_max)
+            )
+            quantity = random_quantity()
+            for p in products:
+                if p.propensity_to_buy == rnd_propensity_to_buy:
+                    add_supplement = random_add_supplements(p.product_id)
+                    supplement_price = supplements_cost if add_supplement else 0.00
+                    new_purchase = Purchase(
+                        transaction_time,
+                        int(abs(hash(transaction_time))),
+                        p.product_id,
+                        p.price,
+                        random_quantity(),
+                        is_member,
+                        member_discount,
+                        add_supplement,
+                        supplement_price,
+                    )
+                    publish_to_kafka(topic_purchases, new_purchase)
+                    p.inventory = p.inventory - quantity
+                    if p.inventory <= min_inventory:
+                        restock_item(p.product_id)
+                    break
         time.sleep(random.randint(min_sale_freq, max_sale_freq))
 
 
@@ -153,12 +159,22 @@ def closest_product_match(lst, k):
     return lst[min(range(len(lst)), key=lambda i: abs(lst[i] - k))]
 
 
-# purchase quantity (usually 1, max 3)
+# individual item purchase quantity (usually 1, max 3)
 def random_quantity():
     rnd = random.randint(1, 30)
     if rnd == 30:
         return 3
-    if rnd <= quantity_one_freq:
+    if rnd <= item_quantity_one_freq:
+        return 1
+    return 2
+
+
+# transaction items quantity (usually 1, max 3)
+def random_transaction_item_quantity():
+    rnd = random.randint(1, 20)
+    if rnd >= 19:
+        return 3
+    if rnd <= transaction_quantity_one_item_freq:
         return 1
     return 2
 

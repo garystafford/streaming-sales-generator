@@ -56,6 +56,7 @@ def read_from_kafka(spark):
 def summarize_sales(df_sales):
     schema = StructType([
         StructField("transaction_time", TimestampType(), False),
+        StructField("transaction_id", IntegerType(), False),
         StructField("product_id", StringType(), False),
         StructField("price", FloatType(), False),
         StructField("quantity", IntegerType(), False),

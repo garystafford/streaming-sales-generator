@@ -15,8 +15,8 @@ on and visualize different aspects with Business Intelligence (BI) and dashboard
 data source should possess a degree of consistency and predictability while still displaying a reasonable level of
 natural randomness. Conversely, the source should not result in an unnatural uniform distribution of data over time.
 
-This project's highly configurable synthetic data generator ([producer.py](producer.py)) streams beverage products,
-semi-random beverage sales transactions, and inventory restocking activities to Apache Kafka topics. It is designed for
+This project's highly configurable synthetic data generator ([producer.py](producer.py)) streams product listings,
+sales transactions, and inventory restocking activities to Apache Kafka topics. It is designed for
 demonstrating streaming data analytics tools, such as
 [Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html),
 [Apache Beam](https://beam.apache.org/), [Apache Flink](https://flink.apache.org/),
@@ -32,7 +32,7 @@ Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the genera
 
 ## Sample Code
 
-  * Apache Spark Structured Streaming: [Code samples](./streaming_examples) written with PySpark, which consumes and aggregates the 
+  * Apache Spark Structured Streaming: [Code samples](./apache_spark_examples) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Spark
   * Apache Flink: [Code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Flink
@@ -169,41 +169,21 @@ A few sample sales transaction messages are show below.
 ```json
 [
     {
-        "transaction_time": "2022-08-30 12:57:07.942191",
-        "product_id": "CS10",
+        "transaction_time": "2022-09-13 11:51:09.006164",
+        "transaction_id": 9000324019618167755,
+        "product_id": "CS06",
         "price": 4.99,
-        "quantity": 2,
-        "is_member": false,
-        "member_discount": 0.0,
-        "add_supplements": false,
-        "supplement_price": 0.0,
-        "total_purchase": 9.98
-    },
-    {
-        "transaction_time": "2022-08-30 12:57:11.113150",
-        "product_id": "SC03",
-        "price": 5.99,
         "quantity": 1,
         "is_member": false,
         "member_discount": 0.0,
-        "add_supplements": false,
-        "supplement_price": 0.0,
-        "total_purchase": 5.99
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
     },
     {
-        "transaction_time": "2022-08-30 12:57:12.338458",
-        "product_id": "SC05",
-        "price": 5.99,
-        "quantity": 1,
-        "is_member": true,
-        "member_discount": 0.1,
-        "add_supplements": false,
-        "supplement_price": 0.0,
-        "total_purchase": 5.39
-    },
-    {
-        "transaction_time": "2022-08-30 12:57:14.584755",
-        "product_id": "SF07",
+        "transaction_time": "2022-09-13 11:53:24.925539",
+        "transaction_id": 9051670610281553996,
+        "product_id": "SC04",
         "price": 5.99,
         "quantity": 1,
         "is_member": true,
@@ -213,8 +193,9 @@ A few sample sales transaction messages are show below.
         "total_purchase": 7.18
     },
     {
-        "transaction_time": "2022-08-30 12:57:18.787460",
-        "product_id": "SC05",
+        "transaction_time": "2022-09-13 11:56:27.143473",
+        "transaction_id": 6730925912413682784,
+        "product_id": "SF03",
         "price": 5.99,
         "quantity": 1,
         "is_member": false,
@@ -222,6 +203,30 @@ A few sample sales transaction messages are show below.
         "add_supplements": true,
         "supplement_price": 1.99,
         "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-13 11:59:33.269093",
+        "transaction_id": 2051718832449428473,
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 18.85
+    },
+    {
+        "transaction_time": "2022-09-13 11:59:33.269093",
+        "transaction_id": 2051718832449428473,
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 14.36
     }
 ]
 ```
@@ -229,9 +234,8 @@ A few sample sales transaction messages are show below.
 ### Sample Batch Data
 
 The [sample_data_small.json](sample_batch_data/sample_data_small.json) file contains a batch of 290 purchases,
-representing a typical
-12-hour business day from 8AM to 8PM. The [sample_data_large.json](sample_batch_data/sample_data_large.json) file
-contains 500 purchases,
+representing a typical 12-hour business day from 8AM to 8PM.
+The [sample_data_large.json](sample_batch_data/sample_data_large.json) file contains 500 purchases,
 spanning ~20.5 hours of sample data.
 
 ## Restocking Activity Topic
@@ -295,9 +299,9 @@ docker stack deploy streaming-stack --compose-file docker/docker-compose.yml
 docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
 ```
 
-### Containers
+### Streaming Stack Containers
 
-Example containers:
+Example Kafka, Spark, and Flink containers:
 
 ```text
 CONTAINER ID   IMAGE                      PORTS                                    NAMES
@@ -387,7 +391,7 @@ kafka-console-consumer.sh \
 * ✓ Add streaming data analysis example using Apache Kafka Streams
 * ✓ Add event time to Product model so product changes can be accounted for in stream
 * ✓ Add Apache Spark containers to local docker streaming stack (Kafka, Spark, Flink)
-* ❏ Enable multiple product sales to be associated with a single transaction, add transaction ID to Purchases Class
+* ✓ Enable multiple product sales to be associated with a single transaction, add transaction ID to Purchases Class
 * ❏ Replace specific restocking events with more generic events topic with multiple event type field: restocking, price change, COGS change,
   ingredients, etc.
 * ❏ Add hours of operation (e.g., Monday 8AM - 8PM), which impact when sales can be made
