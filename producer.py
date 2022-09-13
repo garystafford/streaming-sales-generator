@@ -88,11 +88,18 @@ def generate_sales():
         transaction_time = str(datetime.utcnow())
         is_member = random_club_member()
         member_discount = club_member_discount if is_member else 0.00
+
+        # reset values
+        rnd_propensity_to_buy = -1
+        previous_rnd_propensity_to_buy = -1
+
         for y in range(0, random_transaction_item_quantity()):
-            # unique to each line item
-            rnd_propensity_to_buy = closest_product_match(
-                propensity_to_buy_range, random.randint(range_min, range_max)
-            )
+            # reduces but not eliminates risk of duplicate products in same transaction - TODO: improve this method
+            if rnd_propensity_to_buy == previous_rnd_propensity_to_buy:
+                rnd_propensity_to_buy = closest_product_match(
+                    propensity_to_buy_range, random.randint(range_min, range_max)
+                )
+            previous_rnd_propensity_to_buy = rnd_propensity_to_buy
             quantity = random_quantity()
             for p in products:
                 if p.propensity_to_buy == rnd_propensity_to_buy:
@@ -100,7 +107,7 @@ def generate_sales():
                     supplement_price = supplements_cost if add_supplement else 0.00
                     new_purchase = Purchase(
                         transaction_time,
-                        int(abs(hash(transaction_time))),
+                        str(abs(hash(transaction_time))),
                         p.product_id,
                         p.price,
                         random_quantity(),
