@@ -170,7 +170,7 @@ A few sample sales transaction messages are show below.
 [
     {
         "transaction_time": "2022-09-13 11:51:09.006164",
-        "transaction_id": 9000324019618167755,
+        "transaction_id": "9000324019618167755",
         "product_id": "CS06",
         "price": 4.99,
         "quantity": 1,
@@ -182,7 +182,7 @@ A few sample sales transaction messages are show below.
     },
     {
         "transaction_time": "2022-09-13 11:53:24.925539",
-        "transaction_id": 9051670610281553996,
+        "transaction_id": "9051670610281553996",
         "product_id": "SC04",
         "price": 5.99,
         "quantity": 1,
@@ -194,7 +194,7 @@ A few sample sales transaction messages are show below.
     },
     {
         "transaction_time": "2022-09-13 11:56:27.143473",
-        "transaction_id": 6730925912413682784,
+        "transaction_id": "6730925912413682784",
         "product_id": "SF03",
         "price": 5.99,
         "quantity": 1,
@@ -206,7 +206,7 @@ A few sample sales transaction messages are show below.
     },
     {
         "transaction_time": "2022-09-13 11:59:33.269093",
-        "transaction_id": 2051718832449428473,
+        "transaction_id": "2051718832449428473",
         "product_id": "CS04",
         "price": 4.99,
         "quantity": 1,
@@ -218,7 +218,7 @@ A few sample sales transaction messages are show below.
     },
     {
         "transaction_time": "2022-09-13 11:59:33.269093",
-        "transaction_id": 2051718832449428473,
+        "transaction_id": "2051718832449428473",
         "product_id": "SF07",
         "price": 5.99,
         "quantity": 2,
