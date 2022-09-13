@@ -15,7 +15,7 @@ on and visualize different aspects with Business Intelligence (BI) and dashboard
 data source should possess a degree of consistency and predictability while still displaying a reasonable level of
 natural randomness. Conversely, the source should not result in an unnatural uniform distribution of data over time.
 
-This project's highly configurable synthetic data generator ([producer.py](producer.py)) streams product listings,
+This project's highly configurable, Python-based, synthetic data generator ([producer.py](producer.py)) streams product listings,
 sales transactions, and inventory restocking activities to Apache Kafka topics. It is designed for
 demonstrating streaming data analytics tools, such as
 [Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html),
@@ -27,7 +27,7 @@ and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytic
 
 ## Video Demonstration
 
-Short [YouTube video](https://youtu.be/HWOcOFTnl9M) that demonstrates the generator in use (video only - no audio).
+Short [YouTube video](https://youtu.be/MTCsN7gJuJM) demonstrates the generator in use (video only - no audio).
 
 
 ## Sample Code
