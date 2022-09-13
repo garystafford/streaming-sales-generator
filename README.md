@@ -292,7 +292,7 @@ docker swarm init
 docker stack deploy streaming-stack --compose-file docker/docker-compose.yml
 
 # optional: to exec into Kafka container
-docker exec -it $(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}") bash
+docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
 ```
 
 ### Containers
@@ -386,7 +386,7 @@ kafka-console-consumer.sh \
 * ✓ Add streaming data analysis example using Apache Flink
 * ✓ Add streaming data analysis example using Apache Kafka Streams
 * ✓ Add event time to Product model so product changes can be accounted for in stream
-* ✓ Add Apache Spark to local docker streaming stack
+* ✓ Add Apache Spark containers to local docker streaming stack
 * ❏ Enable multiple product sales to be associated with a single transaction, add transaction ID to Purchases Class
 * ❏ Replace specific restocking events with more generic events topic with multiple event type field: restocking, price change, COGS change,
   ingredients, etc.
