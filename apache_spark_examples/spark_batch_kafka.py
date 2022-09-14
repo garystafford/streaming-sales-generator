@@ -40,8 +40,7 @@ def read_from_kafka(spark):
     if os.environ.get("AUTH_METHOD") == "sasl_scram":
         options["kafka.security.protocol"] = "SASL_SSL"
         options["kafka.sasl.mechanism"] = "SCRAM-SHA-512"
-        options["kafka.sasl.jaas.config"] = os.environ.get("SASL_USERNAME")
-        options["sasl_plain_password"] = \
+        options["kafka.sasl.jaas.config"] = \
             "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"{0}\" password=\"{1}\";".format(
                 os.environ.get("SASL_USERNAME"), os.environ.get("SASL_PASSWORD"))
 
