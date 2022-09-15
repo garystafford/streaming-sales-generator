@@ -1,0 +1,55 @@
+# Command: docker stack deploy pinot-kafka --compose-file apache-pinot-kafka-stack.yml
+# Gary A. Stafford (2022-09-14)
+
+version: "3.9"
+services:
+  zookeeper:
+    image: "zookeeper:3.8.0"
+    hostname: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+  pinot-controller:
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
+    command: "StartController -zkAddress zookeeper:2181"
+    ports:
+      - "9000:9000"
+    environment:
+      JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx4G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-controller.log"
+    depends_on:
+      - zookeeper
+  pinot-broker:
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
+    command: "StartBroker -zkAddress zookeeper:2181"
+    ports:
+      - "8099:8099"
+    environment:
+      JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx4G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-controller.log"
+    depends_on:
+      - pinot-controller
+  pinot-server:
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
+    command: "StartServer -zkAddress zookeeper:2181"
+    ports:
+      - "8098:8098"
+    environment:
+      JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx4G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-controller.log"
+    depends_on:
+      - pinot-broker
+  kafka:
+    image: "bitnami/kafka:3.2.1"
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 0
+      KAFKA_CFG_LISTENERS: "PLAINTEXT://:9092,PLAINTEXT_HOST://:29092"
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: "PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT"
+      KAFKA_CFG_ADVERTISED_LISTENERS: "PLAINTEXT://127.0.0.1:9092,PLAINTEXT_HOST://kafka:29092"
+      KAFKA_CFG_ZOOKEEPER_CONNECT: "zookeeper:2181/kafka"
+      ALLOW_PLAINTEXT_LISTENER: "yes"
+      KAFKA_CFG_ADVERTISED_HOST_NAME: "kafka"
+    depends_on:
+      - zookeeper
