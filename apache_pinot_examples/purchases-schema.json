@@ -10,6 +10,10 @@
             "dataType": "STRING"
         },
         {
+            "name": "price",
+            "dataType": "FLOAT"
+        },
+        {
             "name": "is_member",
             "dataType": "BOOLEAN"
         },
@@ -32,7 +36,7 @@
             "dataType": "INT"
         },
         {
-            "name": "price",
+            "name": "total_purchase",
             "dataType": "FLOAT"
         }
     ],
