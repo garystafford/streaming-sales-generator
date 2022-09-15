@@ -1,0 +1,47 @@
+{
+    "schemaName": "purchases",
+    "dimensionFieldSpecs": [
+        {
+            "name": "transaction_id",
+            "dataType": "STRING"
+        },
+        {
+            "name": "product_id",
+            "dataType": "STRING"
+        },
+        {
+            "name": "is_member",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "member_discount",
+            "dataType": "FLOAT"
+        },
+        {
+            "name": "add_supplements",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "supplement_price",
+            "dataType": "FLOAT"
+        }
+    ],
+    "metricFieldSpecs": [
+        {
+            "name": "quantity",
+            "dataType": "INT"
+        },
+        {
+            "name": "price",
+            "dataType": "FLOAT"
+        }
+    ],
+    "dateTimeFieldSpecs": [
+        {
+            "name": "transaction_time",
+            "dataType": "STRING",
+            "format": "1:DAYS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
+            "granularity": "1:MILLISECONDS"
+        }
+    ]
+}

@@ -1,150 +1,3686 @@
-{"transaction_time": "2022-09-13 18:46:00.091181", "transaction_id": "7479817852704183869", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 18:46:00.091181", "transaction_id": "7479817852704183869", "product_id": "CS02", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.28}
-{"transaction_time": "2022-09-13 18:46:00.091181", "transaction_id": "7479817852704183869", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.94}
-{"transaction_time": "2022-09-13 18:49:29.874852", "transaction_id": "5971487692535687947", "product_id": "SC05", "price": 5.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 15.96}
-{"transaction_time": "2022-09-13 18:53:13.122284", "transaction_id": "3167669975417278121", "product_id": "SC04", "price": 5.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 11.98}
-{"transaction_time": "2022-09-13 18:56:48.379781", "transaction_id": "6344057127805216586", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 19:01:32.653952", "transaction_id": "9005048165502373500", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 19:01:32.653952", "transaction_id": "9005048165502373500", "product_id": "CS10", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.98}
-{"transaction_time": "2022-09-13 19:01:32.653952", "transaction_id": "9005048165502373500", "product_id": "IS03", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.48}
-{"transaction_time": "2022-09-13 19:04:10.372250", "transaction_id": "9112771356425613775", "product_id": "CS04", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.98}
-{"transaction_time": "2022-09-13 19:06:23.617429", "transaction_id": "7413110842690103267", "product_id": "IS04", "price": 5.49, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.73}
-{"transaction_time": "2022-09-13 19:11:18.861536", "transaction_id": "8387391086864828920", "product_id": "CS02", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 19:15:40.115288", "transaction_id": "2345543476827843500", "product_id": "SF05", "price": 5.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 11.98}
-{"transaction_time": "2022-09-13 19:15:40.115288", "transaction_id": "2345543476827843500", "product_id": "CS05", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 19:20:28.503653", "transaction_id": "3790243312755133094", "product_id": "SC03", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.18}
-{"transaction_time": "2022-09-13 19:25:12.760143", "transaction_id": "4268265076347818982", "product_id": "SF05", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 19:29:13.007253", "transaction_id": "987183013045423181", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.28}
-{"transaction_time": "2022-09-13 19:31:30.261885", "transaction_id": "7274000123155237373", "product_id": "CS10", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 19:36:01.390635", "transaction_id": "1215100489488348261", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 19:36:01.390635", "transaction_id": "1215100489488348261", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 19:36:01.390635", "transaction_id": "1215100489488348261", "product_id": "CS11", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.98}
-{"transaction_time": "2022-09-13 19:40:12.985059", "transaction_id": "245833143459783791", "product_id": "SF05", "price": 5.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 11.98}
-{"transaction_time": "2022-09-13 19:45:07.259842", "transaction_id": "7982672908549522565", "product_id": "SF04", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 19:49:11.497643", "transaction_id": "5474368724588239968", "product_id": "SC05", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 19:51:41.965803", "transaction_id": "3687823238496544100", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 19:56:17.171664", "transaction_id": "2686899189947180043", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-13 20:00:04.468183", "transaction_id": "5319574737532583948", "product_id": "CS06", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.98}
-{"transaction_time": "2022-09-13 20:00:04.468183", "transaction_id": "5319574737532583948", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 20:00:04.468183", "transaction_id": "5319574737532583948", "product_id": "SF03", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 20:03:40.159093", "transaction_id": "3560736661830251912", "product_id": "SF06", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 20:08:19.468001", "transaction_id": "3951573602703660191", "product_id": "CS04", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.28}
-{"transaction_time": "2022-09-13 20:08:19.468001", "transaction_id": "3951573602703660191", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 20:11:37.074142", "transaction_id": "7689582097891241435", "product_id": "IS03", "price": 5.49, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.94}
-{"transaction_time": "2022-09-13 20:14:18.357320", "transaction_id": "6813719151797211335", "product_id": "SF05", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 20:14:18.357320", "transaction_id": "6813719151797211335", "product_id": "CS11", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 20:18:48.766135", "transaction_id": "7860072637937413733", "product_id": "CS02", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.98}
-{"transaction_time": "2022-09-13 20:18:48.766135", "transaction_id": "7860072637937413733", "product_id": "IS04", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-13 20:23:08.228958", "transaction_id": "4634223218469687418", "product_id": "SF06", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 20:23:08.228958", "transaction_id": "4634223218469687418", "product_id": "CS09", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 20:26:54.685506", "transaction_id": "75780461291837886", "product_id": "CS05", "price": 4.99, "quantity": 2, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 12.56}
-{"transaction_time": "2022-09-13 20:26:54.685506", "transaction_id": "75780461291837886", "product_id": "SF05", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 20:29:47.168249", "transaction_id": "4900970499882194893", "product_id": "CS02", "price": 4.99, "quantity": 3, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 14.97}
-{"transaction_time": "2022-09-13 20:34:31.406064", "transaction_id": "546442682737277005", "product_id": "CS07", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 20:37:00.623882", "transaction_id": "305995029269630788", "product_id": "CS08", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.98}
-{"transaction_time": "2022-09-13 20:37:00.623882", "transaction_id": "305995029269630788", "product_id": "IS01", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-13 20:37:00.623882", "transaction_id": "305995029269630788", "product_id": "CS09", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 20:41:46.209276", "transaction_id": "6286305620593107336", "product_id": "CS04", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 20:41:46.209276", "transaction_id": "6286305620593107336", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-13 20:46:05.573227", "transaction_id": "2122614803507481771", "product_id": "SF07", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.18}
-{"transaction_time": "2022-09-13 20:51:04.814247", "transaction_id": "2181335932297802774", "product_id": "IS04", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-13 20:55:16.049513", "transaction_id": "2246058460866558267", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 20:58:54.299016", "transaction_id": "5210408203007932879", "product_id": "SF01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 21:02:28.542519", "transaction_id": "1965002921687039222", "product_id": "SF03", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 21:05:06.969634", "transaction_id": "3514250148044777876", "product_id": "CS05", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 21:05:06.969634", "transaction_id": "3514250148044777876", "product_id": "SC04", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 21:07:45.467399", "transaction_id": "5442695070437337083", "product_id": "IS03", "price": 5.49, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.94}
-{"transaction_time": "2022-09-13 21:10:41.705987", "transaction_id": "34559794986157176", "product_id": "CS07", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 21:13:20.961938", "transaction_id": "1286254326001846396", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 21:16:18.191595", "transaction_id": "4817785289963156238", "product_id": "SC04", "price": 5.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 15.96}
-{"transaction_time": "2022-09-13 21:20:50.419683", "transaction_id": "3778910702044061424", "product_id": "SF07", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.18}
-{"transaction_time": "2022-09-13 21:23:51.654358", "transaction_id": "9194131226680599052", "product_id": "CS08", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.98}
-{"transaction_time": "2022-09-13 21:25:53.899137", "transaction_id": "9147046493144902394", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-13 21:30:48.144704", "transaction_id": "2674083024385716507", "product_id": "CS10", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 21:34:11.405697", "transaction_id": "2675776508225862714", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 21:34:11.405697", "transaction_id": "2675776508225862714", "product_id": "CS06", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 21:38:47.872524", "transaction_id": "7541821889866725173", "product_id": "CS08", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.98}
-{"transaction_time": "2022-09-13 21:41:54.144067", "transaction_id": "7108376923753499885", "product_id": "CS01", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 21:45:38.382929", "transaction_id": "3035146338130121218", "product_id": "CS10", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.28}
-{"transaction_time": "2022-09-13 21:45:38.382929", "transaction_id": "3035146338130121218", "product_id": "SF06", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 21:47:49.875669", "transaction_id": "4251271064673609430", "product_id": "SF06", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 21:50:42.013734", "transaction_id": "988855753053591989", "product_id": "SF04", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.18}
-{"transaction_time": "2022-09-13 21:50:42.013734", "transaction_id": "988855753053591989", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 21:50:42.013734", "transaction_id": "988855753053591989", "product_id": "SF07", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-13 21:55:34.620228", "transaction_id": "4449627526579156736", "product_id": "IS01", "price": 5.49, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.94}
-{"transaction_time": "2022-09-13 21:58:55.861011", "transaction_id": "5176469741861975086", "product_id": "CS11", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 22:03:42.092026", "transaction_id": "4614701021301568417", "product_id": "CS09", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 22:07:57.298834", "transaction_id": "8026000639512408471", "product_id": "CS02", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 22:11:08.546750", "transaction_id": "8016222750374523007", "product_id": "SF05", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 22:15:56.779543", "transaction_id": "4354448271774800732", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.18}
-{"transaction_time": "2022-09-13 22:20:13.011346", "transaction_id": "4387158721721528398", "product_id": "CS07", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 22:23:55.238417", "transaction_id": "7191224854846362598", "product_id": "SF04", "price": 5.99, "quantity": 2, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 10.78}
-{"transaction_time": "2022-09-13 22:23:55.238417", "transaction_id": "7191224854846362598", "product_id": "SF04", "price": 5.99, "quantity": 2, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 10.78}
-{"transaction_time": "2022-09-13 22:26:31.703392", "transaction_id": "4550716413828130076", "product_id": "SC04", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 22:26:31.703392", "transaction_id": "4550716413828130076", "product_id": "CS11", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.98}
-{"transaction_time": "2022-09-13 22:30:12.912303", "transaction_id": "679935733794570157", "product_id": "CS09", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 22:30:12.912303", "transaction_id": "679935733794570157", "product_id": "SC05", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.18}
-{"transaction_time": "2022-09-13 22:35:10.365996", "transaction_id": "5371386396451236170", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 22:37:49.595532", "transaction_id": "795312295364565074", "product_id": "SC04", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 22:40:24.828612", "transaction_id": "3093067640369386146", "product_id": "CS05", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.98}
-{"transaction_time": "2022-09-13 22:40:24.828612", "transaction_id": "3093067640369386146", "product_id": "CS03", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.98}
-{"transaction_time": "2022-09-13 22:44:51.309575", "transaction_id": "3474954526770312488", "product_id": "CS05", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 13.96}
-{"transaction_time": "2022-09-13 22:49:17.538201", "transaction_id": "2879814744455916341", "product_id": "CS10", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 22:53:16.770395", "transaction_id": "5417693692979048741", "product_id": "SC02", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 22:55:41.007636", "transaction_id": "5363450079226714464", "product_id": "CS04", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.28}
-{"transaction_time": "2022-09-13 22:55:41.007636", "transaction_id": "5363450079226714464", "product_id": "CS05", "price": 4.99, "quantity": 2, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 8.98}
-{"transaction_time": "2022-09-13 22:59:34.483762", "transaction_id": "5883724968838900715", "product_id": "SC04", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 23:04:11.631949", "transaction_id": "2932193281584419132", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-13 23:09:00.879588", "transaction_id": "5514080698292697904", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.98}
-{"transaction_time": "2022-09-13 23:13:55.083371", "transaction_id": "6093868627356318882", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 6.73}
-{"transaction_time": "2022-09-13 23:16:28.444587", "transaction_id": "6875806268399244687", "product_id": "CS02", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 23:21:08.680514", "transaction_id": "9158762237270161609", "product_id": "SF06", "price": 5.99, "quantity": 2, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 14.36}
-{"transaction_time": "2022-09-13 23:23:12.975201", "transaction_id": "1517390109685440950", "product_id": "SF05", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 23:25:42.222512", "transaction_id": "6905997640227012172", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 23:25:42.222512", "transaction_id": "6905997640227012172", "product_id": "SF01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 23:29:06.673212", "transaction_id": "6266512590118952283", "product_id": "SF07", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 23:34:04.892864", "transaction_id": "2071963042456212538", "product_id": "CS07", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-13 23:34:04.892864", "transaction_id": "2071963042456212538", "product_id": "SF07", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 23:38:56.361921", "transaction_id": "4775095034989826520", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.94}
-{"transaction_time": "2022-09-13 23:41:53.509522", "transaction_id": "2584110418693795853", "product_id": "CS01", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-13 23:44:10.738479", "transaction_id": "6900449412119697087", "product_id": "SC02", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 23:46:15.980255", "transaction_id": "6864534976393043020", "product_id": "IS03", "price": 5.49, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 10.98}
-{"transaction_time": "2022-09-13 23:49:03.239892", "transaction_id": "8115694703542997370", "product_id": "SF07", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-13 23:49:03.239892", "transaction_id": "8115694703542997370", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-13 23:53:13.602867", "transaction_id": "88596073785235576", "product_id": "CS04", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.98}
-{"transaction_time": "2022-09-13 23:56:34.867249", "transaction_id": "6796214361650929546", "product_id": "SC02", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-14 00:01:19.148729", "transaction_id": "7048599057142705691", "product_id": "IS03", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-14 00:01:19.148729", "transaction_id": "7048599057142705691", "product_id": "SF05", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-14 00:01:19.148729", "transaction_id": "7048599057142705691", "product_id": "SC04", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-14 00:03:27.023530", "transaction_id": "4914137845520756366", "product_id": "SF01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-14 00:07:04.188590", "transaction_id": "5749893273238863049", "product_id": "SF03", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-14 00:09:46.462443", "transaction_id": "372188995924383764", "product_id": "IS03", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.48}
-{"transaction_time": "2022-09-14 00:09:46.462443", "transaction_id": "372188995924383764", "product_id": "CS02", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-14 00:09:46.462443", "transaction_id": "372188995924383764", "product_id": "SC03", "price": 5.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 15.96}
-{"transaction_time": "2022-09-14 00:14:05.188063", "transaction_id": "6681139511780239343", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-14 00:14:05.188063", "transaction_id": "6681139511780239343", "product_id": "CS06", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-14 00:14:05.188063", "transaction_id": "6681139511780239343", "product_id": "SC01", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-14 00:16:40.948868", "transaction_id": "3762475044827074098", "product_id": "SF05", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-14 00:16:40.948868", "transaction_id": "3762475044827074098", "product_id": "CS06", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-14 00:16:40.948868", "transaction_id": "3762475044827074098", "product_id": "IS01", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-14 00:21:14.640698", "transaction_id": "3376312764149118464", "product_id": "CS10", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-14 00:24:21.887062", "transaction_id": "5693012676856782478", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.48}
-{"transaction_time": "2022-09-14 00:28:45.139408", "transaction_id": "3086217621561987465", "product_id": "SC04", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.98}
-{"transaction_time": "2022-09-14 00:28:45.139408", "transaction_id": "3086217621561987465", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-14 00:33:00.613349", "transaction_id": "4825941891604938396", "product_id": "SC03", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-14 00:35:56.848318", "transaction_id": "8809781367526421685", "product_id": "CS07", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.98}
-{"transaction_time": "2022-09-14 00:39:24.099710", "transaction_id": "2598792677293773584", "product_id": "CS02", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-14 00:43:09.377855", "transaction_id": "8641047031757905322", "product_id": "IS02", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-14 00:45:16.624675", "transaction_id": "5764539000864344299", "product_id": "IS02", "price": 5.49, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 14.96}
-{"transaction_time": "2022-09-14 00:45:16.624675", "transaction_id": "5764539000864344299", "product_id": "CS10", "price": 4.99, "quantity": 2, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.98}
-{"transaction_time": "2022-09-14 00:48:57.115210", "transaction_id": "9091683260367836050", "product_id": "CS08", "price": 4.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.49}
-{"transaction_time": "2022-09-14 00:52:04.369846", "transaction_id": "6249960548814397292", "product_id": "SF04", "price": 5.99, "quantity": 2, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 14.36}
-{"transaction_time": "2022-09-14 00:52:04.369846", "transaction_id": "6249960548814397292", "product_id": "SC05", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.39}
-{"transaction_time": "2022-09-14 00:55:07.845808", "transaction_id": "8112658547380187543", "product_id": "CS05", "price": 4.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 4.99}
-{"transaction_time": "2022-09-14 00:55:07.845808", "transaction_id": "8112658547380187543", "product_id": "SF05", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-14 00:59:54.363756", "transaction_id": "3434253775661613948", "product_id": "SC05", "price": 5.99, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.99}
-{"transaction_time": "2022-09-14 01:02:19.719756", "transaction_id": "7375538916573124434", "product_id": "SF02", "price": 5.99, "quantity": 1, "is_member": true, "member_discount": 0.1, "add_supplements": true, "supplement_price": 1.99, "total_purchase": 7.18}
-{"transaction_time": "2022-09-14 01:04:51.980126", "transaction_id": "4522215513963297397", "product_id": "IS01", "price": 5.49, "quantity": 2, "is_member": true, "member_discount": 0.1, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 9.88}
-{"transaction_time": "2022-09-14 01:08:17.234339", "transaction_id": "607136997210440960", "product_id": "IS03", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-14 01:10:56.484342", "transaction_id": "7795524838072589209", "product_id": "IS01", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
-{"transaction_time": "2022-09-14 01:10:56.484342", "transaction_id": "7795524838072589209", "product_id": "IS01", "price": 5.49, "quantity": 1, "is_member": false, "member_discount": 0.0, "add_supplements": false, "supplement_price": 0.0, "total_purchase": 5.49}
+[
+    {
+        "transaction_time": "2022-09-14 04:36:08.334683",
+        "transaction_id": "3982651906569181497",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 04:38:58.351030",
+        "transaction_id": "3412500147933434926",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 04:42:06.589859",
+        "transaction_id": "1989564121033993527",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 04:42:06.589859",
+        "transaction_id": "1989564121033993527",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 11.98
+    },
+    {
+        "transaction_time": "2022-09-14 04:42:06.589859",
+        "transaction_id": "1989564121033993527",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 04:44:23.062650",
+        "transaction_id": "1661541568069248801",
+        "product_id": "SF03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 04:44:23.062650",
+        "transaction_id": "1661541568069248801",
+        "product_id": "CS02",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 04:47:14.414822",
+        "transaction_id": "2046965100547304618",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 04:51:22.645839",
+        "transaction_id": "3877410723688636051",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-09-14 04:53:22.863483",
+        "transaction_id": "2236167446607694574",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 3,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 21.55
+    },
+    {
+        "transaction_time": "2022-09-14 04:58:17.090004",
+        "transaction_id": "620617369779058364",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 05:02:41.312924",
+        "transaction_id": "2645979532094074049",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 05:02:41.312924",
+        "transaction_id": "2645979532094074049",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 05:07:19.666847",
+        "transaction_id": "104512460778245462",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 11.98
+    },
+    {
+        "transaction_time": "2022-09-14 05:09:25.884078",
+        "transaction_id": "1770062172184124208",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 05:12:16.099552",
+        "transaction_id": "7026601609908952414",
+        "product_id": "SC02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 05:12:16.099552",
+        "transaction_id": "7026601609908952414",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 05:14:49.474636",
+        "transaction_id": "8294047802195762083",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 05:14:49.474636",
+        "transaction_id": "8294047802195762083",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 05:16:56.843452",
+        "transaction_id": "3428275551949405114",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 05:19:23.066653",
+        "transaction_id": "462889698874518076",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 05:24:23.308505",
+        "transaction_id": "2604239815984870972",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 05:28:51.528256",
+        "transaction_id": "7516083364939161287",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 05:31:55.746619",
+        "transaction_id": "1604539414158403822",
+        "product_id": "CS11",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 05:31:55.746619",
+        "transaction_id": "1604539414158403822",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 05:31:55.746619",
+        "transaction_id": "1604539414158403822",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 05:35:21.230911",
+        "transaction_id": "5279391385637265663",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 05:37:44.461525",
+        "transaction_id": "1031172590573027761",
+        "product_id": "CS11",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 05:37:44.461525",
+        "transaction_id": "1031172590573027761",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 05:41:51.795626",
+        "transaction_id": "6722401193568585042",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 05:44:57.041675",
+        "transaction_id": "8521186095795880286",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 05:44:57.041675",
+        "transaction_id": "8521186095795880286",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 05:47:15.394631",
+        "transaction_id": "200590876782593298",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 05:50:09.635530",
+        "transaction_id": "8448772916201070970",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 05:53:40.846632",
+        "transaction_id": "8917618420883472082",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 05:55:48.074086",
+        "transaction_id": "5768396944482447743",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 8.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:00:13.293029",
+        "transaction_id": "7062265584521347934",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 06:03:01.510861",
+        "transaction_id": "4545918010066787579",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 06:07:40.733978",
+        "transaction_id": "3490580118591680490",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:10:34.955772",
+        "transaction_id": "6454844048888372991",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 06:14:22.174285",
+        "transaction_id": "1018444734883110837",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.48
+    },
+    {
+        "transaction_time": "2022-09-14 06:14:22.174285",
+        "transaction_id": "1018444734883110837",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:14:22.174285",
+        "transaction_id": "1018444734883110837",
+        "product_id": "SF04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:16:30.646642",
+        "transaction_id": "1189858634990727918",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 8.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:18:42.874687",
+        "transaction_id": "6981290071521610946",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-09-14 06:18:42.874687",
+        "transaction_id": "6981290071521610946",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 06:21:58.225716",
+        "transaction_id": "4120315554868182209",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.48
+    },
+    {
+        "transaction_time": "2022-09-14 06:24:55.452026",
+        "transaction_id": "2968831648302662751",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 06:29:03.684296",
+        "transaction_id": "334563824706339440",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 06:29:03.684296",
+        "transaction_id": "334563824706339440",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 06:29:03.684296",
+        "transaction_id": "334563824706339440",
+        "product_id": "SF04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:31:20.185444",
+        "transaction_id": "3744307895257566493",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.28
+    },
+    {
+        "transaction_time": "2022-09-14 06:31:20.185444",
+        "transaction_id": "3744307895257566493",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 06:31:20.185444",
+        "transaction_id": "3744307895257566493",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.73
+    },
+    {
+        "transaction_time": "2022-09-14 06:35:04.675704",
+        "transaction_id": "4384728417454011996",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:38:45.894638",
+        "transaction_id": "2203951679382457472",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 06:42:12.113459",
+        "transaction_id": "5140113935541711363",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 06:46:58.338730",
+        "transaction_id": "5280390901993752118",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:46:58.338730",
+        "transaction_id": "5280390901993752118",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 06:49:35.694629",
+        "transaction_id": "6934235640137162199",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 06:49:35.694629",
+        "transaction_id": "6934235640137162199",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 06:52:25.034743",
+        "transaction_id": "2404568678017161545",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 06:56:17.258650",
+        "transaction_id": "5606140971734015535",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 06:58:33.482677",
+        "transaction_id": "3678873138999952981",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 07:01:35.706633",
+        "transaction_id": "3899305345759338965",
+        "product_id": "SC02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 07:06:18.922716",
+        "transaction_id": "826003476455129146",
+        "product_id": "CS02",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 07:10:25.138008",
+        "transaction_id": "3848475580444806589",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 10.78
+    },
+    {
+        "transaction_time": "2022-09-14 07:10:25.138008",
+        "transaction_id": "3848475580444806589",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.28
+    },
+    {
+        "transaction_time": "2022-09-14 07:15:22.485156",
+        "transaction_id": "6365912649051035079",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 07:15:22.485156",
+        "transaction_id": "6365912649051035079",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
+    },
+    {
+        "transaction_time": "2022-09-14 07:18:03.854629",
+        "transaction_id": "8531835647601999085",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 3,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 16.47
+    },
+    {
+        "transaction_time": "2022-09-14 07:18:03.854629",
+        "transaction_id": "8531835647601999085",
+        "product_id": "CS03",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 07:18:03.854629",
+        "transaction_id": "8531835647601999085",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 07:20:33.324724",
+        "transaction_id": "8517105137220855177",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 07:20:33.324724",
+        "transaction_id": "8517105137220855177",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 07:24:29.698649",
+        "transaction_id": "500284356395689359",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 07:24:29.698649",
+        "transaction_id": "500284356395689359",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 07:29:03.045553",
+        "transaction_id": "3201256617128492047",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 07:29:03.045553",
+        "transaction_id": "3201256617128492047",
+        "product_id": "SF02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 07:31:22.422769",
+        "transaction_id": "4977574001633983877",
+        "product_id": "SF03",
+        "price": 5.99,
+        "quantity": 3,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 21.55
+    },
+    {
+        "transaction_time": "2022-09-14 07:33:30.644099",
+        "transaction_id": "7194849795663247591",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.48
+    },
+    {
+        "transaction_time": "2022-09-14 07:35:59.869582",
+        "transaction_id": "8520369141284736982",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 07:40:10.085842",
+        "transaction_id": "912713817342395256",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 07:43:42.374646",
+        "transaction_id": "8605133825290732638",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 07:43:42.374646",
+        "transaction_id": "8605133825290732638",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 07:47:41.794638",
+        "transaction_id": "7831182668605281056",
+        "product_id": "SF03",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-09-14 07:51:30.030503",
+        "transaction_id": "5217728918691929209",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 07:51:30.030503",
+        "transaction_id": "5217728918691929209",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 07:51:30.030503",
+        "transaction_id": "5217728918691929209",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 07:55:27.478621",
+        "transaction_id": "6303551225236114895",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 07:55:27.478621",
+        "transaction_id": "6303551225236114895",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 07:59:21.815825",
+        "transaction_id": "5747483506335692531",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.48
+    },
+    {
+        "transaction_time": "2022-09-14 07:59:21.815825",
+        "transaction_id": "5747483506335692531",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 08:03:44.150647",
+        "transaction_id": "4602420596151691804",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 08:03:44.150647",
+        "transaction_id": "4602420596151691804",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 08:06:21.518641",
+        "transaction_id": "101265863630722138",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 08:10:31.761815",
+        "transaction_id": "4872023796168390179",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 08:10:31.761815",
+        "transaction_id": "4872023796168390179",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 10.78
+    },
+    {
+        "transaction_time": "2022-09-14 08:14:39.136112",
+        "transaction_id": "2354608237693902256",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 11.98
+    },
+    {
+        "transaction_time": "2022-09-14 08:14:39.136112",
+        "transaction_id": "2354608237693902256",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 08:18:42.506622",
+        "transaction_id": "4722332002079604897",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 08:22:30.718619",
+        "transaction_id": "4663860734017555213",
+        "product_id": "CS02",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 13.96
+    },
+    {
+        "transaction_time": "2022-09-14 08:27:17.931467",
+        "transaction_id": "6258897647315727572",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 08:30:21.153636",
+        "transaction_id": "6599400728693968771",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.48
+    },
+    {
+        "transaction_time": "2022-09-14 08:32:34.370642",
+        "transaction_id": "492947983292867633",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 08:36:33.594643",
+        "transaction_id": "8131857604774469991",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 08:36:33.594643",
+        "transaction_id": "8131857604774469991",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 08:39:35.971194",
+        "transaction_id": "5903067025671543906",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 3,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 16.47
+    },
+    {
+        "transaction_time": "2022-09-14 08:44:15.183937",
+        "transaction_id": "6104195857503588674",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 08:46:15.405288",
+        "transaction_id": "4909724550595140151",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 08:46:15.405288",
+        "transaction_id": "4909724550595140151",
+        "product_id": "SF03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 08:48:20.743454",
+        "transaction_id": "9083679393201666915",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
+    },
+    {
+        "transaction_time": "2022-09-14 08:51:58.975739",
+        "transaction_id": "5272013235658412907",
+        "product_id": "CS11",
+        "price": 4.99,
+        "quantity": 3,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 14.97
+    },
+    {
+        "transaction_time": "2022-09-14 08:54:35.203241",
+        "transaction_id": "5290521084485584126",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 08:56:39.416157",
+        "transaction_id": "7941535212855806446",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 08:56:39.416157",
+        "transaction_id": "7941535212855806446",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:00:14.762665",
+        "transaction_id": "4045377723878278969",
+        "product_id": "CS01",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 09:05:10.985881",
+        "transaction_id": "7564015618727959569",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 09:05:10.985881",
+        "transaction_id": "7564015618727959569",
+        "product_id": "CS02",
+        "price": 4.99,
+        "quantity": 3,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 14.97
+    },
+    {
+        "transaction_time": "2022-09-14 09:08:56.355444",
+        "transaction_id": "313565591610214203",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-09-14 09:13:01.576722",
+        "transaction_id": "9098487158528742219",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.48
+    },
+    {
+        "transaction_time": "2022-09-14 09:13:01.576722",
+        "transaction_id": "9098487158528742219",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:17:59.950706",
+        "transaction_id": "5147860464393260985",
+        "product_id": "CS01",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:22:40.162078",
+        "transaction_id": "1626806951821284249",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:26:04.376141",
+        "transaction_id": "971241789778828379",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:26:04.376141",
+        "transaction_id": "971241789778828379",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:26:04.376141",
+        "transaction_id": "971241789778828379",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:30:45.858633",
+        "transaction_id": "5697760189781669338",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:30:45.858633",
+        "transaction_id": "5697760189781669338",
+        "product_id": "CS11",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:34:56.224060",
+        "transaction_id": "1249540167478013193",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 09:38:22.441941",
+        "transaction_id": "5900265944926059703",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 09:38:22.441941",
+        "transaction_id": "5900265944926059703",
+        "product_id": "SF01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 09:42:25.775756",
+        "transaction_id": "6691752543524383061",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 09:46:25.990626",
+        "transaction_id": "932248385513439695",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 09:51:10.210634",
+        "transaction_id": "3499881504191729250",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 09:51:10.210634",
+        "transaction_id": "3499881504191729250",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 09:53:23.538644",
+        "transaction_id": "4438555501010982822",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.28
+    },
+    {
+        "transaction_time": "2022-09-14 09:53:23.538644",
+        "transaction_id": "4438555501010982822",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 09:53:23.538644",
+        "transaction_id": "4438555501010982822",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 09:56:12.014683",
+        "transaction_id": "5918337524001079674",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 09:56:12.014683",
+        "transaction_id": "5918337524001079674",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 10:01:08.410647",
+        "transaction_id": "4137827166843320895",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.28
+    },
+    {
+        "transaction_time": "2022-09-14 10:06:05.626643",
+        "transaction_id": "1963043023137038660",
+        "product_id": "SF02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 10:08:17.845304",
+        "transaction_id": "594112776080467230",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 10:08:17.845304",
+        "transaction_id": "594112776080467230",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 10:08:17.845304",
+        "transaction_id": "594112776080467230",
+        "product_id": "CS01",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 10:10:32.316040",
+        "transaction_id": "885341055133597918",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.73
+    },
+    {
+        "transaction_time": "2022-09-14 10:13:19.530974",
+        "transaction_id": "1992565052994637152",
+        "product_id": "CS02",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 10:13:19.530974",
+        "transaction_id": "1992565052994637152",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 10:15:45.863858",
+        "transaction_id": "1729775096267665548",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 8.98
+    },
+    {
+        "transaction_time": "2022-09-14 10:20:40.078643",
+        "transaction_id": "6930176367412790854",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 10:22:43.312819",
+        "transaction_id": "4538121656883450973",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 10:26:54.526642",
+        "transaction_id": "2085146640854298492",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 10:26:54.526642",
+        "transaction_id": "2085146640854298492",
+        "product_id": "CS11",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 10:26:54.526642",
+        "transaction_id": "2085146640854298492",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 10:31:43.986639",
+        "transaction_id": "1219203785713449122",
+        "product_id": "CS11",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 10:36:09.216046",
+        "transaction_id": "102170339876343947",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 10:36:09.216046",
+        "transaction_id": "102170339876343947",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 10:39:12.566635",
+        "transaction_id": "8281740895701955590",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 10:41:46.776076",
+        "transaction_id": "2291148983679211317",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 10:41:46.776076",
+        "transaction_id": "2291148983679211317",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 10:44:05.142629",
+        "transaction_id": "6032423749994455934",
+        "product_id": "SC02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 10:44:05.142629",
+        "transaction_id": "6032423749994455934",
+        "product_id": "SF01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 10:46:56.531641",
+        "transaction_id": "8707307984115117773",
+        "product_id": "CS02",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 10:50:13.762766",
+        "transaction_id": "2075596408877874346",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 3,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 14.97
+    },
+    {
+        "transaction_time": "2022-09-14 10:54:39.983387",
+        "transaction_id": "8330000998178824461",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 10:57:55.218814",
+        "transaction_id": "4697716082844065338",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 11:01:44.458651",
+        "transaction_id": "4734833028476787875",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:05:00.680949",
+        "transaction_id": "7799428956542622655",
+        "product_id": "SC02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 11:08:03.895578",
+        "transaction_id": "4735379081364769306",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:12:48.115458",
+        "transaction_id": "8938486390956593400",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 11:16:44.354640",
+        "transaction_id": "7273485113147847429",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 11:19:23.575392",
+        "transaction_id": "4519671040596809796",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:22:42.791918",
+        "transaction_id": "3085679714492096888",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
+    },
+    {
+        "transaction_time": "2022-09-14 11:24:57.010877",
+        "transaction_id": "9139733198429568422",
+        "product_id": "SF02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:24:57.010877",
+        "transaction_id": "9139733198429568422",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:28:50.370018",
+        "transaction_id": "6308258982486200841",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:28:50.370018",
+        "transaction_id": "6308258982486200841",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:32:56.718641",
+        "transaction_id": "3241808577301511383",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 11:32:56.718641",
+        "transaction_id": "3241808577301511383",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 11:32:56.718641",
+        "transaction_id": "3241808577301511383",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 11:35:33.226322",
+        "transaction_id": "3068071678885147066",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-09-14 11:37:35.452015",
+        "transaction_id": "8689338392145341010",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 11:41:43.666057",
+        "transaction_id": "7330547605837409482",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:41:43.666057",
+        "transaction_id": "7330547605837409482",
+        "product_id": "CS03",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:44:43.058639",
+        "transaction_id": "5361571483678891952",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 11:44:43.058639",
+        "transaction_id": "5361571483678891952",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:48:40.392466",
+        "transaction_id": "6974379801556692776",
+        "product_id": "CS02",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 13.96
+    },
+    {
+        "transaction_time": "2022-09-14 11:50:45.622240",
+        "transaction_id": "2363382665895491341",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:53:59.838633",
+        "transaction_id": "5430907048430165824",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:56:00.062076",
+        "transaction_id": "3644674730228919716",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 11:58:31.275672",
+        "transaction_id": "3294216724993112409",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 3,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 17.97
+    },
+    {
+        "transaction_time": "2022-09-14 12:00:37.511583",
+        "transaction_id": "454247778449297886",
+        "product_id": "IS04",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 12:05:15.739136",
+        "transaction_id": "5249287447463513583",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 12:09:04.954989",
+        "transaction_id": "2353903146308887549",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 12:11:59.172354",
+        "transaction_id": "6953988393787488742",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 12:11:59.172354",
+        "transaction_id": "6953988393787488742",
+        "product_id": "IS04",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 12:14:11.545003",
+        "transaction_id": "8817330769004195522",
+        "product_id": "IS04",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.48
+    },
+    {
+        "transaction_time": "2022-09-14 12:18:43.766278",
+        "transaction_id": "318810336211477432",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.48
+    },
+    {
+        "transaction_time": "2022-09-14 12:18:43.766278",
+        "transaction_id": "318810336211477432",
+        "product_id": "SF03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 12:18:43.766278",
+        "transaction_id": "318810336211477432",
+        "product_id": "SF04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 12:23:41.214622",
+        "transaction_id": "4899772033634652515",
+        "product_id": "CS02",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
+    },
+    {
+        "transaction_time": "2022-09-14 12:23:41.214622",
+        "transaction_id": "4899772033634652515",
+        "product_id": "SF04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 12:28:14.541411",
+        "transaction_id": "5657063190080789712",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 12:32:13.759642",
+        "transaction_id": "645878863652660734",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.88
+    },
+    {
+        "transaction_time": "2022-09-14 12:35:33.979621",
+        "transaction_id": "4589005023947775852",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 13.96
+    },
+    {
+        "transaction_time": "2022-09-14 12:39:50.198639",
+        "transaction_id": "8508701867728200807",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 12:44:05.415432",
+        "transaction_id": "7392986552222796461",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 11.98
+    },
+    {
+        "transaction_time": "2022-09-14 12:46:08.632735",
+        "transaction_id": "4158778182890404255",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 12:48:25.855782",
+        "transaction_id": "5233499040351130409",
+        "product_id": "IS04",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 12:50:58.070627",
+        "transaction_id": "7994511586073922209",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 14.36
+    },
+    {
+        "transaction_time": "2022-09-14 12:53:46.299667",
+        "transaction_id": "883108606844712202",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 12:58:06.514648",
+        "transaction_id": "1425717193207959812",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.73
+    },
+    {
+        "transaction_time": "2022-09-14 13:01:21.753281",
+        "transaction_id": "7776042041599045896",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 12.56
+    },
+    {
+        "transaction_time": "2022-09-14 13:01:21.753281",
+        "transaction_id": "7776042041599045896",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 13:05:36.106650",
+        "transaction_id": "5454181271040477797",
+        "product_id": "SC05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:05:36.106650",
+        "transaction_id": "5454181271040477797",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:09:32.445412",
+        "transaction_id": "4201769858980318620",
+        "product_id": "IS04",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 13:09:32.445412",
+        "transaction_id": "4201769858980318620",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:12:41.790239",
+        "transaction_id": "4066406704965879797",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 13:16:16.019161",
+        "transaction_id": "3617238845925384807",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:16:16.019161",
+        "transaction_id": "3617238845925384807",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:20:52.354369",
+        "transaction_id": "7201469947607878143",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.28
+    },
+    {
+        "transaction_time": "2022-09-14 13:23:52.570643",
+        "transaction_id": "3221231358837964658",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 13:23:52.570643",
+        "transaction_id": "3221231358837964658",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 13:23:52.570643",
+        "transaction_id": "3221231358837964658",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 13:28:34.086646",
+        "transaction_id": "4883305858623094324",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:30:56.305877",
+        "transaction_id": "4616706444089240363",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:35:03.522884",
+        "transaction_id": "8340947469691396568",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:35:03.522884",
+        "transaction_id": "8340947469691396568",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 13:39:24.875782",
+        "transaction_id": "2626786920985915485",
+        "product_id": "SF04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 13:41:48.086715",
+        "transaction_id": "1036422110758182869",
+        "product_id": "CS11",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 13:46:35.302850",
+        "transaction_id": "8050345231153328183",
+        "product_id": "SF02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:46:35.302850",
+        "transaction_id": "8050345231153328183",
+        "product_id": "IS04",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 13:51:15.674153",
+        "transaction_id": "502619442526316587",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:55:21.895267",
+        "transaction_id": "6526095377690573220",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 13:58:19.119389",
+        "transaction_id": "5385488941287729620",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 14:01:43.338648",
+        "transaction_id": "7295369482847749050",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 14:05:17.568906",
+        "transaction_id": "364790264075744854",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 14:09:23.798770",
+        "transaction_id": "5217422590189722678",
+        "product_id": "SF04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 14:12:15.030678",
+        "transaction_id": "6664058881884495054",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 14:12:15.030678",
+        "transaction_id": "6664058881884495054",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 14:12:15.030678",
+        "transaction_id": "6664058881884495054",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 14:16:29.492646",
+        "transaction_id": "2043386666955166484",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 14:16:29.492646",
+        "transaction_id": "2043386666955166484",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 14:16:29.492646",
+        "transaction_id": "2043386666955166484",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 14:19:41.979424",
+        "transaction_id": "7857082472471698439",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 14:24:00.201045",
+        "transaction_id": "5069625535222312580",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 14:28:16.442636",
+        "transaction_id": "3653500947257214006",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 14:33:15.665956",
+        "transaction_id": "5442022865610632554",
+        "product_id": "SC01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.39
+    },
+    {
+        "transaction_time": "2022-09-14 14:36:49.877257",
+        "transaction_id": "1819820892622999334",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 14:41:02.137734",
+        "transaction_id": "4419841447382796856",
+        "product_id": "CS03",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 14:43:22.365738",
+        "transaction_id": "723469592355912051",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 13.96
+    },
+    {
+        "transaction_time": "2022-09-14 14:46:17.610640",
+        "transaction_id": "5771515733637152114",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 14:48:45.843166",
+        "transaction_id": "5682692861103015856",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
+    },
+    {
+        "transaction_time": "2022-09-14 14:51:24.063264",
+        "transaction_id": "5946098581420326201",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 3,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 23.94
+    },
+    {
+        "transaction_time": "2022-09-14 14:51:24.063264",
+        "transaction_id": "5946098581420326201",
+        "product_id": "CS03",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
+    },
+    {
+        "transaction_time": "2022-09-14 14:51:24.063264",
+        "transaction_id": "5946098581420326201",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 14:56:13.555751",
+        "transaction_id": "3296441522560422748",
+        "product_id": "SF02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:00:43.782672",
+        "transaction_id": "8457453509118235387",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 9.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:00:43.782672",
+        "transaction_id": "8457453509118235387",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 15:03:45.145806",
+        "transaction_id": "3086982197087793444",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 15:03:45.145806",
+        "transaction_id": "3086982197087793444",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 14.36
+    },
+    {
+        "transaction_time": "2022-09-14 15:03:45.145806",
+        "transaction_id": "3086982197087793444",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 15:06:15.620409",
+        "transaction_id": "4568952414848536124",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 15:06:15.620409",
+        "transaction_id": "4568952414848536124",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:09:24.970022",
+        "transaction_id": "462976918439084828",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 8.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:11:59.183259",
+        "transaction_id": "7045095409435975104",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:16:54.398697",
+        "transaction_id": "1302715194850331686",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 15:16:54.398697",
+        "transaction_id": "1302715194850331686",
+        "product_id": "CS03",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 15:19:59.776656",
+        "transaction_id": "6152486333934177267",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:22:09.986660",
+        "transaction_id": "8531901419956438637",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:22:09.986660",
+        "transaction_id": "8531901419956438637",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 15:22:09.986660",
+        "transaction_id": "8531901419956438637",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 15:25:39.452066",
+        "transaction_id": "1284572193166281003",
+        "product_id": "SF01",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.18
+    },
+    {
+        "transaction_time": "2022-09-14 15:25:39.452066",
+        "transaction_id": "1284572193166281003",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 8.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:30:25.802634",
+        "transaction_id": "4006285977978614556",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:30:25.802634",
+        "transaction_id": "4006285977978614556",
+        "product_id": "SF05",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:34:49.183200",
+        "transaction_id": "6400321584074183044",
+        "product_id": "CS06",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 15:38:20.410645",
+        "transaction_id": "5873856409946038607",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:40:58.058641",
+        "transaction_id": "5045853778222042522",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 15:40:58.058641",
+        "transaction_id": "5045853778222042522",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-09-14 15:44:53.397447",
+        "transaction_id": "3419500248745911390",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 15:48:36.661398",
+        "transaction_id": "5890977170971253000",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 15:51:07.878076",
+        "transaction_id": "2914261338727604479",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 3,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 23.94
+    },
+    {
+        "transaction_time": "2022-09-14 15:55:59.102662",
+        "transaction_id": "208734029199049930",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:00:53.370670",
+        "transaction_id": "5964188373298011720",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.49
+    },
+    {
+        "transaction_time": "2022-09-14 16:00:53.370670",
+        "transaction_id": "5964188373298011720",
+        "product_id": "CS03",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.28
+    },
+    {
+        "transaction_time": "2022-09-14 16:04:33.731234",
+        "transaction_id": "1219678781858893627",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:06:44.987560",
+        "transaction_id": "1371789983959950239",
+        "product_id": "CS09",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 16:11:32.219713",
+        "transaction_id": "2981131545853388589",
+        "product_id": "SF02",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 7.98
+    },
+    {
+        "transaction_time": "2022-09-14 16:15:05.441017",
+        "transaction_id": "8257977609358238961",
+        "product_id": "SF01",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-09-14 16:17:18.659952",
+        "transaction_id": "5005021041091629287",
+        "product_id": "IS03",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.94
+    },
+    {
+        "transaction_time": "2022-09-14 16:17:18.659952",
+        "transaction_id": "5005021041091629287",
+        "product_id": "CS08",
+        "price": 4.99,
+        "quantity": 2,
+        "is_member": true,
+        "member_discount": 0.1,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 8.98
+    },
+    {
+        "transaction_time": "2022-09-14 16:20:36.992070",
+        "transaction_id": "1467489762122580707",
+        "product_id": "SC03",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:24:35.238625",
+        "transaction_id": "6327445439318322314",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 6.98
+    },
+    {
+        "transaction_time": "2022-09-14 16:24:35.238625",
+        "transaction_id": "6327445439318322314",
+        "product_id": "SF07",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": true,
+        "supplement_price": 1.99,
+        "total_purchase": 15.96
+    },
+    {
+        "transaction_time": "2022-09-14 16:27:52.613687",
+        "transaction_id": "5810025287264558355",
+        "product_id": "CS07",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:27:52.613687",
+        "transaction_id": "5810025287264558355",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 11.98
+    },
+    {
+        "transaction_time": "2022-09-14 16:27:52.613687",
+        "transaction_id": "5810025287264558355",
+        "product_id": "SF06",
+        "price": 5.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:30:01.096197",
+        "transaction_id": "1347136586371618483",
+        "product_id": "SC04",
+        "price": 5.99,
+        "quantity": 2,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 11.98
+    },
+    {
+        "transaction_time": "2022-09-14 16:32:20.314641",
+        "transaction_id": "8308073046232169722",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:32:20.314641",
+        "transaction_id": "8308073046232169722",
+        "product_id": "IS01",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    },
+    {
+        "transaction_time": "2022-09-14 16:35:50.731726",
+        "transaction_id": "6328705114808749653",
+        "product_id": "CS05",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:35:50.731726",
+        "transaction_id": "6328705114808749653",
+        "product_id": "CS10",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:38:59.078940",
+        "transaction_id": "4048145238693417121",
+        "product_id": "CS04",
+        "price": 4.99,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 4.99
+    },
+    {
+        "transaction_time": "2022-09-14 16:38:59.078940",
+        "transaction_id": "4048145238693417121",
+        "product_id": "IS02",
+        "price": 5.49,
+        "quantity": 1,
+        "is_member": false,
+        "member_discount": 0.0,
+        "add_supplements": false,
+        "supplement_price": 0.0,
+        "total_purchase": 5.49
+    }
+]
