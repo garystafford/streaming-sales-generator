@@ -21,3 +21,7 @@ bin/pinot-admin.sh AddTable \
   -tableConfigFile /tmp/purchases-config.json \
   -schemaFile /tmp/purchases-schema.json -exec
 ```
+
+## Preview
+
+![Pinot UI](screengrabs/pinot_ui.png)
