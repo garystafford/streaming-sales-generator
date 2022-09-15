@@ -26,6 +26,19 @@ bin/pinot-admin.sh AddTable \
   -schemaFile /tmp/purchases-schema.json -exec
 ```
 
+Sample SQL Statements
+
+```sql
+SELECT product_id,
+  SUM(quantity) AS quantity,
+  ROUND(SUM(total_purchase), 1) AS sales,
+  MAX(total_purchase) AS max_sale
+FROM purchases
+GROUP BY product_id
+ORDER BY sales DESC
+LIMIT 10;
+```
+
 ## Preview
 
 ![Pinot UI](screengrabs/pinot_ui.png)
