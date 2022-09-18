@@ -391,10 +391,10 @@ kafka-console-consumer.sh \
 * ✓ Add SASL/SCRAM authentication option for Apache Kafka in addition to PLAINTEXT
 * ✓ Add streaming data analysis example using Apache Spark Structured Streaming
 * ✓ Add streaming data analysis example using Apache Flink
-* ✓ Add streaming data analysis example using Apache Kafka Streams
-* ✓ Add streaming data analysis example using Apache Pinot and Apache Superset
+* ✓ Add streaming data analysis example using Apache Kafka Streams (KStreams)
+* ✓ Add streaming data analysis example using Apache Pinot with Apache Superset and JupyterLab
 * ✓ Add event time to Product model so product changes can be accounted for in stream
-* ✓ Add Apache Spark containers to local docker streaming stack (Kafka, Spark, Flink)
+* ✓ Docker streaming stack to support all examples: Apache Kafka, Spark, Flink, Pinot, Superset, and JupyterLab
 * ✓ Enable multiple product sales to be associated with a single transaction, add transaction ID to Purchases Class
 * ❏ Replace specific restocking events with more generic events topic with multiple event type field: restocking, price change, COGS change,
   ingredients, etc.

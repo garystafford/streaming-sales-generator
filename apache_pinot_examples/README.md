@@ -83,6 +83,8 @@ ORDER BY
 
 ![Pinot UI](screengrabs/pinot_ui.png)
 
+![Superset](screengrabs/superset.png)
+
 ## Build Apache Superset for Pinot
 
 ```shell
