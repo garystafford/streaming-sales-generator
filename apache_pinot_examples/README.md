@@ -14,7 +14,7 @@ python3 ./producer.py
 # deploy pinot/kafka stack
 docker stack deploy pinot-kafka --compose-file apache-pinot-kafka-stack.yml
 
-# create new pinot table
+# create new pinot tables
 cd ~/streaming-sales-generator/apache_pinot_examples
 CONTROLLER_CONTAINER=$(docker container ls --filter  name=pinot-kafka_pinot-controller.1 --format "{{.ID}}")
 
