@@ -1,6 +1,6 @@
-# Instructions
+# Apache Pinot Instructions
 
-Commands to run from host that is running Apache Pinot/Kafka Docker Swarm stack.
+Commands to run from host that is running Apache Flink/Pinot/Superset/Kafka Docker Swarm stack.
 
 ```shell
 # clone project locally
@@ -38,6 +38,16 @@ bin/pinot-admin.sh AddTable \
 Sample SQL Statements
 
 ```sql
+-- products
+SELECT
+  COUNT(product_id) AS product_count,
+  AVG(price) AS avg_price,
+  AVG(cogs) AS avg_cogs,
+  AVG(price) - AVG(cogs) AS avg_gross_profit
+FROM
+  products;
+
+-- purchases
 SELECT
   product_id,
   SUM(quantity) AS quantity,
@@ -50,13 +60,20 @@ GROUP BY
 ORDER BY
   sales DESC;
 
+-- purchasesEnriched
 SELECT
-  COUNT(product_id) AS product_count,
-  AVG(price) AS avg_price,
-  AVG(cogs) AS avg_cogs,
-  AVG(price) - AVG(cogs) AS avg_gross_profit
+  product_id,
+  product_category,
+  SUM(purchase_quantity) AS quantity,
+  ROUND(SUM(total_purchase), 1) AS sales,
+  AVG(total_purchase) AS avg_sale
 FROM
-  products;
+  purchasesEnriched
+GROUP BY
+  product_category,
+  product_id
+ORDER BY
+  sales DESC;
 ```
 
 ## Preview
@@ -91,9 +108,13 @@ docker exec -it ${SUPERSET_CONTAINER} superset db upgrade
 docker exec -it ${SUPERSET_CONTAINER} superset init
 ```
 
-## Database Connection String
+## Superset Pinot Database Connection String
 
 ```text
 pinot+http://pinot-broker:8099/query?controller=http://pinot-controller:9000
 pinot+http://pinot-broker:8099/query?controller=http://pinot-controller:9000/debug=true
 ```
+
+## Enable Logging for Superset
+
+Superset logging is off by default, making nearly impossible to troubleshoot errors. To enable, set `ENABLE_TIME_ROTATE = True` in Superset's `config.py`, line `717`. Logs will then be found at: `/app/superset_home/superset.log`.
