@@ -1,4 +1,4 @@
-# Command: docker stack deploy pinot-kafka --compose-file apache-pinot-kafka-stack.yml
+# Command: docker stack deploy streaming-stack-2 --compose-file flink-pinot-superset-kafka-stack.yml
 # Gary A. Stafford (2022-09-14)
 
 version: "3.9"
@@ -65,3 +65,22 @@ services:
       - "10000:8888"
     volumes:
       - "${PWD}:/home/jovyan/work"
+  jobmanager:
+    image: "flink:1.15.2"
+    command: jobmanager
+    ports:
+      - "8081:8081"
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+  taskmanager:
+    image: "flink:1.15.2"
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        taskmanager.numberOfTaskSlots: 2

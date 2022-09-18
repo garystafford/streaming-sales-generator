@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-1. `docker stack deploy streaming-stack --compose-file docker/docker-compose.yml` to create local instance of Kafka
+1. `docker stack deploy streaming-stack --compose-file docker/flink-spark-kafka-stack.yml` to create local instance of Kafka
 2. `python3 -m pip install kafka-python` to install the `kafka-python` package
 3. `python3 ./producer.py` to start generating streaming data to Apache Kafka
 4. `python3 ./consumer.py` in a separate terminal window to view results
@@ -293,7 +293,7 @@ docker stack rm streaming-stack
 
 # deploy kafka stack
 docker swarm init
-docker stack deploy streaming-stack --compose-file docker/docker-compose.yml
+docker stack deploy streaming-stack --compose-file docker/flink-spark-kafka-stack.yml
 
 # optional: to exec into Kafka container
 docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
@@ -389,6 +389,7 @@ kafka-console-consumer.sh \
 * ✓ Add streaming data analysis example using Apache Spark Structured Streaming
 * ✓ Add streaming data analysis example using Apache Flink
 * ✓ Add streaming data analysis example using Apache Kafka Streams
+* ✓ Add streaming data analysis example using Apache Pinot
 * ✓ Add event time to Product model so product changes can be accounted for in stream
 * ✓ Add Apache Spark containers to local docker streaming stack (Kafka, Spark, Flink)
 * ✓ Enable multiple product sales to be associated with a single transaction, add transaction ID to Purchases Class

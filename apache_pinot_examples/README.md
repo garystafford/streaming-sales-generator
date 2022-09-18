@@ -12,11 +12,11 @@ python3 -m pip install kafka-python
 python3 ./producer.py
 
 # deploy pinot/kafka stack
-docker stack deploy pinot-kafka --compose-file apache-pinot-kafka-stack.yml
+docker stack deploy streaming-stack-2 --compose-file flink-pinot-superset-kafka-stack.yml
 
 # create new pinot tables
 cd ~/streaming-sales-generator/apache_pinot_examples
-CONTROLLER_CONTAINER=$(docker container ls --filter  name=pinot-kafka_pinot-controller.1 --format "{{.ID}}")
+CONTROLLER_CONTAINER=$(docker container ls --filter  name=streaming-stack-2_pinot-controller.1 --format "{{.ID}}")
 
 docker cp configs_schemas/ ${CONTROLLER_CONTAINER}:/tmp/
 
@@ -38,7 +38,7 @@ SELECT
   product_id,
   SUM(quantity) AS quantity,
   ROUND(SUM(total_purchase), 1) AS sales,
-  MAX(total_purchase) AS max_sale
+  AVG(total_purchase) AS avg_sale
 FROM
   purchases
 GROUP BY
@@ -47,6 +47,14 @@ ORDER BY
   sales DESC
 LIMIT
   10;
+
+SELECT
+  COUNT(product_id) AS product_count,
+  AVG(price) AS avg_price,
+  AVG(cogs) AS avg_cogs,
+  AVG(price) - AVG(cogs) AS avg_gross_profit
+FROM
+  products;
 ```
 
 ## Preview
@@ -64,7 +72,7 @@ docker build \
 
 docker push garystafford/superset-pinot:${TAG}
 
-SUPERSET_CONTAINER=$(docker container ls --filter  name=pinot-kafka_superset.1 --format "{{.ID}}")
+SUPERSET_CONTAINER=$(docker container ls --filter  name=streaming-stack-2_superset.1 --format "{{.ID}}")
 
 docker exec -it ${SUPERSET_CONTAINER} superset fab create-admin \
   --username admin \
