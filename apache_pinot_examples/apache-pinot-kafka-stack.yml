@@ -53,3 +53,13 @@ services:
       KAFKA_CFG_ADVERTISED_HOST_NAME: "kafka"
     depends_on:
       - zookeeper
+  superset:
+    image: "garystafford/superset-pinot:0.11.0"
+    ports:
+      - "8080:8088"
+  jupyter:
+    image: "jupyter/pyspark-notebook:spark-3.3.0"
+    ports:
+      - "10000:8888"
+    volumes:
+      - "${PWD}:/home/jovyan/work"

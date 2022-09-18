@@ -1,0 +1,62 @@
+{
+    "schemaName": "purchases",
+    "dimensionFieldSpecs": [
+        {
+            "name": "product_id",
+            "dataType": "STRING"
+        },
+        {
+            "name": "category",
+            "dataType": "STRING"
+        },
+        {
+            "name": "item",
+            "dataType": "STRING"
+        },
+        {
+            "name": "size",
+            "dataType": "STRING"
+        },
+        {
+            "name": "cogs",
+            "dataType": "FLOAT"
+        },
+        {
+            "name": "price",
+            "dataType": "FLOAT"
+        },
+        {
+            "inventory": "price",
+            "dataType": "INT"
+        },
+        {
+            "name": "contains_fruit",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "contains_veggies",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "contains_nuts",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "contains_caffeine",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "propensity_to_buy",
+            "dataType": "INT"
+        }
+    ],
+    "metricFieldSpecs": [],
+    "dateTimeFieldSpecs": [
+        {
+            "name": "event_time",
+            "dataType": "STRING",
+            "format": "1:DAYS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
+            "granularity": "1:MILLISECONDS"
+        }
+    ]
+}
