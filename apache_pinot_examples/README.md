@@ -50,8 +50,8 @@ FROM
 -- purchases
 SELECT
   product_id,
-  SUM(quantity) AS quantity,
-  ROUND(SUM(total_purchase), 1) AS sales,
+  SUMPRECISION(purchase_quantity, 10, 2) AS quantity,
+  SUMPRECISION(total_purchase, 10, 2) AS sales
   AVG(total_purchase) AS avg_sale
 FROM
   purchases
@@ -61,17 +61,20 @@ ORDER BY
   sales DESC;
 
 -- purchasesEnriched
+SET useStarTree = 'true';
+
 SELECT
   product_id,
+  product_name,
   product_category,
-  SUM(purchase_quantity) AS quantity,
-  ROUND(SUM(total_purchase), 1) AS sales,
-  AVG(total_purchase) AS avg_sale
+  SUMPRECISION(purchase_quantity, 10, 2) AS quantity,
+  SUMPRECISION(total_purchase, 10, 2) AS sales
 FROM
   purchasesEnriched
 GROUP BY
-  product_category,
-  product_id
+  product_id,
+  product_name,
+  product_category
 ORDER BY
   sales DESC;
 ```
