@@ -26,10 +26,6 @@
             "dataType": "FLOAT"
         },
         {
-            "inventory": "price",
-            "dataType": "INT"
-        },
-        {
             "name": "contains_fruit",
             "dataType": "BOOLEAN"
         },
@@ -44,13 +40,14 @@
         {
             "name": "contains_caffeine",
             "dataType": "BOOLEAN"
-        },
+        }
+    ],
+    "metricFieldSpecs": [
         {
-            "name": "propensity_to_buy",
+            "name": "inventory",
             "dataType": "INT"
         }
     ],
-    "metricFieldSpecs": [],
     "dateTimeFieldSpecs": [
         {
             "name": "event_time",
