@@ -32,13 +32,16 @@ Short [YouTube video](https://youtu.be/MTCsN7gJuJM) demonstrates the generator i
 
 ## Streaming Code Sample
 
-  * Apache Spark Structured Streaming: [Code samples](./apache_spark_examples) written with PySpark, which consumes and aggregates the 
+  * Apache Spark Structured Streaming: [Code samples](./apache_spark_examples/) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Spark
   * Apache Flink: [Code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Flink
   * Apache Kafka Streams (KStreams): [Code sample](https://github.com/garystafford/kstreams-kafka-demo/) written in Java, which consumes and aggregates the real-time sales data from Kafka using KStreams
+  * Apache Pinot/Apache Superset: [Code sample](./apache_pinot_examples/) to query products, purchases, and purchases-enhanced streaming data from Kafka using SQL
 
-## Features
+![Architecture](./diagram/streaming_workflow.png)
+
+## Project Features
 
 * Generator is configurable in a separate [configuration.ini](configuration/configuration.ini) file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
@@ -299,7 +302,7 @@ docker stack deploy streaming-stack --compose-file docker/flink-spark-kafka-stac
 docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
 ```
 
-### Streaming Stack Containers
+### Streaming Stack 1 of 2 Containers
 
 Example Kafka, Spark, and Flink containers:
 
@@ -389,7 +392,7 @@ kafka-console-consumer.sh \
 * ✓ Add streaming data analysis example using Apache Spark Structured Streaming
 * ✓ Add streaming data analysis example using Apache Flink
 * ✓ Add streaming data analysis example using Apache Kafka Streams
-* ✓ Add streaming data analysis example using Apache Pinot
+* ✓ Add streaming data analysis example using Apache Pinot and Apache Superset
 * ✓ Add event time to Product model so product changes can be accounted for in stream
 * ✓ Add Apache Spark containers to local docker streaming stack (Kafka, Spark, Flink)
 * ✓ Enable multiple product sales to be associated with a single transaction, add transaction ID to Purchases Class

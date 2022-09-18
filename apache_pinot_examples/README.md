@@ -118,6 +118,15 @@ pinot+http://pinot-broker:8099/query?controller=http://pinot-controller:9000
 pinot+http://pinot-broker:8099/query?controller=http://pinot-controller:9000/debug=true
 ```
 
+## Superset Login
+
+```shell
+SUPERSET_CONTAINER=$(docker container ls --filter  name=streaming-stack-2_superset.1 --format "{{.ID}}")
+docker logs ${SUPERSET_CONTAINER}
+
+# find string, similar to: "/lab?token=98baea49b9363a25b0cc8fca429265d6408c9e19021e99e5"
+```
+
 ## Enable Logging for Superset
 
 Superset logging is off by default, making nearly impossible to troubleshoot errors. To enable, set `ENABLE_TIME_ROTATE = True` in Superset's `config.py`, line `717`. Logs will then be found at: `/app/superset_home/superset.log`.
