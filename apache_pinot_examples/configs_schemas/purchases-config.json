@@ -1,8 +1,8 @@
 {
-    "tableName": "products",
+    "tableName": "purchases",
     "tableType": "REALTIME",
     "segmentsConfig": {
-        "timeColumnName": "event_time",
+        "timeColumnName": "transaction_time",
         "timeType": "MILLISECONDS",
         "schemaName": "purchases",
         "replicasPerPartition": "1"
@@ -13,7 +13,7 @@
         "streamConfigs": {
             "streamType": "kafka",
             "stream.kafka.consumer.type": "lowlevel",
-            "stream.kafka.topic.name": "demo.products",
+            "stream.kafka.topic.name": "demo.purchases",
             "stream.kafka.decoder.class.name": "org.apache.pinot.plugin.stream.kafka.KafkaJSONMessageDecoder",
             "stream.kafka.consumer.factory.class.name": "org.apache.pinot.plugin.stream.kafka20.KafkaConsumerFactory",
             "stream.kafka.broker.list": "kafka:29092",

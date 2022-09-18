@@ -16,16 +16,19 @@ docker stack deploy pinot-kafka --compose-file apache-pinot-kafka-stack.yml
 
 # create new pinot table
 cd ~/streaming-sales-generator/apache_pinot_examples
-CONTROLLER_CONTAINER=$(docker container ls --filter  name=pinot-kafka_superset.1 --format "{{.ID}}")
+CONTROLLER_CONTAINER=$(docker container ls --filter  name=pinot-kafka_pinot-controller.1 --format "{{.ID}}")
 
 docker cp configs_schemas/ ${CONTROLLER_CONTAINER}:/tmp/
-docker cp purchases-config.json ${CONTROLLER_CONTAINER}:/tmp/
 
 docker exec -it ${CONTROLLER_CONTAINER} bash
 
 bin/pinot-admin.sh AddTable \
-  -tableConfigFile /tmp/purchases-config.json \
-  -schemaFile /tmp/purchases-schema.json -exec
+  -tableConfigFile /tmp/configs_schemas/purchases-config.json \
+  -schemaFile /tmp/configs_schemas/purchases-schema.json -exec
+
+bin/pinot-admin.sh AddTable \
+  -tableConfigFile /tmp/configs_schemas/products-config.json \
+  -schemaFile /tmp/configs_schemas/products-schema.json -exec
 ```
 
 Sample SQL Statements
