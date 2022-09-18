@@ -29,6 +29,10 @@ bin/pinot-admin.sh AddTable \
 bin/pinot-admin.sh AddTable \
   -tableConfigFile /tmp/configs_schemas/products-config.json \
   -schemaFile /tmp/configs_schemas/products-schema.json -exec
+
+bin/pinot-admin.sh AddTable \
+  -tableConfigFile /tmp/configs_schemas/purchases-enriched-config.json \
+  -schemaFile /tmp/configs_schemas/purchases-enriched-schema.json -exec
 ```
 
 Sample SQL Statements
@@ -44,9 +48,7 @@ FROM
 GROUP BY
   product_id
 ORDER BY
-  sales DESC
-LIMIT
-  10;
+  sales DESC;
 
 SELECT
   COUNT(product_id) AS product_count,

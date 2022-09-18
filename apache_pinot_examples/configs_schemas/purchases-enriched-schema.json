@@ -1,0 +1,87 @@
+{
+    "schemaName": "purchasesEnriched",
+    "dimensionFieldSpecs": [
+        {
+            "name": "transaction_id",
+            "dataType": "STRING"
+        },
+        {
+            "name": "product_id",
+            "dataType": "STRING"
+        },
+        {
+            "name": "product_category",
+            "dataType": "STRING"
+        },
+        {
+            "name": "product_name",
+            "dataType": "STRING"
+        },
+        {
+            "name": "product_size",
+            "dataType": "STRING"
+        },
+        {
+            "name": "product_cogs",
+            "dataType": "FLOAT"
+        },
+        {
+            "name": "product_price",
+            "dataType": "FLOAT"
+        },
+        {
+            "name": "contains_fruit",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "contains_veggies",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "contains_nuts",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "contains_caffeine",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "purchase_price",
+            "dataType": "FLOAT"
+        },
+        {
+            "name": "is_member",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "member_discount",
+            "dataType": "FLOAT"
+        },
+        {
+            "name": "add_supplements",
+            "dataType": "BOOLEAN"
+        },
+        {
+            "name": "supplement_price",
+            "dataType": "FLOAT"
+        }
+    ],
+    "metricFieldSpecs": [
+        {
+            "name": "purchase_quantity",
+            "dataType": "INT"
+        },
+        {
+            "name": "total_purchase",
+            "dataType": "FLOAT"
+        }
+    ],
+    "dateTimeFieldSpecs": [
+        {
+            "name": "transaction_time",
+            "dataType": "STRING",
+            "format": "1:DAYS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
+            "granularity": "1:MILLISECONDS"
+        }
+    ]
+}
