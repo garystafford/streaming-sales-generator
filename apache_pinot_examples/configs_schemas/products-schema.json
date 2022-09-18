@@ -1,5 +1,5 @@
 {
-    "schemaName": "purchases",
+    "schemaName": "products",
     "dimensionFieldSpecs": [
         {
             "name": "product_id",
