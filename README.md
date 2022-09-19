@@ -39,7 +39,9 @@ real-time sales data from Kafka using Apache Flink
   * Apache Kafka Streams (KStreams): [Code sample](https://github.com/garystafford/kstreams-kafka-demo/) written in Java, which consumes and aggregates the real-time sales data from Kafka using KStreams
   * Apache Pinot/Apache Superset: [Code sample](./apache_pinot_examples/) to query products, purchases, and purchases-enhanced streaming data from Kafka using SQL
 
-![Architecture](./diagram/streaming_workflow.png)
+![Architecture1](./diagram/streaming_workflow1.png)
+
+![Architecture2](./diagram/streaming_workflow2.png)
 
 ## Project Features
 
