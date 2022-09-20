@@ -355,10 +355,15 @@ export TOPIC_STOCKINGS="demo.stockings"
 kafka-topics.sh --list \
     --bootstrap-server $BOOTSTRAP_SERVERS
 
+# describe topic
 kafka-topics.sh --describe \
     --topic $TOPIC_PURCHASES \
     --bootstrap-server $BOOTSTRAP_SERVERS
 
+# list consumer groups
+kafka-consumer-groups.sh --list \
+    --bootstrap-server $BOOTSTRAP_SERVERS
+  
 # delete topics
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PRODUCTS
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PURCHASES
