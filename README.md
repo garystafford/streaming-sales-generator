@@ -299,6 +299,8 @@ docker stack rm streaming-stack
 docker swarm init
 docker stack deploy streaming-stack --compose-file docker/spark-kstreams-stack.yml
 
+docker container ls --format "{{ .Names}}, {{ .Status}}"
+
 # optional: to exec into Kafka container
 docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
 ```
@@ -309,6 +311,7 @@ Example Apache Kafka, Spark, Flink, Pinot, Superset, and JupyterLab containers:
 
 ```text
 CONTAINER ID   IMAGE                      PORTS                                    NAMES
+8edd2caf765d   garystafford/kstreams-kafka-demo:0.7.0                              streaming-stack_kstreams.1...
 1d7c6ab3009d   bitnami/spark:3.3                                                   streaming-stack_spark...
 1d7c6ab3009d   bitnami/spark:3.3                                                   streaming-stack_spark-worker...
 6114dc4a9824   bitnami/kafka:3.2.1        9092/tcp                                 streaming-stack_kafka.1...

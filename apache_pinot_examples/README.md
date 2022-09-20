@@ -9,6 +9,8 @@ docker stack rm streaming-stack
 # deploy pinot/kafka stack
 docker stack deploy streaming-stack --compose-file flink-pinot-superset-stack.yml
 
+docker container ls --format "{{ .Names}}, {{ .Status}}"
+
 # clone project locally
 git clone https://github.com/garystafford/streaming-sales-generator.git
 cd streaming-sales-generator/
