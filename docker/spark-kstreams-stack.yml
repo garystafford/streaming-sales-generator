@@ -1,4 +1,4 @@
-# Command: docker stack deploy streaming-stack --compose-file docker/spark-kafka-stack.yml
+# Command: docker stack deploy streaming-stack --compose-file docker/spark-kstreams-stack.yml
 # Gary A. Stafford (2022-09-14)
 
 version: "3.9"
@@ -52,6 +52,12 @@ services:
     #  - /tmp:/bitnami/kafka
     depends_on:
       - zookeeper
+    networks:
+      - streaming-stack
+  kstreams:
+    image: "garystafford/kstreams-kafka-demo:0.1.0 "
+    depends_on:
+      - kakfa
     networks:
       - streaming-stack
 
