@@ -16,7 +16,7 @@ docker stack deploy streaming-stack --compose-file flink-pinot-superset-stack.ym
 
 # create new pinot tables
 cd ~/streaming-sales-generator/apache_pinot_examples
-CONTROLLER_CONTAINER=$(docker container ls --filter  name=streaming-stack-2_pinot-controller.1 --format "{{.ID}}")
+CONTROLLER_CONTAINER=$(docker container ls --filter  name=streaming-stack_pinot-controller.1 --format "{{.ID}}")
 
 docker cp configs_schemas/ ${CONTROLLER_CONTAINER}:/tmp/
 
@@ -96,7 +96,7 @@ docker build \
 
 docker push garystafford/superset-pinot:${TAG}
 
-SUPERSET_CONTAINER=$(docker container ls --filter  name=streaming-stack-2_superset.1 --format "{{.ID}}")
+SUPERSET_CONTAINER=$(docker container ls --filter  name=streaming-stack_superset.1 --format "{{.ID}}")
 
 docker exec -it ${SUPERSET_CONTAINER} superset fab create-admin \
   --username admin \
@@ -123,7 +123,7 @@ pinot+http://pinot-broker:8099/query?controller=http://pinot-controller:9000/deb
 ## Superset Login
 
 ```shell
-SUPERSET_CONTAINER=$(docker container ls --filter  name=streaming-stack-2_superset.1 --format "{{.ID}}")
+SUPERSET_CONTAINER=$(docker container ls --filter  name=streaming-stack_superset.1 --format "{{.ID}}")
 docker logs ${SUPERSET_CONTAINER}
 
 # find string, similar to: "/lab?token=98baea49b9363a25b0cc8fca429265d6408c9e19021e99e5"
