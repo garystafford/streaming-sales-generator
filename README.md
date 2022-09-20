@@ -297,7 +297,7 @@ docker stack rm streaming-stack
 
 # deploy kafka stack
 docker swarm init
-docker stack deploy streaming-stack --compose-file docker/spark-kafka-stack.yml
+docker stack deploy streaming-stack --compose-file docker/spark-kstreams-stack.yml
 
 # optional: to exec into Kafka container
 docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
