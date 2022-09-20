@@ -1,4 +1,4 @@
-# Command: docker stack deploy streaming-stack-2 --compose-file flink-pinot-superset-kafka-stack.yml
+# Command: docker stack deploy streaming-stack --compose-file flink-pinot-superset-stack.yml
 # Gary A. Stafford (2022-09-14)
 
 version: "3.9"
@@ -12,6 +12,8 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       ALLOW_ANONYMOUS_LOGIN: "yes"
+    networks:
+      - streaming-stack
   pinot-controller:
     image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
     command: "StartController -zkAddress zookeeper:2181"
@@ -21,6 +23,8 @@ services:
       JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx4G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-controller.log"
     depends_on:
       - zookeeper
+    networks:
+      - streaming-stack
   pinot-broker:
     image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
     command: "StartBroker -zkAddress zookeeper:2181"
@@ -30,6 +34,8 @@ services:
       JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx4G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-controller.log"
     depends_on:
       - pinot-controller
+    networks:
+      - streaming-stack
   pinot-server:
     image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
     command: "StartServer -zkAddress zookeeper:2181"
@@ -39,6 +45,8 @@ services:
       JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms1G -Xmx4G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xloggc:gc-pinot-controller.log"
     depends_on:
       - pinot-broker
+    networks:
+      - streaming-stack
   kafka:
     image: "bitnami/kafka:3.2.1"
     ports:
@@ -53,18 +61,24 @@ services:
       KAFKA_CFG_ADVERTISED_HOST_NAME: "kafka"
     depends_on:
       - zookeeper
+    networks:
+      - streaming-stack
   superset:
     image: "garystafford/superset-pinot:0.11.0"
     ports:
       - "8080:8088"
     volumes:
       - "/tmp/config.py:/app/superset/config.py"
+    networks:
+      - streaming-stack
   jupyter:
     image: "jupyter/pyspark-notebook:spark-3.3.0"
     ports:
       - "10000:8888"
     volumes:
       - "${PWD}:/home/jovyan/work"
+    networks:
+      - streaming-stack
   jobmanager:
     image: "flink:1.15.2"
     command: jobmanager
@@ -74,6 +88,8 @@ services:
       - |
         FLINK_PROPERTIES=
         jobmanager.rpc.address: jobmanager
+    networks:
+      - streaming-stack
   taskmanager:
     image: "flink:1.15.2"
     depends_on:
@@ -84,3 +100,8 @@ services:
         FLINK_PROPERTIES=
         jobmanager.rpc.address: jobmanager
         taskmanager.numberOfTaskSlots: 2
+    networks:
+      - streaming-stack
+
+networks:
+  streaming-stack:

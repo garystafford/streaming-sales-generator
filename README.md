@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-1. `docker stack deploy streaming-stack --compose-file docker/flink-spark-kafka-stack.yml` to create local instance of Kafka
+1. `docker stack deploy streaming-stack --compose-file docker/spark-kafka-stack.yml` to create local instance of Kafka
 2. `python3 -m pip install kafka-python` to install the `kafka-python` package
 3. `python3 ./producer.py` to start generating streaming data to Apache Kafka
 4. `python3 ./consumer.py` in a separate terminal window to view results
@@ -298,7 +298,7 @@ docker stack rm streaming-stack
 
 # deploy kafka stack
 docker swarm init
-docker stack deploy streaming-stack --compose-file docker/flink-spark-kafka-stack.yml
+docker stack deploy streaming-stack --compose-file docker/spark-kafka-stack.yml
 
 # optional: to exec into Kafka container
 docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
@@ -312,8 +312,6 @@ Example Apache Kafka, Spark, Flink, Pinot, Superset, and JupyterLab containers:
 CONTAINER ID   IMAGE                      PORTS                                    NAMES
 1d7c6ab3009d   bitnami/spark:3.3                                                   streaming-stack_spark...
 1d7c6ab3009d   bitnami/spark:3.3                                                   streaming-stack_spark-worker...
-69ad1556eb3a   flink:1.15.2               6123/tcp, 8081/tcp                       streaming-stack_taskmanager.1...
-9f9b8e43eb21   flink:1.15.2               6123/tcp, 8081/tcp                       streaming-stack_jobmanager.1...
 6114dc4a9824   bitnami/kafka:3.2.1        9092/tcp                                 streaming-stack_kafka.1...
 837c0cdd1498   bitnami/zookeeper:3.8.0    2181/tcp, 2888/tcp, 3888/tcp, 8080/tcp   streaming-stack_zookeeper.1...
 

@@ -12,7 +12,7 @@ python3 -m pip install kafka-python
 python3 ./producer.py
 
 # deploy pinot/kafka stack
-docker stack deploy streaming-stack-2 --compose-file flink-pinot-superset-kafka-stack.yml
+docker stack deploy streaming-stack --compose-file flink-pinot-superset-stack.yml
 
 # create new pinot tables
 cd ~/streaming-sales-generator/apache_pinot_examples

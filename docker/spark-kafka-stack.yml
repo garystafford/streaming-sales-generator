@@ -1,4 +1,4 @@
-# Command: docker stack deploy streaming-stack --compose-file docker/flink-spark-kafka-stack.yml
+# Command: docker stack deploy streaming-stack --compose-file docker/spark-kafka-stack.yml
 # Gary A. Stafford (2022-09-14)
 
 version: "3.9"
@@ -50,31 +50,8 @@ services:
       - ALLOW_PLAINTEXT_LISTENER=yes
     #volumes:
     #  - /tmp:/bitnami/kafka
-    networks:
-      - streaming-stack
     depends_on:
       - zookeeper
-  jobmanager:
-    image: "flink:1.15.2"
-    command: jobmanager
-    ports:
-      - "8081:8081"
-    environment:
-      - |
-        FLINK_PROPERTIES=
-        jobmanager.rpc.address: jobmanager
-    networks:
-      - streaming-stack
-  taskmanager:
-    image: "flink:1.15.2"
-    depends_on:
-      - jobmanager
-    command: taskmanager
-    environment:
-      - |
-        FLINK_PROPERTIES=
-        jobmanager.rpc.address: jobmanager
-        taskmanager.numberOfTaskSlots: 2
     networks:
       - streaming-stack
 
