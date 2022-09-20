@@ -29,15 +29,14 @@ and [Amazon Kinesis Data Analytics](https://aws.amazon.com/kinesis/data-analytic
 
 Short [YouTube video](https://youtu.be/MTCsN7gJuJM) demonstrates the generator in use (video only - no audio).
 
-
 ## Streaming Code Sample
 
-  * Apache Spark Structured Streaming: [Code samples](./apache_spark_examples/) written with PySpark, which consumes and aggregates the 
+* Apache Spark Structured Streaming: [Code samples](./apache_spark_examples/) written with PySpark, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Spark
-  * Apache Flink: [Code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
+* Apache Flink: [Code sample](https://github.com/garystafford/flink-kafka-demo/) written in Java, which consumes and aggregates the 
 real-time sales data from Kafka using Apache Flink
-  * Apache Kafka Streams (KStreams): [Code sample](https://github.com/garystafford/kstreams-kafka-demo/) written in Java, which consumes and aggregates the real-time sales data from Kafka using KStreams
-  * Apache Pinot/Apache Superset: [Code sample](./apache_pinot_examples/) to query products, purchases, and purchases-enhanced streaming data from Kafka using SQL
+* Apache Kafka Streams (KStreams): [Code sample](https://github.com/garystafford/kstreams-kafka-demo/) written in Java, which consumes and aggregates the real-time sales data from Kafka using KStreams
+* Apache Pinot/Apache Superset: [Code sample](./apache_pinot_examples/) to query products, purchases, and purchases-enhanced streaming data from Kafka using SQL
 
 ![Architecture1](./diagram/streaming_workflow1.png)
 
