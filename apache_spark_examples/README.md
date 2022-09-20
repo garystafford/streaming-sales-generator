@@ -3,7 +3,6 @@
 ## Spark Commands
 
 ```shell
-
 # Install packages on AWS EMR
 sudo yum install git vim wget
 
@@ -21,7 +20,9 @@ wget https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-
 mv *.jar /opt/bitnami/spark/jars/
 
 exit
+```
 
+```shell
 # Run Spark jobs Bitnami container
 docker cp streaming_examples/ ${SPARK_CONTAINER}:/home/
 
@@ -38,7 +39,6 @@ export SASL_PASSWORD="bar"
 
 git clone https://github.com/garystafford/streaming-sales-generator.git
 cd streaming-sales-generator/
-
 
 spark-submit spark_batch_kafka.py
 
