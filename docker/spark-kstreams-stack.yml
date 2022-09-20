@@ -55,7 +55,7 @@ services:
     networks:
       - streaming-stack
   kstreams:
-    image: "garystafford/kstreams-kafka-demo:0.2.0"
+    image: "garystafford/kstreams-kafka-demo:0.3.0"
     depends_on:
       - kakfa
     networks:
