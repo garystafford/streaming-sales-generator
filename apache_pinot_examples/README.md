@@ -3,6 +3,12 @@
 Commands to run from host that is running Apache Flink/Pinot/Superset/Kafka Docker Swarm stack.
 
 ```shell
+# optional: delete existing stack
+docker stack rm streaming-stack
+
+# deploy pinot/kafka stack
+docker stack deploy streaming-stack --compose-file flink-pinot-superset-stack.yml
+
 # clone project locally
 git clone https://github.com/garystafford/streaming-sales-generator.git
 cd streaming-sales-generator/
@@ -10,9 +16,6 @@ cd streaming-sales-generator/
 # generate some messages
 python3 -m pip install kafka-python
 python3 ./producer.py
-
-# deploy pinot/kafka stack
-docker stack deploy streaming-stack --compose-file flink-pinot-superset-stack.yml
 
 # create new pinot tables
 cd ~/streaming-sales-generator/apache_pinot_examples
