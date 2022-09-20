@@ -1,6 +1,4 @@
-# Notes for Streaming Examples
-
-Spark batch and streaming examples currently both use SASL/SCRAM authentication.
+# Notes for Spark Structured Streaming Examples
 
 ## Spark Commands
 
@@ -9,7 +7,7 @@ Spark batch and streaming examples currently both use SASL/SCRAM authentication.
 # Install packages on AWS EMR
 sudo yum install git vim wget
 
-# Install packages in Bitnami container
+# Install packages in Bitnami container as root
 SPARK_CONTAINER=$(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}")
 docker exec -it -u 0 ${SPARK_CONTAINER} bash
 apt-get update && apt-get install git vim wget
@@ -22,6 +20,8 @@ wget https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3
 wget https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.0/spark-token-provider-kafka-0-10_2.12-3.3.0.jar
 mv *.jar /opt/bitnami/spark/jars/
 
+exit
+
 # Run Spark jobs Bitnami container
 docker cp streaming_examples/ ${SPARK_CONTAINER}:/home/
 
@@ -31,7 +31,7 @@ cd /home/streaming_examples/apache_spark_docker_container/
 export BOOTSTRAP_SERVERS="kafka:29092"
 export TOPIC_PURCHASES="demo.purchases"
 
-# optional: SASL/SCRAM
+# optional: SASL/SCRAM vs. PLAINTEXT
 AUTH_METHOD="sasl_scram"
 export SASL_USERNAME="foo"
 export SASL_PASSWORD="bar"

@@ -339,8 +339,6 @@ python3 -m pip install kafka-python
 python3 ./producer.py
 # alternately, run as background process
 nohup python3 ./producer.py &
-
-python3 ./consumer.py
 ```
 
 Manage the topics from within the Kafka container:

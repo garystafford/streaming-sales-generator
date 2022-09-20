@@ -13,9 +13,14 @@ docker stack deploy streaming-stack --compose-file flink-pinot-superset-stack.ym
 git clone https://github.com/garystafford/streaming-sales-generator.git
 cd streaming-sales-generator/
 
-# generate some messages
+# install `kafka-python` python package
 python3 -m pip install kafka-python
+
+# run in foreground
 python3 ./producer.py
+# alternately, run as background process
+nohup python3 ./producer.py &
+ps -alh
 
 # create new pinot tables
 cd ~/streaming-sales-generator/apache_pinot_examples
@@ -23,19 +28,20 @@ CONTROLLER_CONTAINER=$(docker container ls --filter  name=streaming-stack_pinot-
 
 docker cp configs_schemas/ ${CONTROLLER_CONTAINER}:/tmp/
 
-docker exec -it ${CONTROLLER_CONTAINER} bash
+docker exec -it ${CONTROLLER_CONTAINER} \
+  bin/pinot-admin.sh AddTable \
+    -tableConfigFile /tmp/configs_schemas/purchases-config.json \
+    -schemaFile /tmp/configs_schemas/purchases-schema.json -exec
 
-bin/pinot-admin.sh AddTable \
-  -tableConfigFile /tmp/configs_schemas/purchases-config.json \
-  -schemaFile /tmp/configs_schemas/purchases-schema.json -exec
+docker exec -it ${CONTROLLER_CONTAINER} \
+  bin/pinot-admin.sh AddTable \
+    -tableConfigFile /tmp/configs_schemas/products-config.json \
+    -schemaFile /tmp/configs_schemas/products-schema.json -exec
 
-bin/pinot-admin.sh AddTable \
-  -tableConfigFile /tmp/configs_schemas/products-config.json \
-  -schemaFile /tmp/configs_schemas/products-schema.json -exec
-
-bin/pinot-admin.sh AddTable \
-  -tableConfigFile /tmp/configs_schemas/purchases-enriched-config.json \
-  -schemaFile /tmp/configs_schemas/purchases-enriched-schema.json -exec
+docker exec -it ${CONTROLLER_CONTAINER} \
+  bin/pinot-admin.sh AddTable \
+    -tableConfigFile /tmp/configs_schemas/purchases-enriched-config.json \
+    -schemaFile /tmp/configs_schemas/purchases-enriched-schema.json -exec
 ```
 
 Sample SQL Statements
@@ -88,7 +94,7 @@ ORDER BY
 
 ![Superset](screengrabs/superset.png)
 
-## Build Apache Superset for Pinot
+## Build Custom Apache Superset for Pinot
 
 ```shell
 cd apache_superset
@@ -98,22 +104,30 @@ docker build \
   -t garystafford/superset-pinot:${TAG} .
 
 docker push garystafford/superset-pinot:${TAG}
+```
 
+## Configure Apache Superset
+
+```shell
 SUPERSET_CONTAINER=$(docker container ls --filter  name=streaming-stack_superset.1 --format "{{.ID}}")
 
-docker exec -it ${SUPERSET_CONTAINER} superset fab create-admin \
-  --username admin \
-  --firstname Superset \
-  --lastname Admin \
-  --email admin@superset.com \
-  --password admin
+docker exec -it ${SUPERSET_CONTAINER} \
+  superset fab create-admin \
+    --username admin \
+    --firstname Superset \
+    --lastname Admin \
+    --email admin@superset.com \
+    --password admin
 
-docker exec -it ${SUPERSET_CONTAINER} superset db upgrade
+docker exec -it ${SUPERSET_CONTAINER} \
+  superset db upgrade
 
 # optional
-# docker exec -it ${SUPERSET_CONTAINER} superset load_examples
+# docker exec -it ${SUPERSET_CONTAINER} \
+#   superset load_examples
 
-docker exec -it ${SUPERSET_CONTAINER} superset init
+docker exec -it ${SUPERSET_CONTAINER} \
+  superset init
 ```
 
 ## Superset Pinot Database Connection String
