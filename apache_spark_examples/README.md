@@ -9,7 +9,7 @@ sudo yum install git vim wget
 # Install packages in Bitnami container as root
 SPARK_CONTAINER=$(docker container ls --filter  name=streaming-stack_spark.1 --format "{{.ID}}")
 docker exec -it -u 0 ${SPARK_CONTAINER} bash
-apt-get update && apt-get install git vim wget
+apt-get update && apt-get install git vim wget -y
 
 python3 -m pip install kafka-python
 
@@ -24,10 +24,10 @@ exit
 
 ```shell
 # Run Spark jobs Bitnami container
-docker cp streaming_examples/ ${SPARK_CONTAINER}:/home/
+docker cp apache_spark_examples/ ${SPARK_CONTAINER}:/home/
 
 docker exec -it ${SPARK_CONTAINER} bash
-cd /home/streaming_examples/apache_spark_docker_container/
+cd /home/apache_spark_examples/
 
 export BOOTSTRAP_SERVERS="kafka:29092"
 export TOPIC_PURCHASES="demo.purchases"
