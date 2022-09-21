@@ -286,10 +286,7 @@ A few sample restocking activity messages are show below.
 ]
 ```
 
-## Docker
-
-See [bitnami/kafka](https://hub.docker.com/r/bitnami/kafka) on Docker Hub for more information about running Kafka
-locally using Docker.
+## Docker Streaming Stacks
 
 ```shell
 # optional: delete previous stack
@@ -299,15 +296,15 @@ docker stack rm streaming-stack
 docker swarm init
 docker stack deploy streaming-stack --compose-file docker/spark-kstreams-stack.yml
 
-docker container ls --format "{{ .Names}}, {{ .Status}}"
+# view results
+docker stats
 
-# optional: to exec into Kafka container
-docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --format "{{.ID}}") bash
+docker container ls --format "{{ .Names}}, {{ .Status}}"
 ```
 
-### Streaming Stacks
+### Containers
 
-Example Apache Kafka, Spark, Flink, Pinot, Superset, and JupyterLab containers:
+Example Apache Kafka, Zookeeper, Spark, Flink, Pinot, Superset, KStreams, and JupyterLab containers:
 
 ```text
 CONTAINER ID   IMAGE                      PORTS                                    NAMES
@@ -400,6 +397,33 @@ kafka-console-consumer.sh \
 kafka-console-consumer.sh \
     --topic $TOPIC_STOCKINGS --from-beginning \
     --bootstrap-server $BOOTSTRAP_SERVERS
+```
+
+## Setup Amazon Linux 2 EC2 Instance
+
+Bootstrap script using Amazon SSM `aws:runShellScript` Run Command:
+
+```shell
+sudo yum update -y
+sudo yum install docker vim git wget jq htop python3-pip -y
+
+sudo usermod -a -G docker ec2-user
+id ec2-user
+newgrp docker
+
+pip3 install docker-compose kafka-python python-dateutil
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+sudo systemctl status docker.service
+docker --version
+docker swarm init
+
+cd /home/ec2-user/
+
+git clone https://github.com/garystafford/streaming-sales-generator.git
+cd streaming-sales-generator/
+
+docker stack deploy streaming-stack --compose-file docker/spark-kstreams-stack.yml
 ```
 
 ## TODO Items
