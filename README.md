@@ -401,7 +401,7 @@ kafka-console-consumer.sh \
 
 ## Setup Amazon Linux 2 EC2 Instance
 
-Bootstrap script using Amazon SSM `aws:runShellScript` Run Command:
+Suggest a minimum `m5.xlarge` instance type. Bootstrap script using Amazon SSM `aws:runShellScript`:
 
 ```shell
 sudo yum update -y
