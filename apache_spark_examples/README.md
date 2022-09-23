@@ -11,7 +11,7 @@ SPARK_CONTAINER=$(docker container ls --filter  name=streaming-stack_spark.1 --f
 docker exec -it -u 0 ${SPARK_CONTAINER} bash
 apt-get update && apt-get install git vim wget -y
 
-python3 -m pip install kafka-python
+#python3 -m pip install kafka-python
 
 wget https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar
 wget https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/2.8.1/kafka-clients-2.8.1.jar
