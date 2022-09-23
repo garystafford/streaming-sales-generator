@@ -1,13 +1,12 @@
 # Purpose: Reads a stream of messages from a Kafka topic and
-#          writes a stream of aggregations over sliding event-time window to console (stdout)
+#          writes a stream of running sales totals to console (stdout)
 # References: https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html
 # Author:  Gary A. Stafford
-# Date: 2022-09-02
+# Date: 2022-09-23
 # Note: Expects a min. of two environment variables: BOOTSTRAP_SERVERS, TOPIC_PURCHASES
 #       Optionally: AUTH_METHOD, SASL_USERNAME, SASL_PASSWORD
 
 import os
-
 import pyspark.sql.functions as F
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructField, StructType, IntegerType, \
@@ -17,7 +16,7 @@ from pyspark.sql.types import StructField, StructType, IntegerType, \
 def main():
     spark = SparkSession \
         .builder \
-        .appName("kafka-streaming-query") \
+        .appName("kafka-streaming-query-running-totals") \
         .getOrCreate()
 
     spark.sparkContext.setLogLevel("INFO")
@@ -71,20 +70,16 @@ def summarize_sales(df_sales):
         .selectExpr("CAST(value AS STRING)") \
         .select(F.from_json("value", schema=schema).alias("data")) \
         .select("data.*") \
-        .withWatermark("transaction_time", "10 minutes") \
-        .groupBy("product_id",
-                 F.window("transaction_time", "10 minutes", "5 minutes")) \
+        .groupBy("product_id") \
         .agg(F.sum("total_purchase"), F.count("quantity")) \
-        .orderBy(F.col("window").desc(),
-                 F.col("sum(total_purchase)").desc()) \
+        .orderBy(F.col("sum(total_purchase)").desc()) \
         .select("product_id",
                 F.format_number("sum(total_purchase)", 2).alias("sales"),
-                F.format_number("count(quantity)", 0).alias("drinks"),
-                "window.start", "window.end") \
+                F.format_number("count(quantity)", 0).alias("drinks")) \
         .coalesce(1) \
         .writeStream \
         .queryName("streaming_to_console") \
-        .trigger(processingTime="1 minute") \
+        .trigger(processingTime="2 minute") \
         .outputMode("complete") \
         .format("console") \
         .option("numRows", 10) \
