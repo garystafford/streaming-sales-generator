@@ -1,4 +1,4 @@
-class Stocking:
+class Inventory:
     def __init__(
         self,
         event_time: str,
@@ -15,7 +15,7 @@ class Stocking:
 
     def __str__(self):
         return (
-            "Stocking: event_time: {0}, product_id: {1}, existing_level: {2:.0f}, stock_quantity: {3:.0f}, "
+            "Inventory: event_time: {0}, product_id: {1}, existing_level: {2:.0f}, stock_quantity: {3:.0f}, "
             "new_level: {4:.0f}".format(
                 self.event_time,
                 self.product_id,

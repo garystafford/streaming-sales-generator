@@ -38,9 +38,7 @@ real-time sales data from Kafka using Apache Flink
 * Apache Kafka Streams (KStreams): [Code sample](https://github.com/garystafford/kstreams-kafka-demo/) written in Java, which consumes and aggregates the real-time sales data from Kafka using KStreams
 * Apache Pinot/Apache Superset: [Code sample](./apache_pinot_examples/) to query products, purchases, and purchases-enhanced streaming data from Kafka using SQL
 
-![Architecture1](./diagram/streaming_workflow1.png)
-
-![Architecture2](./diagram/streaming_workflow2.png)
+![Architecture1](./diagram/streaming_workflow_intro.png)
 
 ## Project Features
 
@@ -244,7 +242,7 @@ spanning ~20.5 hours of sample data.
 
 ## Restocking Activity Topic
 
-A few sample restocking activity messages are show below.
+A few sample inventory activity messages are show below.
 
 ```json
 [
@@ -349,7 +347,7 @@ docker exec -it $(docker container ls --filter  name=streaming-stack_kafka.1 --f
 export BOOTSTRAP_SERVERS="localhost:9092"
 export TOPIC_PRODUCTS="demo.products"
 export TOPIC_PURCHASES="demo.purchases"
-export TOPIC_STOCKINGS="demo.stockings"
+export TOPIC_INVENTORIES="demo.inventories"
 
 # list topics
 kafka-topics.sh --list \
@@ -367,7 +365,7 @@ kafka-consumer-groups.sh --list \
 # delete topics
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PRODUCTS
 kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_PURCHASES
-kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_STOCKINGS
+kafka-topics.sh --bootstrap-server $BOOTSTRAP_SERVERS --delete --topic $TOPIC_INVENTORIES
 
 # optional: create partitions (or will be automatically created)
 kafka-topics.sh --create --topic $TOPIC_PRODUCTS \
@@ -380,7 +378,7 @@ kafka-topics.sh --create --topic $TOPIC_PURCHASES \
     --config cleanup.policy=compact \
     --bootstrap-server $BOOTSTRAP_SERVERS
 
-kafka-topics.sh --create --topic $TOPIC_STOCKINGS \
+kafka-topics.sh --create --topic $TOPIC_INVENTORIES \
     --partitions 1 --replication-factor 1 \
     --config cleanup.policy=compact \
     --bootstrap-server $BOOTSTRAP_SERVERS
@@ -395,11 +393,11 @@ kafka-console-consumer.sh \
     --bootstrap-server $BOOTSTRAP_SERVERS
 
 kafka-console-consumer.sh \
-    --topic $TOPIC_STOCKINGS --from-beginning \
+    --topic $TOPIC_INVENTORIES --from-beginning \
     --bootstrap-server $BOOTSTRAP_SERVERS
 ```
 
-## Setup Amazon Linux 2 EC2 Instance
+## Setup Amazon Linux 2 EC2 Instance with Docker
 
 Suggest a minimum `m5.xlarge` instance type. Bootstrap script using Amazon SSM `aws:runShellScript`:
 

@@ -15,7 +15,7 @@ from kafka import KafkaProducer
 from config.kafka import get_configs
 from models.product import Product
 from models.purchase import Purchase
-from models.stocking import Stocking
+from models.inventory import Inventory
 
 config = configparser.ConfigParser()
 config.read("configuration/configuration.ini")
@@ -23,7 +23,7 @@ config.read("configuration/configuration.ini")
 # *** CONFIGURATION ***
 topic_products = config["KAFKA"]["topic_products"]
 topic_purchases = config["KAFKA"]["topic_purchases"]
-topic_stockings = config["KAFKA"]["topic_stockings"]
+topic_inventories = config["KAFKA"]["topic_inventories"]
 
 min_sale_freq = int(config["SALES"]["min_sale_freq"])
 max_sale_freq = int(config["SALES"]["max_sale_freq"])
@@ -129,7 +129,7 @@ def restock_item(product_id):
     for p in products:
         if p.product_id == product_id:
             new_inventory = p.inventory + restock_amount
-            new_stocking = Stocking(
+            new_inventory = Inventory(
                 str(datetime.utcnow()),
                 p.product_id,
                 p.inventory,
@@ -137,7 +137,7 @@ def restock_item(product_id):
                 new_inventory,
             )
             p.inventory = new_inventory  # update existing product item
-            publish_to_kafka(topic_stockings, new_stocking)
+            publish_to_kafka(topic_inventories, new_inventory)
             break
 
 
