@@ -79,9 +79,9 @@
     "dateTimeFieldSpecs": [
         {
             "name": "transaction_time",
-            "dataType": "STRING",
-            "format": "1:DAYS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
-            "granularity": "1:MILLISECONDS"
+            "dataType": "TIMESTAMP",
+            "format": "1:SECONDS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
+            "granularity": "1:MINUTES"
         }
     ]
 }
