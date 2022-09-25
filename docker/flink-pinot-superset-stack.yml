@@ -15,7 +15,7 @@ services:
     networks:
       - streaming-stack
   pinot-controller:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20220925"
     command: "StartController -zkAddress zookeeper:2181"
     ports:
       - "9000:9000"
@@ -26,7 +26,7 @@ services:
     networks:
       - streaming-stack
   pinot-broker:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20220925"
     command: "StartBroker -zkAddress zookeeper:2181"
     ports:
       - "8099:8099"
@@ -37,12 +37,12 @@ services:
     networks:
       - streaming-stack
   pinot-server:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-e1900f5-20220914"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20220925"
     command: "StartServer -zkAddress zookeeper:2181"
     ports:
       - "8098:8098"
     environment:
-      JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms44G -Xmx16G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xlog:gc:gc-pinot-server.log"
+      JAVA_OPTS: "-Dplugins.dir=/opt/pinot/plugins -Xms4G -Xmx16G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -Xlog:gc:gc-pinot-server.log"
     depends_on:
       - pinot-broker
     networks:
