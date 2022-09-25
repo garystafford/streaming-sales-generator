@@ -26,6 +26,7 @@ def main():
 
 def consume_messages():
     # choose any or all topics
+    # topics = (topic_purchases)
     topics = (topic_products, topic_purchases, topic_stockings)
 
     configs = get_configs()

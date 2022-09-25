@@ -22,7 +22,5 @@
             "stream.kafka.consumer.prop.auto.offset.reset": "smallest"
         }
     },
-    "metadata": {
-        "customConfigs": {}
-    }
+    "metadata": {}
 }

@@ -61,8 +61,8 @@ FROM
 -- purchases
 SELECT
   product_id,
-  SUMPRECISION(purchase_quantity, 10, 2) AS quantity,
-  SUMPRECISION(total_purchase, 10, 2) AS sales
+  SUMPRECISION(quantity, 10, 2) AS quantity,
+  SUMPRECISION(total_purchase, 10, 2) AS sales,
   AVG(total_purchase) AS avg_sale
 FROM
   purchases
@@ -142,8 +142,8 @@ pinot+http://pinot-broker:8099/query?controller=http://pinot-controller:9000/deb
 ## Superset Login
 
 ```shell
-SUPERSET_CONTAINER=$(docker container ls --filter  name=streaming-stack_superset.1 --format "{{.ID}}")
-docker logs ${SUPERSET_CONTAINER}
+JUPYTER_CONTAINER=$(docker container ls --filter  name=streaming-stack_jupyter.1 --format "{{.ID}}")
+docker logs ${JUPYTER_CONTAINER}
 
 # find string, similar to: "/lab?token=98baea49b9363a25b0cc8fca429265d6408c9e19021e99e5"
 ```
