@@ -64,11 +64,11 @@ services:
     networks:
       - streaming-stack
   superset:
-    image: "garystafford/superset-pinot:0.11.0"
+    image: "garystafford/superset-pinot:0.12.0"
     ports:
       - "8080:8088"
-    volumes:
-      - "/tmp/config.py:/app/superset/config.py"
+#    volumes:
+#      - "/tmp/config.py:/app/superset/config.py"
     networks:
       - streaming-stack
   jupyter:

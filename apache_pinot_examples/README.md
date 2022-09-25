@@ -100,7 +100,7 @@ ORDER BY
 
 ```shell
 cd apache_superset
-export TAG=0.11.0
+export TAG=0.12.0
 docker build \
   -f Dockerfile \
   -t garystafford/superset-pinot:${TAG} .
