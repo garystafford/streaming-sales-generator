@@ -13,7 +13,7 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
     ports:
-      - "8180:8080"
+      - "8080:8080"
     networks:
       - streaming-stack
   spark-worker:
@@ -29,6 +29,15 @@ services:
       - SPARK_SSL_ENABLED=no
     networks:
       - streaming-stack
+#  jupyter:
+#    image: "jupyter/pyspark-notebook:spark-3.3.0"
+#    ports:
+#      - "8888:8888"
+#      - "4040-4045:4040-4045"
+#    volumes:
+#      - "${PWD}:/home/jovyan/work"
+#    networks:
+#      - streaming-stack
   zookeeper:
     image: "bitnami/zookeeper:3.8.0"
     ports:
