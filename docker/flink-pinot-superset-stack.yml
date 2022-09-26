@@ -75,7 +75,7 @@ services:
     image: "jupyter/pyspark-notebook:spark-3.3.0"
     ports:
       - "8888:8888"
-      - "4040-4045:4040-4035"
+      - "4040-4045:4040-4045"
     volumes:
       - "${PWD}:/home/jovyan/work"
     networks:
