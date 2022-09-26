@@ -80,8 +80,8 @@
         {
             "name": "transaction_time",
             "dataType": "TIMESTAMP",
-            "format": "1:SECONDS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
-            "granularity": "1:MINUTES"
+            "format": "1:MILLISECONDS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
+            "granularity": "1:MILLISECONDS"
         }
     ]
 }

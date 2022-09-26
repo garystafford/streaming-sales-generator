@@ -44,7 +44,7 @@
     ],
     "metricFieldSpecs": [
         {
-            "name": "inventory",
+            "name": "inventory_level",
             "dataType": "INT"
         }
     ],
@@ -52,8 +52,8 @@
         {
             "name": "event_time",
             "dataType": "TIMESTAMP",
-            "format": "1:SECONDS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
-            "granularity": "1:MINUTES"
+            "format": "1:MILLISECONDS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss.SSSSSS",
+            "granularity": "1:MILLISECONDS"
         }
     ]
 }
