@@ -103,6 +103,17 @@ services:
         taskmanager.numberOfTaskSlots: 2
     networks:
       - streaming-stack
+  kafka-ui:
+    image: "provectuslabs/kafka-ui:master"
+    ports:
+      - "9080:8080"
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=streaming-demo
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:29092
+    depends_on:
+      - kakfa
+    networks:
+      - streaming-stack
 
 networks:
   streaming-stack:
