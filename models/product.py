@@ -8,7 +8,7 @@ class Product:
         size: str,
         cogs: float,
         price: float,
-        inventory: int,
+        inventory_level: int,
         contains_fruit: bool,
         contains_veggies: bool,
         contains_nuts: bool,
@@ -22,7 +22,7 @@ class Product:
         self.size = str(size)
         self.cogs = float(cogs)
         self.price = float(price)
-        self.inventory = int(inventory)
+        self.inventory_level = int(inventory_level)
         self.contains_fruit = bool(contains_fruit)
         self.contains_veggies = bool(contains_veggies)
         self.contains_nuts = bool(contains_nuts)
@@ -32,7 +32,7 @@ class Product:
     def __str__(self):
         return (
             "Product: event_time: {0}, Product: product_id: {1}, category: {2}, item: {3}, size: {4}, "
-            "cogs: ${5:.2f}, price: ${6:.2f}, inventory: {7:.0f}, contains_fruit: {8}, contains_veggies: {9}, "
+            "cogs: ${5:.2f}, price: ${6:.2f}, inventory_level: {7:.0f}, contains_fruit: {8}, contains_veggies: {9}, "
             "contains_nuts: {10}, contains_caffeine: {10}".format(
                 self.event_time,
                 self.product_id,
@@ -41,7 +41,7 @@ class Product:
                 self.size,
                 self.cogs,
                 self.price,
-                self.inventory,
+                self.inventory_level,
                 self.contains_fruit,
                 self.contains_veggies,
                 self.contains_nuts,

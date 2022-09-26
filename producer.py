@@ -117,8 +117,8 @@ def generate_sales():
                         supplement_price,
                     )
                     publish_to_kafka(topic_purchases, new_purchase)
-                    p.inventory = p.inventory - quantity
-                    if p.inventory <= min_inventory:
+                    p.inventory_level = p.inventory_level - quantity
+                    if p.inventory_level <= min_inventory:
                         restock_item(p.product_id)
                     break
         time.sleep(random.randint(min_sale_freq, max_sale_freq))
@@ -128,15 +128,15 @@ def generate_sales():
 def restock_item(product_id):
     for p in products:
         if p.product_id == product_id:
-            new_inventory = p.inventory + restock_amount
+            new_inventory = p.inventory_level + restock_amount
             new_inventory = Inventory(
                 str(datetime.utcnow()),
                 p.product_id,
-                p.inventory,
+                p.inventory_level,
                 restock_amount,
                 new_inventory,
             )
-            p.inventory = new_inventory  # update existing product item
+            p.inventory_level = new_inventory  # update existing product item
             publish_to_kafka(topic_inventories, new_inventory)
             break
 
