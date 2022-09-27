@@ -1,8 +1,9 @@
 from pinotdb import connect
 
-conn = connect(host='pinot-broker', port=8099, path='/query/sql', scheme='http')
+conn = connect(host="pinot-broker", port=8099, path="/query/sql", scheme="http")
 curs = conn.cursor()
-curs.execute("""
+curs.execute(
+    """
 SELECT
   product_id,
   product_name,
@@ -16,6 +17,7 @@ GROUP BY
   product_name,
   product_category
 ORDER BY
-  sales DESC;""")
+  sales DESC;"""
+)
 for row in curs:
     print(row)

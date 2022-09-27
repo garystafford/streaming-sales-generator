@@ -28,7 +28,9 @@ topic_inventories = config["KAFKA"]["topic_inventories"]
 min_sale_freq = int(config["SALES"]["min_sale_freq"])
 max_sale_freq = int(config["SALES"]["max_sale_freq"])
 number_of_sales = int(config["SALES"]["number_of_sales"])
-transaction_quantity_one_item_freq = int(config["SALES"]["transaction_quantity_one_item_freq"])
+transaction_quantity_one_item_freq = int(
+    config["SALES"]["transaction_quantity_one_item_freq"]
+)
 item_quantity_one_freq = int(config["SALES"]["item_quantity_one_freq"])
 member_freq = int(config["SALES"]["member_freq"])
 club_member_discount = float(config["SALES"]["club_member_discount"])
