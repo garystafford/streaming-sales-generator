@@ -240,4 +240,6 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 /streaming_examples/jars/
-/streaming_examples/flink_streaming_kafka.py
+
+nohup.out
+diagram/.$streaming_workflow.drawio.bkp
