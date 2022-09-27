@@ -128,15 +128,15 @@ def generate_sales():
 def restock_item(product_id):
     for p in products:
         if p.product_id == product_id:
-            new_inventory = p.inventory_level + restock_amount
+            new_level = p.inventory_level + restock_amount
             new_inventory = Inventory(
                 str(datetime.utcnow()),
                 p.product_id,
                 p.inventory_level,
                 restock_amount,
-                new_inventory,
+                new_level,
             )
-            p.inventory_level = new_inventory  # update existing product item
+            p.inventory_level = new_level  # update existing product item
             publish_to_kafka(topic_inventories, new_inventory)
             break
 
