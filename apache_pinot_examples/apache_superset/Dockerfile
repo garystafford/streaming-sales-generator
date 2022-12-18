@@ -1,7 +1,8 @@
 # Custom Superset build to add apache pinot driver
 # Gary A. Stafford (2022-09-25)
+# Updated: 2022-12-18
 
-FROM apache/superset:5d51555c464eef2a9a4e95485f3830319a72f0cb
+FROM apache/superset:66138b0ca0b82a94404e058f0cc55517b2240069
 
 # Switching to root to install the required packages
 USER root

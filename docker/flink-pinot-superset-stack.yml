@@ -1,5 +1,6 @@
-# Command: docker stack deploy streaming-stack --compose-file flink-pinot-superset-stack.yml
+# Command: docker stack deploy streaming-stack --compose-file docker/flink-pinot-superset-stack.yml
 # Gary A. Stafford (2022-09-14)
+# Updated: 2022-12-17
 
 version: "3.9"
 services:
@@ -15,7 +16,7 @@ services:
     networks:
       - streaming-stack
   pinot-controller:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20220925"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221217"
     command: "StartController -zkAddress zookeeper:2181"
     ports:
       - "9000:9000"
@@ -26,7 +27,7 @@ services:
     networks:
       - streaming-stack
   pinot-broker:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20220925"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221217"
     command: "StartBroker -zkAddress zookeeper:2181"
     ports:
       - "8099:8099"
@@ -37,7 +38,7 @@ services:
     networks:
       - streaming-stack
   pinot-server:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20220925"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221217"
     command: "StartServer -zkAddress zookeeper:2181"
     ports:
       - "8098:8098"
@@ -48,7 +49,7 @@ services:
     networks:
       - streaming-stack
   kafka:
-    image: "bitnami/kafka:3.2.1"
+    image: "bitnami/kafka:3.3.1"
     ports:
       - "9092:9092"
     environment:
@@ -64,7 +65,7 @@ services:
     networks:
       - streaming-stack
   superset:
-    image: "garystafford/superset-pinot:0.11.0"
+    image: "garystafford/superset-pinot:0.13.0"
     ports:
       - "8088:8088"
 #    volumes:
@@ -72,7 +73,7 @@ services:
     networks:
       - streaming-stack
   jupyter:
-    image: "jupyter/pyspark-notebook:spark-3.3.0"
+    image: "jupyter/pyspark-notebook:spark-3.3.1"
     ports:
       - "8888:8888"
       - "4040-4045:4040-4045"
@@ -81,7 +82,7 @@ services:
     networks:
       - streaming-stack
   jobmanager:
-    image: "flink:1.15.2"
+    image: "flink:1.16.0"
     command: jobmanager
     ports:
       - "8081:8081"
@@ -92,7 +93,7 @@ services:
     networks:
       - streaming-stack
   taskmanager:
-    image: "flink:1.15.2"
+    image: "flink:1.16.0"
     depends_on:
       - jobmanager
     command: taskmanager
@@ -104,7 +105,7 @@ services:
     networks:
       - streaming-stack
   kafka-ui:
-    image: "provectuslabs/kafka-ui:master"
+    image: "provectuslabs/kafka-ui:f9906b5d307da11303177c4ddc04d4658c4ebfab"
     ports:
       - "9080:8080"
     environment:

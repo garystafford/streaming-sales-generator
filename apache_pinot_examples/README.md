@@ -28,7 +28,7 @@ ps -alh
 cd ~/streaming-sales-generator/apache_pinot_examples
 CONTROLLER_CONTAINER=$(docker container ls --filter  name=streaming-stack_pinot-controller.1 --format "{{.ID}}")
 
-docker cp configs_schemas/ ${CONTROLLER_CONTAINER}:/tmp/
+docker cp apache_pinot_examples/configs_schemas/ ${CONTROLLER_CONTAINER}:/tmp/
 
 docker exec -it ${CONTROLLER_CONTAINER} \
   bin/pinot-admin.sh AddTable \
@@ -44,6 +44,18 @@ docker exec -it ${CONTROLLER_CONTAINER} \
   bin/pinot-admin.sh AddTable \
     -tableConfigFile /tmp/configs_schemas/purchases-enriched-config.json \
     -schemaFile /tmp/configs_schemas/purchases-enriched-schema.json -exec
+
+docker exec -it ${CONTROLLER_CONTAINER} \
+  bin/pinot-admin.sh AddTable \
+    -tableConfigFile /tmp/configs_schemas/purchases-aggregated-config.json \
+    -schemaFile /tmp/configs_schemas/purchases-aggregated-schema.json -exec
+
+docker exec -it ${CONTROLLER_CONTAINER} \
+  bin/pinot-admin.sh ChangeTableState \
+    -tableName purchasesAggregated_REALTIME \
+    -state drop \
+    -controllerHost localhost -controllerPort 9000 #-exec
+
 ```
 
 Sample SQL Statements
@@ -100,7 +112,7 @@ ORDER BY
 
 ```shell
 cd apache_superset
-export TAG=0.12.0
+export TAG=0.13.0
 docker build \
   -f Dockerfile \
   -t garystafford/superset-pinot:${TAG} .

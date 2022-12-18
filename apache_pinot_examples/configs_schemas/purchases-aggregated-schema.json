@@ -1,0 +1,31 @@
+{
+    "schemaName": "purchasesAggregated",
+    "dimensionFieldSpecs": [
+        {
+            "name": "product_id",
+            "dataType": "STRING"
+        }
+    ],
+    "metricFieldSpecs": [
+        {
+            "name": "transaction_count",
+            "dataType": "INT"
+        },
+        {
+            "name": "total_quantity",
+            "dataType": "INT"
+        },
+        {
+            "name": "total_purchases",
+            "dataType": "FLOAT"
+        }
+    ],
+    "dateTimeFieldSpecs": [
+        {
+            "name": "minutesSinceEpoch",
+            "dataType": "LONG",
+            "format": "1:MILLISECONDS:EPOCH",
+            "granularity": "1:MILLISECONDS"
+        }
+    ]
+}

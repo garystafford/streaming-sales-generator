@@ -1,11 +1,12 @@
 # Command: docker stack deploy streaming-stack --compose-file docker/spark-kstreams-stack.yml
 # Gary A. Stafford (2022-09-14)
+# Updated: 2022-12-17
 
 version: "3.9"
 
 services:
   spark:
-    image: "docker.io/bitnami/spark:3.3"
+    image: "docker.io/bitnami/spark:3.3.1"
     environment:
       - SPARK_MODE=master
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
@@ -17,7 +18,7 @@ services:
     networks:
       - streaming-stack
   spark-worker:
-    image: "docker.io/bitnami/spark:3.3"
+    image: "docker.io/bitnami/spark:3.3.1"
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
@@ -47,7 +48,7 @@ services:
     networks:
       - streaming-stack
   kafka:
-    image: "bitnami/kafka:3.2.1"
+    image: "bitnami/kafka:3.3.1"
     ports:
       - "9092:9092"
     environment:
@@ -70,7 +71,7 @@ services:
     networks:
       - streaming-stack
   kafka-ui:
-    image: "provectuslabs/kafka-ui:master"
+    image: "provectuslabs/kafka-ui:f9906b5d307da11303177c4ddc04d4658c4ebfab"
     ports:
       - "9080:8080"
     environment:
