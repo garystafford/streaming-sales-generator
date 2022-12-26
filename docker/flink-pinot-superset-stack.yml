@@ -1,6 +1,6 @@
 # Command: docker stack deploy streaming-stack --compose-file docker/flink-pinot-superset-stack.yml
 # Gary A. Stafford (2022-09-14)
-# Updated: 2022-12-17
+# Updated: 2022-12-26
 
 version: "3.9"
 services:
@@ -16,7 +16,7 @@ services:
     networks:
       - streaming-stack
   pinot-controller:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221217"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221226"
     command: "StartController -zkAddress zookeeper:2181"
     ports:
       - "9000:9000"
@@ -27,7 +27,7 @@ services:
     networks:
       - streaming-stack
   pinot-broker:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221217"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221226"
     command: "StartBroker -zkAddress zookeeper:2181"
     ports:
       - "8099:8099"
@@ -38,7 +38,7 @@ services:
     networks:
       - streaming-stack
   pinot-server:
-    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221217"
+    image: "apachepinot/pinot:0.11.0-SNAPSHOT-a6f5e89-20221226"
     command: "StartServer -zkAddress zookeeper:2181"
     ports:
       - "8098:8098"
@@ -77,6 +77,10 @@ services:
     ports:
       - "8888:8888"
       - "4040-4045:4040-4045"
+    user: root
+    environment:
+      NB_GID: 100
+      GRANT_SUDO: "yes"
     volumes:
       - "${PWD}:/home/jovyan/work"
     networks:
