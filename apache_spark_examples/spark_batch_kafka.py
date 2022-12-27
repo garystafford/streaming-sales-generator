@@ -76,7 +76,7 @@ def summarize_sales(df_sales):
         .select(F.from_json("value", schema=schema).alias("data"))
         .select("data.*")
         .withColumn("row", F.row_number().over(window))
-        .withColumn("quantity", F.count(F.col("quantity")).over(window_agg))
+        .withColumn("quantity", F.sum(F.col("quantity")).over(window_agg))
         .withColumn("sales", F.sum(F.col("total_purchase")).over(window_agg))
         .filter(F.col("row") == 1)
         .drop("row")

@@ -74,12 +74,12 @@ def summarize_sales(df_sales):
         .select(F.from_json("value", schema=schema).alias("data"))
         .select("data.*")
         .groupBy("product_id")
-        .agg(F.sum("total_purchase"), F.count("quantity"))
+        .agg(F.sum("total_purchase"), F.sum("quantity"))
         .orderBy(F.col("sum(total_purchase)").desc())
         .select(
             "product_id",
             F.format_number("sum(total_purchase)", 2).alias("sales"),
-            F.format_number("count(quantity)", 0).alias("drinks"),
+            F.format_number("sum(quantity)", 0).alias("drinks"),
         )
         .coalesce(1)
         .writeStream.queryName("streaming_to_console")

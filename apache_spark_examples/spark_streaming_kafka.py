@@ -74,12 +74,12 @@ def summarize_sales(df_sales):
         .select("data.*")
         .withWatermark("transaction_time", "10 minutes")
         .groupBy("product_id", F.window("transaction_time", "10 minutes", "5 minutes"))
-        .agg(F.sum("total_purchase"), F.count("quantity"))
+        .agg(F.sum("total_purchase"), F.sum("quantity"))
         .orderBy(F.col("window").desc(), F.col("sum(total_purchase)").desc())
         .select(
             "product_id",
             F.format_number("sum(total_purchase)", 2).alias("sales"),
-            F.format_number("count(quantity)", 0).alias("drinks"),
+            F.format_number("sum(quantity)", 0).alias("drinks"),
             "window.start",
             "window.end",
         )
