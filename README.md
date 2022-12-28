@@ -4,8 +4,9 @@
 
 1. `docker stack deploy streaming-stack --compose-file docker/spark-kafka-stack.yml` to create local instance of Kafka
 2. `python3 -m pip install kafka-python` to install the `kafka-python` package
-3. `python3 ./producer.py` to start generating streaming data to Apache Kafka
-4. `python3 ./consumer.py` in a separate terminal window to view results
+3. `cd sales_generator/`
+4. `python3 ./producer.py` to start generating streaming data to Apache Kafka
+5. `python3 ./consumer.py` in a separate terminal window to view results
 
 ## Background
 
@@ -15,7 +16,7 @@ on and visualize different aspects with Business Intelligence (BI) and dashboard
 data source should possess a degree of consistency and predictability while still displaying a reasonable level of
 natural randomness. Conversely, the source should not result in an unnatural uniform distribution of data over time.
 
-This project's highly configurable, Python-based, synthetic data generator ([producer.py](producer.py)) streams product listings,
+This project's highly configurable, Python-based, synthetic data generator ([producer.py](sales_generator/producer.py)) streams product listings,
 sales transactions, and inventory restocking activities to Apache Kafka topics. It is designed for
 demonstrating streaming data analytics tools, such as
 [Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html),
@@ -42,9 +43,9 @@ real-time sales data from Kafka using Apache Flink
 
 ## Project Features
 
-* Generator is configurable in a separate [configuration.ini](configuration/configuration.ini) file
+* Generator is configurable in a separate [configuration.ini](sales_generator/configuration/configuration.ini) file
 * Semi-random data generation - random variables are weighted and can be adjusted in `.ini` file
-* Over 25 smoothie drink products in [products.csv](data/products.csv): descriptions, inventories, costs, ingredients,
+* Over 25 smoothie drink products in [products.csv](sales_generator/data/products.csv): descriptions, inventories, costs, ingredients,
   product propensity-to-buy range value
 * The propensity to buy a product is determined by an assigned value from a range of 0 to 200
 * Writes initial product list to an Apache Kafka topic (topic 1/3)
@@ -69,7 +70,7 @@ from [Fast Food Menu Prices](https://www.fastfoodmenuprices.com/tropical-smoothi
 are were used to generate artificial product category and product propensity-to-buy weighting. These determine how frequently the
 products are purchased in the simulation.
 
-A few sample products from CSV file, [products.csv](data/products.csv) are show below.
+A few sample products from CSV file, [products.csv](sales_generator/data/products.csv) are show below.
 
 ```text
 ID,Category,Item,Size,COGS,Price,Inventory,ContainsFruit,ContainsVeggies,ContainsNuts,ContainsCaffeine,_CatWeight,_ItemWeight,_TotalWeight,_RangeWeight
@@ -332,6 +333,8 @@ To run the application:
 ```shell
 # install `kafka-python` python package
 python3 -m pip install kafka-python
+
+cd sales_generator/
 
 # run in foreground
 python3 ./producer.py
