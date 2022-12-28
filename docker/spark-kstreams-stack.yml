@@ -1,6 +1,6 @@
 # Command: docker stack deploy streaming-stack --compose-file docker/spark-kstreams-stack.yml
 # Gary A. Stafford (2022-09-14)
-# Updated: 2022-12-17
+# Updated: 2022-12-28
 
 version: "3.9"
 
@@ -69,7 +69,7 @@ services:
     networks:
       - streaming-stack
   kstreams:
-    image: "garystafford/kstreams-kafka-demo:0.7.0"
+    image: "garystafford/kstreams-kafka-demo:1.1.2"
     depends_on:
       - kakfa
     networks:
