@@ -97,7 +97,7 @@ services:
     networks:
       - streaming-stack
   taskmanager:
-    image: "flink:1.16.0"
+    image: "flink:1.16-scala_2.12-java11"
     depends_on:
       - jobmanager
     command: taskmanager
@@ -109,7 +109,7 @@ services:
     networks:
       - streaming-stack
   kafka-ui:
-    image: "provectuslabs/kafka-ui:f9906b5d307da11303177c4ddc04d4658c4ebfab"
+    image: "provectuslabs/kafka-ui:5f4bb43afd3a516176db481944fb5adb3178a40e"
     ports:
       - "9080:8080"
     environment:
